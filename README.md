@@ -195,8 +195,8 @@ in neovim too!
    -- null.register(null.builtins.[type].[name])
    ```
 
-   See [BUILTINS.md][bultins.md] (place contents of `sources` table inside
+   See [BUILTINS.md][builtins.md] (place contents of `sources` table inside
    `null.register`'s parentheses).
 
 [prettier]: https://prettier.io
-[buitins.md]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
+[builtins.md]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
