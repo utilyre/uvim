@@ -82,7 +82,7 @@ the desired parser and press `<cr>` to install.
 [tree-sitter]: https://github.com/tree-sitter/tree-sitter
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 
-### Code Analysis/Intellisense via LSPs
+### Code Analysis/Intellisense via LSPs (language server protocols)
 
 If you're coming from VS Code (or practically any other IDE), you're used to
 having code analysis/intellisense support out of the box or at the worst
@@ -90,7 +90,7 @@ scenario you would have to install an extension.
 
 However, in neovim, you've got to install the binaries manually. But don't
 worry, thanks to [mason.nvim][mason.nvim] it became a simple task to setup a LSP
-(language server protocol) in neovim too!
+in neovim too!
 
 1. Press `<leader>mh` on your keyboard to open mason.
 
