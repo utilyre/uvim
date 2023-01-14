@@ -101,14 +101,16 @@ in neovim too!
    **NOTE**: You can press `<cr>` on any item to get a bunch of useful
    information about it (brief description, URL, version, etc).
 
-3. Open a shell and change directory to user config folder
+3. Install the server by pressing `i`.
+
+4. Open a shell and change directory to user config folder
 
    ```bash
    mkdir -p ~/.config/nvim/user # in case it's not already there
    cd ~/.config/nvim/user
    ```
 
-4. Edit/Create `servers.lua` and paste the following in there
+5. Edit/Create `servers.lua` and paste the following in there
 
    ```lua
    local lspconfig = require("lspconfig")
@@ -176,14 +178,16 @@ in neovim too!
    **NOTE**: You can press `<cr>` on any item to get a bunch of useful
    information about it (brief description, URL, version, etc).
 
-3. Open a shell and change directory to user config folder
+3. Install the formatter/linter by pressing `i`.
+
+4. Open a shell and change directory to user config folder
 
    ```bash
    mkdir -p ~/.config/nvim/user # in case it's not already there
    cd ~/.config/nvim/user
    ```
 
-4. Edit/Create `sources.lua` and paste the following in there
+5. Edit/Create `sources.lua` and paste the following in there
 
    ```lua
    local null = require("null-ls")
