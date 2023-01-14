@@ -19,7 +19,7 @@ lazy.setup("config.plugins", {
     colorscheme = { "tokyonight", "habamax" },
   },
   dev = {
-    path = vim.fs.normalize("$XDG_DOCUMENTS_HOME"),
+    path = vim.fs.normalize("$NVIM_DEV"),
   },
   ui = {
     border = "rounded",
