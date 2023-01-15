@@ -16,8 +16,12 @@ function spec.config()
         winblend = 0,
       },
       get_config = function(options)
-        vim.pretty_print(options.prompt)
-        if options.prompt ~= "Rename to " then return nil end
+        if options.prompt == "New Name: " then
+          return {
+            relative = "cursor",
+          }
+        end
+
         return {
           enabled = false,
         }
