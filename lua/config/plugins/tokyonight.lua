@@ -25,6 +25,8 @@ function spec.config()
         { background = colors.red1, foreground = colors.bg, bold = true }
       highlights["@tag.attribute"] =
         { foreground = colors.green1, italic = true }
+
+      highlights["LspCodeLensSeparator"] = { foreground = colors.comment }
     end,
   })
 
