@@ -37,13 +37,13 @@ function spec.config()
     local parameters = { ... }
     vim.keymap.set(
       "n",
-      "<leader>d" .. left,
+      "<leader>e" .. left,
       function() right(unpack(parameters)) end
     )
   end
 
   map(
-    "d",
+    "t",
     function()
       vim.diagnostic.config({
         virtual_text = not vim.diagnostic.config().virtual_text,
