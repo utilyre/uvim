@@ -29,7 +29,17 @@ function spec.config()
     },
     select = {
       backend = { "telescope" },
-      telescope = themes.get_cursor(),
+      get_config = function(options)
+        if options.kind == "codeaction" then
+          return {
+            telescope = themes.get_cursor(),
+          }
+        end
+
+        return {
+          telescope = themes.get_dropdown(),
+        }
+      end,
     },
   })
 end
