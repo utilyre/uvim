@@ -1,7 +1,7 @@
 <h1 align="center">nvim</h1>
 
 <p align="center">
-  This is my "minimal" neovim config that I put pride on.
+  This is my "minimal" Neovim config that I put pride on.
 </p>
 
 ## 🖼️ Screenshots
@@ -58,7 +58,7 @@
 
 ## 📦 Installation
 
-0. (Optional) Take a backup of your existing neovim config
+0. (Optional) Take a backup of your existing Neovim config
 
    ```bash
    mv ~/.config/nvim ~/.config/nvim.back
@@ -80,7 +80,7 @@
 
 ### Syntax highlighting via [tree-sitter][tree-sitter] and [nvim-treesitter][nvim-treesitter]
 
-Type `:TSInstall ` while neovim is open and press `<tab>`. You'll see a list of
+Type `:TSInstall ` while Neovim is open and press `<tab>`. You'll see a list of
 **parsers** displayed under the prompt. Continue pressing `<tab>` until you get to
 the desired parser and press `<cr>` to install.
 
@@ -96,9 +96,9 @@ If you're coming from VS Code (or practically any other IDE), you're used to
 having code analysis/intellisense support out of the box or at the worst
 scenario you would have to install an extension.
 
-However, in neovim, you've got to install the binaries manually. But don't
+However, in Neovim, you've got to install the binaries manually. But don't
 worry, thanks to [mason.nvim][mason.nvim] it became such a simple task to setup
-LSP in neovim too!
+LSP in Neovim too!
 
 1. Press `<leader>mh` on your keyboard to open mason.
 
@@ -212,7 +212,7 @@ LSP in neovim too!
 
 ## 💻 Plugin Development
 
-In case you do some neovim plugin development, here's you would do it in this
+In case you do some Neovim plugin development, here's you would do it in this
 config
 
 1. Set `NVIM_DEV` environment variable to your project's directory. So if you
