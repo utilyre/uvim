@@ -209,3 +209,33 @@ LSP in neovim too!
 
 [prettier]: https://prettier.io
 [builtins.md]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
+
+## 💻 Plugin Development
+
+In case you do some neovim plugin development, here's you would do it in this
+config
+
+1. Set `NVIM_DEV` environment variable to your project's directory. So if you
+   keep the plugin you're working on at `~/Repos/mycoolplugin.nvim`, you
+   should add the following to your `~/.bashrc`, `~/.zshrc`, etc.
+
+   ```bash
+   export NVIM_DEV="$HOME/Repos"
+   ```
+
+2. Create a file under `lua/config/plugins` of this repository with the
+   following content (continuing with the `mycoolplugin.nvim` example)
+
+   ```lua
+   -- lua/config/plugin/mycoolplugin.lua
+   local spec = {
+     "[user]/mycoolplugin.nvim", -- substitute [user] with your github username
+     dev = true,
+   }
+
+   function spec.config()
+     require("mycoolplugin").setup()
+   end
+
+   return spec
+   ```
