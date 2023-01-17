@@ -90,21 +90,21 @@ the desired parser and press `<cr>` to install.
 [tree-sitter]: https://github.com/tree-sitter/tree-sitter
 [nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
 
-### Code Analysis/Intellisense via LSPs (language server protocols)
+### Code Analysis/Intellisense via LSP (language server protocol)
 
 If you're coming from VS Code (or practically any other IDE), you're used to
 having code analysis/intellisense support out of the box or at the worst
 scenario you would have to install an extension.
 
 However, in neovim, you've got to install the binaries manually. But don't
-worry, thanks to [mason.nvim][mason.nvim] it became a simple task to setup a LSP
-in neovim too!
+worry, thanks to [mason.nvim][mason.nvim] it became such a simple task to setup
+LSP in neovim too!
 
 1. Press `<leader>mh` on your keyboard to open mason.
 
-2. Search for the LSP you want to install if you know the name, otherwise press
-   `<c-f>` and select a language so that the long list will narrow down to a
-   few LSPs.
+2. Search for the server you want to install if you know the name, otherwise
+   press `<c-f>` and select a language so that the long list will narrow down to
+   a few servers.
 
    **NOTE**: You can press `<cr>` on any item to get a bunch of useful
    information about it (brief description, URL, version, etc).
@@ -128,7 +128,8 @@ in neovim too!
 
    As you see in the commented line, you can configure a server by calling the
    `setup` function. `setup` requires a table of options that will be used to
-   configure the LSP. You can find these options in the LSP's documentations.
+   configure the server. You can find these options in the server's
+   documentations.
 
    **NOTE**: `[lsp-name]` isn't always the same as the binary you've installed
    from mason. See [server-mappings.md][server-mappings.md] for more
