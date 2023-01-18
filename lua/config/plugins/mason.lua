@@ -28,7 +28,7 @@ function spec.config()
     )
   end
 
-  map("h", ui.open)
+  map("a", ui.open)
 end
 
 return spec

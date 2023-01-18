@@ -100,7 +100,7 @@ However, in Neovim, you've got to install the binaries manually. But don't
 worry, thanks to [mason.nvim][mason.nvim] it became such a simple task to setup
 LSP in Neovim too!
 
-1. Press `<leader>mh` on your keyboard to open mason.
+1. Press `<leader>ma` on your keyboard to open mason.
 
 2. Search for the server you want to install if you know the name, otherwise
    press `<c-f>` and select a language so that the long list will narrow down to
@@ -180,7 +180,7 @@ LSP in Neovim too!
 
 ### Formatters/Linters (e.g. [prettier][prettier])
 
-1. Press `<leader>mh` on your keyboard to open mason.
+1. Press `<leader>ma` on your keyboard to open mason.
 
 2. Search for the formatter/linter you want to install.
 
