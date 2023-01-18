@@ -17,6 +17,11 @@ function spec.config()
       selection_caret = vim.g.icons.widget.inline.ArrowRight .. " ",
       multi_icon = vim.g.icons.widget.inline.Check .. " ",
     }),
+    pickers = {
+      quickfix = {
+        theme = "cursor",
+      },
+    },
   })
 
   local function map(left, right, ...)
@@ -33,6 +38,17 @@ function spec.config()
   map("f", builtin.find_files)
   map("a", builtin.filetypes)
   map("w", builtin.live_grep)
+
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("telescope", {}),
+    pattern = "qf",
+    callback = function(a)
+      vim.defer_fn(function()
+        vim.api.nvim_buf_delete(a.buf, {})
+        builtin.quickfix()
+      end, 0)
+    end,
+  })
 end
 
 return spec
