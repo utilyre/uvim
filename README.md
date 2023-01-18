@@ -212,8 +212,8 @@ LSP in Neovim too!
 
 ## 💻 Plugin Development
 
-In case you do some Neovim plugin development, here's you would do it in this
-config
+In case you do some Neovim plugin development, here's how you would do it in
+this config
 
 1. Set `NVIM_DEV` environment variable to your project's directory. So if you
    keep the plugin you're working on at `~/Repos/mycoolplugin.nvim`, you
