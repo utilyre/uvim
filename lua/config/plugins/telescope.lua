@@ -44,10 +44,10 @@ function spec.config()
     group = vim.api.nvim_create_augroup("telescope", {}),
     pattern = "qf",
     callback = function(a)
-      vim.defer_fn(function()
+      vim.schedule(function()
         vim.api.nvim_buf_delete(a.buf, {})
         builtin.quickfix()
-      end, 0)
+      end)
     end,
   })
 end
