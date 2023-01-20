@@ -76,6 +76,7 @@ vim.g.icons = {
     Method = "",
     Module = "",
     Namespace = "",
+    Null = "",
     Number = "",
     Object = "",
     Operator = "",
@@ -88,6 +89,7 @@ vim.g.icons = {
     Text = "",
     TypeParameter = "",
     Unit = "",
+    Value = "",
     Variable = "",
   },
 }
