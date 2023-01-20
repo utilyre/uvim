@@ -20,6 +20,13 @@ function spec.config()
         if options.prompt == "New Name: " then
           return {
             relative = "cursor",
+            anchor = "NW",
+            override = function(config)
+              return vim.tbl_deep_extend("force", config, {
+                row = 1,
+                col = 0,
+              })
+            end,
           }
         end
 
