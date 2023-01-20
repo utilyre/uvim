@@ -20,7 +20,7 @@ function spec.config()
     pickers = {
       quickfix = {
         theme = "cursor",
-        show_line = false,
+        fname_width = 0,
       },
     },
   })

@@ -52,6 +52,7 @@ function spec.config()
         )
       end
 
+      map("s", vim.lsp.buf.document_symbol)
       map("D", vim.lsp.buf.declaration, { reuse_win = true })
       map("d", vim.lsp.buf.definition, { reuse_win = true })
       map("t", vim.lsp.buf.type_definition, { reuse_win = true })
