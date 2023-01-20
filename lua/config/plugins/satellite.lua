@@ -1,5 +1,8 @@
 local spec = {
   "lewis6991/satellite.nvim",
+  dependencies = {
+    "lewis6991/gitsigns.nvim",
+  },
 }
 
 function spec.config()
