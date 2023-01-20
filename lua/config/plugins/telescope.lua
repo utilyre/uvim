@@ -39,17 +39,6 @@ function spec.config()
   map("f", builtin.find_files)
   map("a", builtin.filetypes)
   map("w", builtin.live_grep)
-
-  vim.api.nvim_create_autocmd("FileType", {
-    group = vim.api.nvim_create_augroup("telescope", {}),
-    pattern = "qf",
-    callback = function(a)
-      vim.schedule(function()
-        vim.api.nvim_buf_delete(a.buf, {})
-        builtin.quickfix()
-      end)
-    end,
-  })
 end
 
 return spec
