@@ -10,6 +10,7 @@ local spec = {
 function spec.config()
   local noice = require("noice")
   local lsp = require("noice.lsp")
+  local cmp = require("cmp")
 
   noice.setup({
     presets = {
@@ -99,6 +100,7 @@ function spec.config()
   local function map(left, right, ...)
     local parameters = { ... }
     vim.keymap.set({ "n", "i", "s" }, left, function()
+      if cmp.visible() then return left end
       if not right(unpack(parameters)) then return left end
       return "<ignore>"
     end, { expr = true })
