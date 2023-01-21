@@ -17,12 +17,6 @@ function spec.config()
       selection_caret = vim.g.icons.widget.inline.ArrowRight .. " ",
       multi_icon = vim.g.icons.widget.inline.Check .. " ",
     }),
-    pickers = {
-      quickfix = {
-        theme = "cursor",
-        fname_width = 0,
-      },
-    },
   })
 
   local function map(left, right, ...)
