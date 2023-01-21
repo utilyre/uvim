@@ -65,7 +65,7 @@ function spec.config()
   }
 
   vim.api.nvim_create_autocmd("User", {
-    group = vim.api.nvim_create_augroup("fterm", {}),
+    group = vim.api.nvim_create_augroup("config.plugins.fterm#unception", {}),
     pattern = "UnceptionEditRequestReceived",
     callback = function() instance:close() end,
   })

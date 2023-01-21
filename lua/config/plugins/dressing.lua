@@ -52,7 +52,7 @@ function spec.config()
   })
 
   vim.api.nvim_create_autocmd("FileType", {
-    group = vim.api.nvim_create_augroup("dressing", {}),
+    group = vim.api.nvim_create_augroup("config.plugins.dressing#quickfix", {}),
     pattern = "qf",
     callback = function(a)
       vim.schedule(function()

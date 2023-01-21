@@ -32,7 +32,7 @@ function spec.config()
     "CursorHold",
     "InsertLeave",
   }, {
-    group = vim.api.nvim_create_augroup("barbecue", {}),
+    group = vim.api.nvim_create_augroup("config.plugins.barbecue#update", {}),
     callback = function() ui.update() end,
   })
 end

@@ -1,4 +1,4 @@
-local augroup = vim.api.nvim_create_augroup("autocmds", {})
+local augroup = vim.api.nvim_create_augroup("config.autocmds", {})
 
 vim.api.nvim_create_autocmd("InsertLeave", {
   group = augroup,
