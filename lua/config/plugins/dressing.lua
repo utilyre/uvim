@@ -17,36 +17,26 @@ function spec.config()
         winblend = 0,
       },
       get_config = function(options)
-        if options.prompt == "New Name: " then
+        if options.prompt ~= "New Name: " then
           return {
-            relative = "cursor",
-            anchor = "NW",
-            override = function(config)
-              return vim.tbl_deep_extend("force", config, {
-                row = 1,
-                col = 0,
-              })
-            end,
+            enabled = false,
           }
         end
 
-        return {
-          enabled = false,
-        }
+        return nil
       end,
     },
     select = {
       backend = { "telescope" },
+      telescope = themes.get_cursor(),
       get_config = function(options)
-        if options.kind == "codeaction" then
+        if options.kind ~= "codeaction" then
           return {
-            telescope = themes.get_cursor(),
+            telescope = themes.get_dropdown(),
           }
         end
 
-        return {
-          telescope = themes.get_dropdown(),
-        }
+        return nil
       end,
     },
   })
