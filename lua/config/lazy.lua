@@ -21,6 +21,22 @@ lazy.setup("config.plugins", {
   dev = {
     path = vim.fs.normalize("$NVIM_DEV"),
   },
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "gzip",
+        "health",
+        "man",
+        "matchit",
+        "netrwPlugin",
+        "rplugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
+  },
   ui = {
     border = "rounded",
     icons = {
