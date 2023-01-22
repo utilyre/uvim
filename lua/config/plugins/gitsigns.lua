@@ -22,21 +22,21 @@ function spec.config()
         local parameters = { ... }
         vim.keymap.set(
           "n",
-          "<leader>g" .. left,
+          left,
           function() right(unpack(parameters)) end,
           { buffer = bufnr }
         )
       end
 
-      map("d", gitsigns.diffthis)
-      map("p", gitsigns.preview_hunk)
-      map("R", gitsigns.reset_buffer)
-      map("r", gitsigns.reset_hunk)
-      map("A", gitsigns.stage_buffer)
-      map("a", gitsigns.stage_hunk)
-      map("u", gitsigns.undo_stage_hunk)
-      map("k", gitsigns.prev_hunk, { navigation_message = false })
-      map("j", gitsigns.next_hunk, { navigation_message = false })
+      map("<leader>gd", gitsigns.diffthis)
+      map("<leader>gp", gitsigns.preview_hunk)
+      map("<leader>gR", gitsigns.reset_buffer)
+      map("<leader>gr", gitsigns.reset_hunk)
+      map("<leader>gA", gitsigns.stage_buffer)
+      map("<leader>ga", gitsigns.stage_hunk)
+      map("<leader>gu", gitsigns.undo_stage_hunk)
+      map("<leader>gk", gitsigns.prev_hunk, { navigation_message = false })
+      map("<leader>gj", gitsigns.next_hunk, { navigation_message = false })
     end,
   })
 end

@@ -21,18 +21,14 @@ function spec.config()
 
   local function map(left, right, ...)
     local parameters = { ... }
-    vim.keymap.set(
-      "n",
-      "<leader>f" .. left,
-      function() right(unpack(parameters)) end
-    )
+    vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
-  map("h", builtin.help_tags)
-  map("r", builtin.oldfiles)
-  map("f", builtin.find_files)
-  map("a", builtin.filetypes)
-  map("w", builtin.live_grep)
+  map("<leader>fh", builtin.help_tags)
+  map("<leader>fr", builtin.oldfiles)
+  map("<leader>ff", builtin.find_files)
+  map("<leader>fa", builtin.filetypes)
+  map("<leader>fw", builtin.live_grep)
 end
 
 return spec

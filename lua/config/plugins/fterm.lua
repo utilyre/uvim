@@ -50,17 +50,17 @@ function spec.config()
         local parameters = { ... }
         vim.keymap.set(
           "t",
-          "<c-w>" .. left,
+          left,
           function() right(unpack(parameters)) end,
           { buffer = bufnr }
         )
       end
 
-      map("=", snap, "center")
-      map("H", snap, "left")
-      map("L", snap, "right")
-      map("K", snap, "top")
-      map("J", snap, "bottom")
+      map("<c-w>=", snap, "center")
+      map("<c-w>H", snap, "left")
+      map("<c-w>L", snap, "right")
+      map("<c-w>K", snap, "top")
+      map("<c-w>J", snap, "bottom")
     end,
   }
 

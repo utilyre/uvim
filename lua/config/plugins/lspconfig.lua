@@ -49,22 +49,22 @@ function spec.config()
         local parameters = { ... }
         vim.keymap.set(
           "n",
-          "<leader>i" .. left,
+          left,
           function() right(unpack(parameters)) end,
           { buffer = a.buf }
         )
       end
 
-      map("s", vim.lsp.buf.document_symbol)
-      map("D", vim.lsp.buf.declaration, { reuse_win = true })
-      map("d", vim.lsp.buf.definition, { reuse_win = true })
-      map("t", vim.lsp.buf.type_definition, { reuse_win = true })
-      map("i", vim.lsp.buf.implementation)
-      map("r", vim.lsp.buf.references)
-      map("a", vim.lsp.buf.code_action)
-      map("f", vim.lsp.buf.format, { async = true })
-      map("c", vim.lsp.buf.rename)
-      map("h", vim.lsp.buf.hover)
+      map("<leader>is", vim.lsp.buf.document_symbol)
+      map("<leader>iD", vim.lsp.buf.declaration, { reuse_win = true })
+      map("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
+      map("<leader>it", vim.lsp.buf.type_definition, { reuse_win = true })
+      map("<leader>ii", vim.lsp.buf.implementation)
+      map("<leader>ir", vim.lsp.buf.references)
+      map("<leader>ia", vim.lsp.buf.code_action)
+      map("<leader>if", vim.lsp.buf.format, { async = true })
+      map("<leader>ic", vim.lsp.buf.rename)
+      map("<leader>ih", vim.lsp.buf.hover)
     end,
   })
 end

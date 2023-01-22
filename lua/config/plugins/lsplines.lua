@@ -35,15 +35,11 @@ function spec.config()
 
   local function map(left, right, ...)
     local parameters = { ... }
-    vim.keymap.set(
-      "n",
-      "<leader>e" .. left,
-      function() right(unpack(parameters)) end
-    )
+    vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
   map(
-    "t",
+    "<leader>et",
     function()
       vim.diagnostic.config({
         virtual_text = not vim.diagnostic.config().virtual_text,
@@ -51,9 +47,9 @@ function spec.config()
       })
     end
   )
-  map("h", vim.diagnostic.open_float)
-  map("k", vim.diagnostic.goto_prev, { float = false })
-  map("j", vim.diagnostic.goto_next, { float = false })
+  map("<leader>eh", vim.diagnostic.open_float)
+  map("<leader>ek", vim.diagnostic.goto_prev, { float = false })
+  map("<leader>ej", vim.diagnostic.goto_next, { float = false })
 end
 
 return spec

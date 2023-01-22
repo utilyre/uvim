@@ -21,14 +21,10 @@ function spec.config()
 
   local function map(left, right, ...)
     local parameters = { ... }
-    vim.keymap.set(
-      "n",
-      "<leader>m" .. left,
-      function() right(unpack(parameters)) end
-    )
+    vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
-  map("a", ui.open)
+  map("<leader>ma", ui.open)
 end
 
 return spec

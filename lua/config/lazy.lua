@@ -60,20 +60,16 @@ lazy.setup("config.plugins", {
 
 local function map(left, right, ...)
   local parameters = { ... }
-  vim.keymap.set(
-    "n",
-    "<leader>p" .. left,
-    function() right(unpack(parameters)) end
-  )
+  vim.keymap.set("n", left, function() right(unpack(parameters)) end)
 end
 
-map("h", lazy.home)
-map("i", lazy.install)
-map("u", lazy.update)
-map("s", lazy.sync)
-map("x", lazy.clean)
-map("c", lazy.check)
-map("l", lazy.log)
-map("r", lazy.restore)
-map("p", lazy.profile)
-map("d", lazy.debug)
+map("<leader>ph", lazy.home)
+map("<leader>pi", lazy.install)
+map("<leader>pu", lazy.update)
+map("<leader>ps", lazy.sync)
+map("<leader>px", lazy.clean)
+map("<leader>pc", lazy.check)
+map("<leader>pl", lazy.log)
+map("<leader>pr", lazy.restore)
+map("<leader>pp", lazy.profile)
+map("<leader>pd", lazy.debug)
