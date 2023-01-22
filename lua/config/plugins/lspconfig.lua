@@ -55,6 +55,7 @@ function spec.config()
         )
       end
 
+      map("K", vim.lsp.buf.hover)
       map("<leader>is", vim.lsp.buf.document_symbol)
       map("<leader>iD", vim.lsp.buf.declaration, { reuse_win = true })
       map("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
@@ -64,7 +65,6 @@ function spec.config()
       map("<leader>ia", vim.lsp.buf.code_action)
       map("<leader>if", vim.lsp.buf.format, { async = true })
       map("<leader>ic", vim.lsp.buf.rename)
-      map("<leader>ih", vim.lsp.buf.hover)
     end,
   })
 end

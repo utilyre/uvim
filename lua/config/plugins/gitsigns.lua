@@ -28,6 +28,8 @@ function spec.config()
         )
       end
 
+      map("[g", gitsigns.prev_hunk, { navigation_message = false })
+      map("]g", gitsigns.next_hunk, { navigation_message = false })
       map("<leader>gd", gitsigns.diffthis)
       map("<leader>gp", gitsigns.preview_hunk)
       map("<leader>gR", gitsigns.reset_buffer)
@@ -35,8 +37,6 @@ function spec.config()
       map("<leader>gA", gitsigns.stage_buffer)
       map("<leader>ga", gitsigns.stage_hunk)
       map("<leader>gu", gitsigns.undo_stage_hunk)
-      map("<leader>gk", gitsigns.prev_hunk, { navigation_message = false })
-      map("<leader>gj", gitsigns.next_hunk, { navigation_message = false })
     end,
   })
 end

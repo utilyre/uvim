@@ -23,6 +23,8 @@ function spec.config()
         )
       end
 
+      map("[g", api.node.navigate.git.prev)
+      map("]g", api.node.navigate.git.next)
       map("h", api.node.navigate.parent_close)
       map("l", api.node.open.edit)
       map("q", api.tree.close)
