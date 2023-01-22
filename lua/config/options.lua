@@ -29,7 +29,8 @@ vim.opt.showmode = false
 vim.opt.cursorline = true
 vim.opt.list = true
 vim.opt.listchars:append({
-  tab = "  " .. vim.g.icons.layout.Tab,
+  tab = vim.g.icons.layout.Tab .. "  ",
+  space = vim.g.icons.layout.Space,
   trail = vim.g.icons.layout.Space,
 })
 vim.opt.fillchars:append({
