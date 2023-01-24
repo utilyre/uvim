@@ -21,6 +21,9 @@ lazy.setup("config.plugins", {
   dev = {
     path = vim.fs.normalize("$NVIM_DEV"),
   },
+  change_detection = {
+    enabled = false,
+  },
   performance = {
     rtp = {
       disabled_plugins = {
