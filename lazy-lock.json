@@ -2,7 +2,7 @@
   "Comment.nvim": { "branch": "master", "commit": "eab2c83a0207369900e92783f56990808082eac2" },
   "FTerm.nvim": { "branch": "master", "commit": "510c8117d3cbb6f2113b855fc4a2eaad69aa0789" },
   "LuaSnip": { "branch": "master", "commit": "60bb423229c5a3df6e3c1acda9c7b4e70d589d78" },
-  "barbecue.nvim": { "branch": "main", "commit": "975e37f027aded82c5844185934b25b9fd586696" },
+  "barbecue.nvim": { "branch": "main", "commit": "2593a60e54305e75821d40c11d5b3e7b7cbda2d0" },
   "bufferline.nvim": { "branch": "main", "commit": "7dd2656bbab466c684bced1559354d51061fe1c6" },
   "cmp-emoji": { "branch": "main", "commit": "19075c36d5820253d32e2478b6aaf3734aeaafa0" },
   "cmp-git": { "branch": "main", "commit": "6bcb61c0a5ec2e0d522ece7c8fb3e009f1c79261" },
