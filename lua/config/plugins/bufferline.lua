@@ -1,5 +1,5 @@
 local spec = {
-  "akinsho/bufferline.nvim",
+  "camiloaromero23/bufferline.nvim",
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
@@ -10,6 +10,7 @@ function spec.config()
 
   bufferline.setup({
     options = {
+      load_icons_from_filetype = false,
       show_close_icon = false,
       show_buffer_close_icons = false,
       left_trunc_marker = vim.g.icons.layout.Truncation,
