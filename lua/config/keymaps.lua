@@ -7,6 +7,7 @@ vim.keymap.set("n", "<c-[>", "<c-[>")
 vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("i", "kj", "<esc>")
 vim.keymap.set("n", "<s-y>", "y$")
+vim.keymap.set("n", "<leader>", "<nop>")
 
 vim.keymap.set("n", "<leader>w", vim.cmd.write)
 vim.keymap.set("n", "<leader>q", vim.cmd.quit)
