@@ -1,11 +1,12 @@
-vim.api.nvim_create_autocmd("InsertLeave", {
+vim.api.nvim_create_autocmd({ "InsertLeave", "InsertEnter" }, {
   group = vim.api.nvim_create_augroup("config.autocmds#timeout", {}),
-  callback = function() vim.opt.timeout = false end,
-})
-
-vim.api.nvim_create_autocmd("InsertEnter", {
-  group = vim.api.nvim_create_augroup("config.autocmds#timeout", {}),
-  callback = function() vim.opt.timeout = true end,
+  callback = function(a)
+    if a.event == "InsertLeave" then
+      vim.opt.timeout = false
+    elseif a.event == "InsertEnter" then
+      vim.opt.timeout = true
+    end
+  end,
 })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
