@@ -1,10 +1,10 @@
 vim.g.icons = {
   layout = {
+    Newline = "↲",
     Nesting = "",
     SectionLeft = "",
     SectionRight = "",
     Separator = "•",
-    Space = "·",
     Tab = "→",
     Truncation = "…",
   },

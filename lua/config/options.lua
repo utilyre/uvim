@@ -29,12 +29,10 @@ vim.opt.relativenumber = true
 vim.opt.showmode = false
 vim.opt.cursorline = true
 vim.opt.list = true
-vim.opt.listchars:append({
+vim.opt.listchars = {
   tab = vim.g.icons.layout.Tab .. "  ",
-  multispace = vim.g.icons.layout.Space,
-  lead = " ",
-  trail = vim.g.icons.layout.Space,
-})
+  eol = vim.g.icons.layout.Newline,
+}
 vim.opt.fillchars:append({
   eob = " ",
 })
