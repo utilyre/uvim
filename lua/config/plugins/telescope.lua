@@ -17,6 +17,17 @@ function spec.config()
       selection_caret = vim.g.icons.widget.inline.ArrowRight .. " ",
       multi_icon = vim.g.icons.widget.inline.Check .. " ",
     }),
+    pickers = {
+      find_files = {
+        hidden = true,
+      },
+      live_grep = {
+        disable_coordinates = true,
+      },
+      buffers = {
+        sort_lastused = true,
+      },
+    },
   })
 
   local function map(left, right, ...)
@@ -24,11 +35,11 @@ function spec.config()
     vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
-  map("<leader>fh", builtin.help_tags)
-  map("<leader>fr", builtin.oldfiles)
+  map("<leader>fr", builtin.resume)
+  map("<leader>ft", builtin.filetypes)
   map("<leader>ff", builtin.find_files)
-  map("<leader>fa", builtin.filetypes)
   map("<leader>fw", builtin.live_grep)
+  map("<leader><space>", builtin.buffers)
 end
 
 return spec
