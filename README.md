@@ -4,20 +4,6 @@
   This is my "minimal" Neovim config that I put pride on.
 </p>
 
-## 🖼️ Screenshots
-
-<details>
-
-<summary>VIEW SCREENSHOTS</summary>
-
-![](https://user-images.githubusercontent.com/91974155/212472441-6ef99c5f-368f-454c-b1e8-947048cc2e8b.png)
-
-![](https://user-images.githubusercontent.com/91974155/212472500-f5c7be4e-9172-418b-aaea-c8b3c72879e0.png)
-
-![](https://user-images.githubusercontent.com/91974155/212472498-0d95c9f0-b948-40b1-97ff-730d912e4968.png)
-
-</details>
-
 ## ⚡ Requirements
 
 - 🍺 Get yourself a fresh install of [`neovim`][neovim].
