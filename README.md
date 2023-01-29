@@ -128,8 +128,8 @@ LSP in Neovim too!
 
    As you see in the commented line, you can configure a server by calling the
    `setup` function. `setup` requires a table of options that will be used to
-   configure the server. You can find these options in the server's
-   documentations.
+   configure the server. See [server_configurations][server_configurations] for
+   more information
 
    **NOTE**: `[lsp-name]` isn't always the same as the binary you've installed
    from mason. See [server-mappings.md][server-mappings.md] for more
@@ -175,6 +175,7 @@ LSP in Neovim too!
    ```
 
 [mason.nvim]: https://github.com/williamboman/mason.nvim
+[server_configurations]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [server-mappings.md]: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
 [lua-language-server]: https://github.com/sumneko/lua-language-server
 
