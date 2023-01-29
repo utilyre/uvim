@@ -12,6 +12,7 @@ function spec.config()
 
   barbecue.setup({
     create_autocmd = false,
+    show_modified = true,
     custom_section = function(bufnr)
       return (
         vim.bo[bufnr].readonly
@@ -31,6 +32,8 @@ function spec.config()
     "BufWinEnter",
     "CursorHold",
     "InsertLeave",
+    "TextChanged",
+    "TextChangedI",
   }, {
     group = vim.api.nvim_create_augroup("config.plugins.barbecue#updater", {}),
     callback = function() ui.update() end,
