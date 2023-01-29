@@ -43,7 +43,6 @@ function spec.config()
   map(
     "<tab>",
     function()
-      vim.opt.relativenumber = not vim.wo.relativenumber
       vim.diagnostic.config({
         virtual_text = not vim.diagnostic.config().virtual_text,
         virtual_lines = not vim.diagnostic.config().virtual_lines,
