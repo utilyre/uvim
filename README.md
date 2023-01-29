@@ -132,8 +132,7 @@ LSP in Neovim too!
    more information
 
    **NOTE**: `[lsp-name]` isn't always the same as the binary you've installed
-   from mason. See [server-mappings.md][server-mappings.md] for more
-   information.
+   from mason. See [server-mappings][server-mappings] for more information.
 
    This is an example of configuring [lua-language-server][lua-language-server]
 
@@ -176,7 +175,7 @@ LSP in Neovim too!
 
 [mason.nvim]: https://github.com/williamboman/mason.nvim
 [server_configurations]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-[server-mappings.md]: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
+[server-mappings]: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
 [lua-language-server]: https://github.com/sumneko/lua-language-server
 
 ### Formatters/Linters (e.g. [prettier][prettier])
@@ -205,11 +204,11 @@ LSP in Neovim too!
    -- null.register(null.builtins.[type].[name])
    ```
 
-   See [BUILTINS.md][builtins.md] (place contents of `sources` table inside
+   See [builtins][builtins] (place contents of `sources` table inside
    `null.register`'s parentheses).
 
 [prettier]: https://prettier.io
-[builtins.md]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
+[builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 
 ## 💻 Plugin Development
 
