@@ -32,6 +32,7 @@ function spec.config()
     "BufWinEnter",
     "CursorHold",
     "InsertLeave",
+    "BufWritePost",
     "TextChanged",
     "TextChangedI",
   }, {
