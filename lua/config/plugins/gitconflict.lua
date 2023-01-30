@@ -12,7 +12,7 @@ function spec.config()
 
   vim.api.nvim_create_autocmd("User", {
     group = vim.api.nvim_create_augroup(
-      "config.plugins.gitconflict#detection",
+      "config.plugins.gitconflict.detection",
       {}
     ),
     pattern = "GitConflictDetected",
@@ -38,7 +38,7 @@ function spec.config()
 
   vim.api.nvim_create_autocmd("User", {
     group = vim.api.nvim_create_augroup(
-      "config.plugins.gitconflict#resolution",
+      "config.plugins.gitconflict.resolution",
       {}
     ),
     pattern = "GitConflictResolved",

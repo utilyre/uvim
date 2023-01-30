@@ -26,7 +26,7 @@ function spec.config()
   end
 
   vim.api.nvim_create_autocmd("LspAttach", {
-    group = vim.api.nvim_create_augroup("config.plugins.lsp#attachment", {}),
+    group = vim.api.nvim_create_augroup("config.plugins.lsp.attachment", {}),
     callback = function(a)
       local client = vim.lsp.get_client_by_id(a.data.client_id)
 
@@ -37,7 +37,7 @@ function spec.config()
           "InsertLeave",
         }, {
           group = vim.api.nvim_create_augroup(
-            "config.plugins.lsp#codelens",
+            "config.plugins.lsp.codelens",
             { clear = false }
           ),
           buffer = a.buf,
