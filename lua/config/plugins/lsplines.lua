@@ -18,14 +18,6 @@ function spec.config()
       header = "",
       prefix = "",
     },
-    signs = {
-      active = {
-        "DiagnosticSignHint",
-        "DiagnosticSignInfo",
-        "DiagnosticSignWarn",
-        "DiagnosticSignError",
-      },
-    },
   })
 
   vim.fn.sign_define("DiagnosticSignHint", { numhl = "DiagnosticSignHint" })
