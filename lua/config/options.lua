@@ -31,7 +31,6 @@ vim.opt.cursorline = true
 vim.opt.list = true
 vim.opt.listchars = {
   tab = vim.g.icons.layout.Tab .. "  ",
-  eol = vim.g.icons.layout.Newline,
 }
 vim.opt.fillchars:append({
   eob = " ",
