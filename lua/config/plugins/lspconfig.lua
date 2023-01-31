@@ -25,6 +25,21 @@ function spec.config()
     dofile(servers_path)
   end
 
+  vim.diagnostic.config({
+    float = {
+      scope = "cursor",
+      source = "always",
+      border = "rounded",
+      header = "",
+      prefix = "",
+    },
+  })
+
+  vim.fn.sign_define("DiagnosticSignHint", { numhl = "DiagnosticSignHint" })
+  vim.fn.sign_define("DiagnosticSignInfo", { numhl = "DiagnosticSignInfo" })
+  vim.fn.sign_define("DiagnosticSignWarn", { numhl = "DiagnosticSignWarn" })
+  vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
+
   vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.attachment", {}),
     callback = function(a)
@@ -67,6 +82,15 @@ function spec.config()
       map("<leader>ic", vim.lsp.buf.rename)
     end,
   })
+
+  local function map(left, right, ...)
+    local parameters = { ... }
+    vim.keymap.set("n", left, function() right(unpack(parameters)) end)
+  end
+
+  map("[d", vim.diagnostic.goto_prev, { float = false })
+  map("]d", vim.diagnostic.goto_next, { float = false })
+  map("<leader>d", vim.diagnostic.open_float)
 end
 
 return spec
