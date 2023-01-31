@@ -8,8 +8,10 @@ local spec = {
 
 function spec.config()
   local barbecue = require("barbecue")
+  local ui = require("barbecue.ui")
 
   barbecue.setup({
+    create_autocmd = false,
     show_modified = true,
     custom_section = function(bufnr)
       return (
@@ -23,6 +25,19 @@ function spec.config()
       ellipsis = vim.g.icons.layout.Truncation,
       separator = vim.g.icons.layout.Nesting,
     },
+  })
+
+  vim.api.nvim_create_autocmd({
+    "WinScrolled",
+    "BufWinEnter",
+    "CursorHold",
+    "InsertLeave",
+    "BufWritePost",
+    "TextChanged",
+    "TextChangedI",
+  }, {
+    group = vim.api.nvim_create_augroup("config.plugins.barbecue.updater", {}),
+    callback = function() ui.update() end,
   })
 end
 
