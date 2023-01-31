@@ -8,9 +8,7 @@ local spec = {
 function spec.config()
   local context = require("treesitter-context")
 
-  context.setup({
-    mode = "topline",
-  })
+  context.setup()
 end
 
 return spec
