@@ -15,14 +15,10 @@ function spec.config()
       highlights["TelescopeMultiIcon"] = { foreground = colors.green }
       highlights["TelescopeMultiSelection"] = { bold = true }
 
-      highlights["@text.note"] = { bold = true, foreground = colors.blue2 }
-      highlights["@text.todo"] = { bold = true, foreground = colors.magenta }
-      highlights["@text.warning"] = { bold = true, foreground = colors.yellow }
-      highlights["@text.danger"] = { bold = true, foreground = colors.red1 }
-      highlights["@tag.attribute"] =
-        { italic = true, foreground = colors.green1 }
-
-      highlights["LspCodeLensSeparator"] = { foreground = colors.comment }
+      highlights["@text.note"] = { foreground = colors.blue2 }
+      highlights["@text.todo"] = { foreground = colors.green1 }
+      highlights["@text.warning"] = { foreground = colors.yellow }
+      highlights["@text.danger"] = { foreground = colors.red1 }
     end,
   })
 
