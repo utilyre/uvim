@@ -26,6 +26,7 @@ function spec.config()
       },
       buffers = {
         sort_lastused = true,
+        initial_mode = "normal",
       },
     },
   })
