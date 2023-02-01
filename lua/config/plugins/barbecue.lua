@@ -28,7 +28,7 @@ function spec.config()
   })
 
   vim.api.nvim_create_autocmd({
-    "WinScrolled",
+    "WinResized",
     "BufWinEnter",
     "CursorHold",
     "InsertLeave",
