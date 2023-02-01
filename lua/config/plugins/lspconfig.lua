@@ -27,11 +27,14 @@ function spec.config()
 
   vim.diagnostic.config({
     float = {
-      scope = "cursor",
-      source = "always",
+      source = true,
       border = "rounded",
       header = "",
-      prefix = "",
+      prefix = {
+        " " .. vim.g.icons.layout.List .. " ",
+        "@punctuation.special.markdown",
+      },
+      suffix = " ",
     },
   })
 
