@@ -30,10 +30,7 @@ function spec.config()
       source = true,
       border = "rounded",
       header = "",
-      prefix = {
-        " " .. vim.g.icons.layout.List .. " ",
-        "@punctuation.special.markdown",
-      },
+      prefix = " " .. vim.g.icons.layout.List .. " ",
       suffix = " ",
     },
   })
