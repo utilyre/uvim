@@ -49,10 +49,10 @@ vim.g.icons = {
     },
   },
   git = {
-    Added = "+",
+    Staged = "+",
     Deleted = "-",
     Ignored = "#",
-    Modified = "!",
+    Unstaged = "!",
     Renamed = "~",
     Unmerged = "=",
     Untracked = "?",

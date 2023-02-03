@@ -38,9 +38,9 @@ function spec.config()
         {
           "diff",
           symbols = {
-            added = vim.g.icons.git.Added,
-            modified = vim.g.icons.git.Modified,
             removed = vim.g.icons.git.Deleted,
+            modified = vim.g.icons.git.Unstaged,
+            added = vim.g.icons.git.Staged,
           },
         },
         {
