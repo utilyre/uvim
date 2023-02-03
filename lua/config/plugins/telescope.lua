@@ -9,6 +9,7 @@ local spec = {
 function spec.config()
   local telescope = require("telescope")
   local themes = require("telescope.themes")
+  local actions = require("telescope.actions")
   local builtin = require("telescope.builtin")
 
   telescope.setup({
@@ -27,6 +28,11 @@ function spec.config()
       buffers = {
         sort_lastused = true,
         initial_mode = "normal",
+        mappings = {
+          n = {
+            dd = actions.delete_buffer,
+          },
+        },
       },
     },
   })
