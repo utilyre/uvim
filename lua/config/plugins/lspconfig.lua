@@ -88,9 +88,9 @@ function spec.config()
     vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
-  map("[d", vim.diagnostic.goto_prev, { float = false })
-  map("]d", vim.diagnostic.goto_next, { float = false })
-  map("<leader>d", vim.diagnostic.open_float)
+  map("[e", vim.diagnostic.goto_prev, { float = false })
+  map("]e", vim.diagnostic.goto_next, { float = false })
+  map("<leader>e", vim.diagnostic.open_float)
 end
 
 return spec
