@@ -24,6 +24,7 @@ function spec.config()
     symbols = {
       ellipsis = vim.g.icons.layout.Truncation,
       separator = vim.g.icons.layout.Nesting,
+      modified = vim.g.icons.layout.Modified,
     },
   })
 

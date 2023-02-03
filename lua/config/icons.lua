@@ -1,6 +1,7 @@
 vim.g.icons = {
   layout = {
     List = "•",
+    Modified = "●",
     Nesting = "",
     SectionLeft = "",
     SectionRight = "",
