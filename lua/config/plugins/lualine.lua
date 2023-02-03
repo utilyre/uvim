@@ -15,7 +15,7 @@ function spec.config()
   lualine.setup({
     options = {
       globalstatus = true,
-      component_separators = vim.g.icons.layout.Separator,
+      component_separators = vim.g.icons.layout.List,
       section_separators = {
         left = vim.g.icons.layout.SectionRight,
         right = vim.g.icons.layout.SectionLeft,

@@ -57,6 +57,12 @@ lazy.setup("config.plugins", {
       runtime = vim.g.icons.widget.inline.Vim,
       import = vim.g.icons.widget.inline.PaperClip,
       config = vim.g.icons.widget.inline.Gear,
+      list = {
+        vim.g.icons.layout.List,
+        vim.g.icons.layout.List,
+        vim.g.icons.layout.List,
+        vim.g.icons.layout.List,
+      },
     },
   },
 })

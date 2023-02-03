@@ -4,7 +4,6 @@ vim.g.icons = {
     Nesting = "",
     SectionLeft = "",
     SectionRight = "",
-    Separator = "•",
     Tab = "→",
     Truncation = "…",
   },
