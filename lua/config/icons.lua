@@ -20,7 +20,6 @@ vim.g.icons = {
       Circle = "",
       Clipboard = "",
       Code = "",
-      Download = "",
       Error = "",
       File = "",
       Fire = "",
