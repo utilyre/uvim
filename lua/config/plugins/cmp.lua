@@ -1,6 +1,7 @@
 local spec = {
   "hrsh7th/nvim-cmp",
   dependencies = {
+    "nvim-lua/plenary.nvim",
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-nvim-lsp",
     "petertriho/cmp-git",

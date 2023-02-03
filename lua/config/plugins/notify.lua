@@ -1,5 +1,8 @@
 local spec = {
   "rcarriga/nvim-notify",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
 }
 
 function spec.config()

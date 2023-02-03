@@ -1,5 +1,8 @@
 local spec = {
   "jose-elias-alvarez/null-ls.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
 }
 
 function spec.config()
