@@ -23,6 +23,7 @@ function spec.config()
           }
         end
 
+        options.prompt = options.prompt:gsub(":%s*$", "")
         return nil
       end,
     },
