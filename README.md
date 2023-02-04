@@ -42,8 +42,8 @@
 
 ## ☕ Tips
 
-- Run `:TSInstall all` to install all treesitter parsers available. (useful for
-  syntax highlighting)
+- Run `:TSInstall all` to install all treesitter parsers available (useful for
+  syntax highlighting).
 
 - See `:help lspconfig-all` to get an understanding of how you should configure
   an specific language server.
