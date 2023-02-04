@@ -11,41 +11,13 @@
 - 📠 Have a feature-rich terminal installed ([`kitty`][kitty] is highly
   recommended).
 
+- 🚀 Use a [Nerd Font][nerdfonts] within your terminal.
+
 - 🔍 Install [`ripgrep`][ripgrep] through your OS's package manager.
-
-  <details>
-    <summary>Arch (btw)</summary>
-
-  ```bash
-  sudo pacman -S ripgrep
-  ```
-
-  </details>
-
-  ***
-
-  <details>
-    <summary>Ubuntu</summary>
-
-  ```bash
-  sudo apt install ripgrep
-  ```
-
-  </details>
-
-  ***
-
-  <details>
-    <summary>macOS</summary>
-
-  ```bash
-  brew install ripgrep
-  ```
-
-  </details>
 
 [neovim]: https://github.com/neovim/neovim
 [kitty]: https://github.com/kovidgoyal/kitty
+[nerdfonts]: https://www.nerdfonts.com/
 [ripgrep]: https://github.com/BurntSushi/ripgrep
 
 ## 📦 Installation
