@@ -44,9 +44,9 @@
 
 ### Syntax highlighting via [tree-sitter][tree-sitter] and [nvim-treesitter][nvim-treesitter]
 
-Type `:TSInstall ` while Neovim is open and press `<tab>`. You'll see a list of
-**parsers** displayed under the prompt. Continue pressing `<tab>` until you get to
-the desired parser and press `<cr>` to install.
+Type `:TSInstall` while Neovim is open and press `<tab>`. You'll see a list of
+**parsers** displayed under the prompt. Continue pressing `<tab>` until you get
+to the desired parser and press `<cr>` to install.
 
 **NOTE**: It's also possible to install all the parsers at once by executing
 `:TSInstall all`.
