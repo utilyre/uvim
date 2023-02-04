@@ -13,7 +13,7 @@
 
 - 🚀 Use a [Nerd Font][nerdfonts] within your terminal.
 
-- 🔍 Install [`ripgrep`][ripgrep] through your OS's package manager.
+- 🔍 Install [`ripgrep`][ripgrep] through your favorite package manager.
 
 [neovim]: https://github.com/neovim/neovim
 [kitty]: https://github.com/kovidgoyal/kitty
