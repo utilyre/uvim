@@ -40,138 +40,23 @@
 
 [lazy.nvim]: https://github.com/folke/lazy.nvim
 
-## ⚙️ Configuration
+## ☕ Tips
 
-### Syntax highlighting via [tree-sitter][tree-sitter] and [nvim-treesitter][nvim-treesitter]
+- Run `:TSInstall all` to install all treesitter parsers available. (useful for
+  syntax highlighting)
 
-Type `:TSInstall` while Neovim is open and press `<tab>`. You'll see a list of
-**parsers** displayed under the prompt. Continue pressing `<tab>` until you get
-to the desired parser and press `<cr>` to install.
+- See `:help lspconfig-all` to get an understanding of how you should configure
+  an specific language server.
 
-**NOTE**: It's also possible to install all the parsers at once by executing
-`:TSInstall all`.
+  **NOTE**: Store server configurations inside `user/servers.lua` relative to
+  this repository's root.
 
-[tree-sitter]: https://github.com/tree-sitter/tree-sitter
-[nvim-treesitter]: https://github.com/nvim-treesitter/nvim-treesitter
+- See [null-ls builtins][builtins] to figure out how you should configure
+  linting/formatting tools.
 
-### Code Analysis/Intellisense via LSP (language server protocol)
+  **NOTE**: Store source configurations inside `user/sources.lua` relative to
+  this repository's root.
 
-If you're coming from VS Code (or practically any other IDE), you're used to
-having code analysis/intellisense support out of the box or at the worst
-scenario you would have to install an extension.
-
-However, in Neovim, you've got to install the binaries manually. But don't
-worry, thanks to [mason.nvim][mason.nvim] it became such a simple task to setup
-LSP in Neovim too!
-
-1. Press `<leader>ma` on your keyboard to open mason.
-
-2. Search for the server you want to install if you know the name, otherwise
-   press `<c-f>` and select a language so that the long list will narrow down to
-   a few servers.
-
-   **NOTE**: You can press `<cr>` on any item to get a bunch of useful
-   information about it (brief description, URL, version, etc).
-
-3. Install the server by pressing `i`.
-
-4. Open a shell and change directory to user config folder
-
-   ```bash
-   mkdir -p ~/.config/nvim/user # in case it's not already there
-   cd ~/.config/nvim/user
-   ```
-
-5. Edit/Create `servers.lua` and paste the following in there
-
-   ```lua
-   local lspconfig = require("lspconfig")
-
-   -- lspconfig.[lsp-name].setup({ [options] })
-   ```
-
-   As you see in the commented line, you can configure a server by calling the
-   `setup` function. `setup` requires a table of options that will be used to
-   configure the server. See [server_configurations][server_configurations] for
-   more information
-
-   **NOTE**: `[lsp-name]` isn't always the same as the binary you've installed
-   from mason. See [server-mappings][server-mappings] for more information.
-
-   This is an example of configuring [lua-language-server][lua-language-server]
-
-   ```lua
-   lspconfig.sumneko_lua.setup({
-     settings = {
-       Lua = {
-         completion = {
-           enable = true,
-           callSnippet = "Replace",
-           showWord = false,
-           workspaceWord = false,
-         },
-         diagnostics = {
-           enable = true,
-           globals = { "vim" },
-         },
-         format = {
-           enable = false,
-         },
-         hint = {
-           enable = true,
-         },
-         hover = {
-           enable = true,
-           expandAlias = false,
-         },
-         runtime = {
-           version = "LuaJIT",
-         },
-         workspace = {
-           library = {
-             [os.getenv("VIMRUNTIME") .. "/lua"] = true,
-           },
-         },
-       },
-     },
-   })
-   ```
-
-[mason.nvim]: https://github.com/williamboman/mason.nvim
-[server_configurations]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-[server-mappings]: https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
-[lua-language-server]: https://github.com/sumneko/lua-language-server
-
-### Formatters/Linters (e.g. [prettier][prettier])
-
-1. Press `<leader>ma` on your keyboard to open mason.
-
-2. Search for the formatter/linter you want to install.
-
-   **NOTE**: You can press `<cr>` on any item to get a bunch of useful
-   information about it (brief description, URL, version, etc).
-
-3. Install the formatter/linter by pressing `i`.
-
-4. Open a shell and change directory to user config folder
-
-   ```bash
-   mkdir -p ~/.config/nvim/user # in case it's not already there
-   cd ~/.config/nvim/user
-   ```
-
-5. Edit/Create `sources.lua` and paste the following in there
-
-   ```lua
-   local null = require("null-ls")
-
-   -- null.register(null.builtins.[type].[name])
-   ```
-
-   See [builtins][builtins] (place contents of `sources` table inside
-   `null.register`'s parentheses).
-
-[prettier]: https://prettier.io
 [builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 
 ## 💻 Plugin Development
