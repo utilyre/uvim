@@ -51,8 +51,8 @@
   **NOTE**: Store server configurations inside `user/servers.lua` relative to
   this repository's root.
 
-- See [null-ls builtins][builtins] to figure out how you should configure
-  linting/formatting tools.
+- See [null-ls builtins][builtins] to figure out how you should configure an
+  specific linting/formatting tool, A.K.A source.
 
   **NOTE**: Store source configurations inside `user/sources.lua` relative to
   this repository's root.
