@@ -45,17 +45,17 @@
 - Run `:TSInstall all` to install all treesitter parsers available (useful for
   syntax highlighting).
 
-- See `:help lspconfig-all` to get an understanding of how you should configure
-  an specific language server.
+- See `:help lspconfig-all` to get an understanding of how you would setup a
+  language server.
 
   **NOTE**: Store server configurations inside `user/servers.lua` relative to
   this repository's root.
 
-- See [null-ls builtins][builtins] to figure out how you should configure an
-  specific linting/formatting tool, A.K.A source.
+- See [null-ls builtins][builtins] to figure out how you are expected to
+  configure a source, A.K.A. a linting/formatting tool.
 
-  **NOTE**: Store source configurations inside `user/sources.lua` relative to
-  this repository's root.
+  **NOTE**: Keep source configurations inside `user/sources.lua` of this
+  repository.
 
 [builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 
