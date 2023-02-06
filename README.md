@@ -52,7 +52,7 @@
   this repository's root.
 
 - See [null-ls builtins][builtins] to figure out how you are expected to
-  configure a source, A.K.A. a linting/formatting tool.
+  configure a source.
 
   **NOTE**: Keep source configurations inside `user/sources.lua` of this
   repository.
