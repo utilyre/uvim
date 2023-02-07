@@ -3,7 +3,6 @@ local spec = {
   dependencies = {
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-emoji",
     "nvim-lua/plenary.nvim",
     "L3MON4D3/LuaSnip",
   },
@@ -38,17 +37,11 @@ function spec.config()
     },
     sources = {
       {
-        group_index = 1,
         name = "luasnip",
         max_item_count = 2,
       },
       {
-        group_index = 1,
         name = "nvim_lsp",
-      },
-      {
-        group_index = 2,
-        name = "emoji",
       },
     },
     mapping = {
