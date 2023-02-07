@@ -4,7 +4,6 @@ local spec = {
     "nvim-lua/plenary.nvim",
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-nvim-lsp",
-    "petertriho/cmp-git",
     "hrsh7th/cmp-emoji",
     "L3MON4D3/LuaSnip",
   },
@@ -12,7 +11,6 @@ local spec = {
 
 function spec.config()
   local cmp = require("cmp")
-  local git = require("cmp_git")
   local luasnip = require("luasnip")
 
   cmp.setup({
@@ -50,10 +48,6 @@ function spec.config()
       },
       {
         group_index = 2,
-        name = "git",
-      },
-      {
-        group_index = 3,
         name = "emoji",
       },
     },
@@ -111,8 +105,6 @@ function spec.config()
       end, { "i", "s" }),
     },
   })
-
-  git.setup()
 end
 
 return spec
