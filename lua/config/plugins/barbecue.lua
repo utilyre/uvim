@@ -30,7 +30,7 @@ function spec.config()
 
   vim.api.nvim_create_autocmd({
     "WinResized",
-    "BufWinEnter",
+    "WinEnter",
     "CursorHold",
     "InsertLeave",
     "BufWritePost",
