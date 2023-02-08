@@ -46,10 +46,10 @@
   syntax highlighting).
 
 - See `:help lspconfig-all` to get an understanding of how you would setup a
-  language server.
+  language server protocol.
 
-  **NOTE**: Store server configurations inside `user/servers.lua` relative to
-  this repository's root.
+  **NOTE**: Store LSP configurations inside `user/servers.lua` relative to this
+  repository's root.
 
 - See [null-ls builtins][builtins] to figure out how you are expected to
   configure a source.
