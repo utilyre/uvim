@@ -1,9 +1,5 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<cr>", "<cr>")
-vim.keymap.set("n", "<c-i>", "<c-i>")
-vim.keymap.set("n", "<c-[>", "<c-[>")
-
 vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("i", "kj", "<esc>")
 vim.keymap.set("n", "<s-y>", "y$")
