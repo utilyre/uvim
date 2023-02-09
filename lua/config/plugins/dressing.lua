@@ -8,7 +8,6 @@ local spec = {
 function spec.config()
   local dressing = require("dressing")
   local themes = require("telescope.themes")
-  local builtin = require("telescope.builtin")
 
   dressing.setup({
     input = {
@@ -40,17 +39,6 @@ function spec.config()
         return nil
       end,
     },
-  })
-
-  vim.api.nvim_create_autocmd("FileType", {
-    group = vim.api.nvim_create_augroup("config.plugins.dressing.quickfix", {}),
-    pattern = "qf",
-    callback = function(a)
-      vim.schedule(function()
-        vim.api.nvim_buf_delete(a.buf, {})
-        builtin.quickfix()
-      end)
-    end,
   })
 end
 
