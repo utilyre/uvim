@@ -43,7 +43,6 @@ vim.g.icons = {
       Folder = "",
       FolderOpen = "",
       Keyboard = "",
-      Lightbulb = "",
       Moon = "",
     },
   },
