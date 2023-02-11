@@ -10,7 +10,6 @@ function spec.config()
 
   notify.setup({
     stages = "fade",
-    top_down = false,
     icons = {
       INFO = vim.g.icons.widget.inline.Info,
       WARN = vim.g.icons.widget.inline.Warn,

@@ -86,15 +86,6 @@ function spec.config()
         },
       },
     },
-    views = {
-      mini = {
-        zindex = 40,
-        position = {
-          row = 2,
-          col = -2,
-        },
-      },
-    },
   })
 
   local function map(left, right, ...)
