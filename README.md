@@ -17,10 +17,10 @@
 
 - 🐙 Double check whether you have [`git`][git] installed.
 
-[neovim]: https://github.com/neovim/neovim
-[kitty]: https://github.com/kovidgoyal/kitty
-[nerdfonts]: https://www.nerdfonts.com/
-[ripgrep]: https://github.com/BurntSushi/ripgrep
+[neovim]: https://neovim.io
+[kitty]: https://sw.kovidgoyal.net/kitty
+[nerdfonts]: https://www.nerdfonts.com
+[ripgrep]: https://crates.io/crates/ripgrep
 [git]: https://git-scm.com
 
 ## 📦 Installation
