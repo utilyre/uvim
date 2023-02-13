@@ -110,7 +110,7 @@ function spec.config()
     vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
-  map("<c-/>", tree.toggle)
+  map("<c-_>", tree.toggle)
 end
 
 return spec
