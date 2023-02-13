@@ -8,7 +8,6 @@ function spec.config()
 
   tokyonight.setup({
     style = "night",
-    on_colors = function(colors) colors.bg_statusline = colors.none end,
     on_highlights = function(highlights, colors)
       highlights["TelescopeSelectionCaret"] =
         { foreground = colors.teal, background = colors.bg_visual }

@@ -2,8 +2,6 @@ vim.g.icons = {
   layout = {
     List = "•",
     Modified = "●",
-    SectionLeft = "",
-    SectionRight = "",
     Tab = "→",
     Truncation = "…",
   },

@@ -17,18 +17,14 @@ function spec.config()
       globalstatus = true,
       component_separators = vim.g.icons.layout.List,
       section_separators = {
-        left = vim.g.icons.layout.SectionRight,
-        right = vim.g.icons.layout.SectionLeft,
+        left = "",
+        right = "",
       },
     },
     sections = {
       lualine_a = {
         {
           function() return vim.g.icons.widget.outline.Moon end,
-          separator = {
-            left = vim.g.icons.layout.SectionLeft,
-            right = vim.g.icons.layout.SectionRight,
-          },
         },
       },
       lualine_b = {
@@ -108,10 +104,6 @@ function spec.config()
       lualine_z = {
         {
           "location",
-          separator = {
-            left = vim.g.icons.layout.SectionLeft,
-            right = vim.g.icons.layout.SectionRight,
-          },
         },
       },
     },
