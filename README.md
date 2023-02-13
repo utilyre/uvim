@@ -15,10 +15,13 @@
 
 - 🔍 Install [`ripgrep`][ripgrep] through your favorite package manager.
 
+- 🐙 Double check whether you have [`git`][git] installed.
+
 [neovim]: https://github.com/neovim/neovim
 [kitty]: https://github.com/kovidgoyal/kitty
 [nerdfonts]: https://www.nerdfonts.com/
 [ripgrep]: https://github.com/BurntSushi/ripgrep
+[git]: https://git-scm.com
 
 ## 📦 Installation
 
