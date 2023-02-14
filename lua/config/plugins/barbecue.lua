@@ -14,11 +14,11 @@ function spec.config()
     create_autocmd = false,
     show_modified = true,
     custom_section = function(bufnr)
-      return (
-        vim.bo[bufnr].readonly
-          and "%#Error#" .. vim.g.icons.widget.inline.Lock
-        or ""
-      ) .. " "
+      return {
+        vim.bo[bufnr].readonly and { vim.g.icons.widget.inline.Lock, "Error" }
+          or { "" },
+        { " " },
+      }
     end,
     kinds = vim.g.icons.kind,
     symbols = {
