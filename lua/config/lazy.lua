@@ -19,7 +19,7 @@ lazy.setup("config.plugins", {
     colorscheme = { "tokyonight", "habamax" },
   },
   dev = {
-    path = vim.fs.normalize("$NVIM_DEV"),
+    path = os.getenv("NVIM_DEV") or vim.fs.normalize("$HOME/Code"),
   },
   change_detection = {
     enabled = false,
