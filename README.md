@@ -48,8 +48,8 @@
 - Run `:TSInstall all` to install all treesitter parsers available (useful for
   syntax highlighting).
 
-- See `:help lspconfig-all` to get an understanding of how you would setup a
-  language server protocol.
+- See [`:help lspconfig-all`][servers] to get an understanding of how you would
+  setup a language server protocol.
 
   **NOTE**: Store LSP configurations inside `user/servers.lua` relative to this
   repository's root.
@@ -60,4 +60,5 @@
   **NOTE**: Keep source configurations inside `user/sources.lua` of this
   repository.
 
+[servers]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
