@@ -68,5 +68,9 @@
   require("null-ls").register(require("null-ls").builtins.formatting.stylua)
   ```
 
+- Set `NVIM_DEV` environment variable to modify where [lazy.nvim][lazy.nvim]
+  should look for `dev = true` plugins.
+
 [servers]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
+[lazy.nvim]: https://github.com/folke/lazy.nvim
