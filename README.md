@@ -15,7 +15,7 @@
 
 - 🔍 Install [`ripgrep`][ripgrep] through your favorite package manager.
 
-- 🐙 Make sure you have [`git`][git] installed.
+- 🐙 Setup [`git`][git] if you haven't already.
 
 [neovim]: https://neovim.io
 [kitty]: https://sw.kovidgoyal.net/kitty
