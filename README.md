@@ -51,14 +51,22 @@
 - See [`:help lspconfig-all`][servers] to get an understanding of how you would
   setup a language server protocol.
 
-  **NOTE**: Store LSP configurations inside `user/servers.lua` relative to this
-  repository's root.
+  Filename: `user/servers.lua`
+  ```lua
+  -- $ rustup component add rust-analyzer
+  require("lspconfig").rust_analyzer.setup({
+    cmd = { "rustup", "run", "stable", "rust-analyzer" },
+  })
+  ```
 
 - See [null-ls builtins][builtins] to figure out how you are expected to
   configure a source.
 
-  **NOTE**: Keep source configurations inside `user/sources.lua` of this
-  repository.
+  Filename: `user/sources.lua`
+  ```lua
+  -- $ cargo install stylua
+  require("null-ls").register(require("null-ls").builtins.formatting.stylua)
+  ```
 
 [servers]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
