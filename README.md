@@ -1,8 +1,10 @@
-<h1 align="center">nvim</h1>
+<div align="center">
 
-<p align="center">
-  This is my "minimal" Neovim config that I put pride on.
-</p>
+# nvim
+
+This is my **"minimal"** _Neovim config_ that I put pride on.
+
+</div>
 
 ## ⚡ Requirements
 
