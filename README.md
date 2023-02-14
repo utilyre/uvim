@@ -52,6 +52,7 @@
   setup a language server protocol.
 
   Filename: `user/servers.lua`
+
   ```lua
   -- $ rustup component add rust-analyzer
   require("lspconfig").rust_analyzer.setup({
@@ -63,6 +64,7 @@
   configure a source.
 
   Filename: `user/sources.lua`
+
   ```lua
   -- $ cargo install stylua
   require("null-ls").register(require("null-ls").builtins.formatting.stylua)
