@@ -30,8 +30,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 0. (Optional) Take a backup of your existing Neovim config
 
    ```bash
-   mv ~/.config/nvim ~/.config/nvim.back
-   mv ~/.local/share/nvim ~/.local/share/nvim.back
+   mv ~/.config/nvim ~/.config/nvim.backup
+   mv ~/.local/share/nvim ~/.local/share/nvim.backup
    ```
 
 1. Clone this repository onto `~/.config/nvim`
