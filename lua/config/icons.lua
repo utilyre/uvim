@@ -11,6 +11,7 @@ vim.g.icons = {
       AngleRight = "",
       Archive = "",
       ArrowRight = "",
+      Beer = "",
       Bolt = "",
       CaretDown = "",
       CaretRight = "",
