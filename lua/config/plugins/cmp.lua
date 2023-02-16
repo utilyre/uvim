@@ -4,7 +4,6 @@ local spec = {
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-nvim-lsp",
     "nvim-lua/plenary.nvim",
-    "L3MON4D3/LuaSnip",
   },
 }
 

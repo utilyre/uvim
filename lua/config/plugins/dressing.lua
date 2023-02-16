@@ -1,8 +1,5 @@
 local spec = {
   "stevearc/dressing.nvim",
-  dependencies = {
-    "nvim-telescope/telescope.nvim",
-  },
 }
 
 function spec.config()

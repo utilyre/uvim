@@ -1,8 +1,6 @@
 local spec = {
   "nvim-lualine/lualine.nvim",
   dependencies = {
-    "folke/noice.nvim",
-    "jose-elias-alvarez/null-ls.nvim",
     "nvim-tree/nvim-web-devicons",
   },
 }
