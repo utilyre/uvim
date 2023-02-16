@@ -14,8 +14,8 @@ function spec.config()
 
   telescope.setup({
     defaults = vim.tbl_deep_extend("force", themes.get_dropdown(), {
-      prompt_prefix = vim.g.icons.widget.inline.Telescope .. " ",
-      selection_caret = vim.g.icons.widget.inline.CaretRight .. " ",
+      prompt_prefix = vim.g.icons.widget.inline.ChevronRight .. " ",
+      selection_caret = "  ",
       multi_icon = vim.g.icons.widget.inline.Check .. " ",
     }),
     pickers = {
