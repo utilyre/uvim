@@ -1,8 +1,5 @@
 vim.keymap.set("n", "<s-y>", "y$")
 
-vim.keymap.set("n", "<c-p>", "<cmd>cbefore<cr>")
-vim.keymap.set("n", "<c-n>", "<cmd>cafter<cr>")
-
 vim.keymap.set("n", "<leader>", "<nop>")
 vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
 vim.keymap.set("n", "<leader>q", "<cmd>quit<cr>")
