@@ -27,7 +27,9 @@ function spec.config()
 
   vim.diagnostic.config({
     virtual_text = {
+      spacing = 2,
       prefix = " " .. vim.g.icons.layout.List,
+      suffix = " ",
     },
     float = {
       source = true,
