@@ -4,7 +4,7 @@ vim.opt.undofile = true
 
 vim.opt.timeout = false
 vim.opt.timeoutlen = 50
-vim.opt.updatetime = 400
+vim.opt.updatetime = 500
 
 vim.opt.termguicolors = true
 vim.opt.confirm = true
