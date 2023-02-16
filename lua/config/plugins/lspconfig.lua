@@ -60,6 +60,25 @@ function spec.config()
         })
       end
 
+      if client.server_capabilities["documentHighlightProvider"] then
+        local group = vim.api.nvim_create_augroup(
+          "config.plugins.lsp.reference",
+          { clear = false }
+        )
+
+        vim.api.nvim_create_autocmd("CursorHold", {
+          group = group,
+          buffer = a.buf,
+          callback = function() vim.lsp.buf.document_highlight() end,
+        })
+
+        vim.api.nvim_create_autocmd({ "CursorMoved", "InsertEnter" }, {
+          group = group,
+          buffer = a.buf,
+          callback = function() vim.lsp.buf.clear_references() end,
+        })
+      end
+
       local function map(left, right, ...)
         local parameters = { ... }
         vim.keymap.set(

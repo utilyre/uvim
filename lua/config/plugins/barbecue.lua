@@ -29,7 +29,7 @@ function spec.config()
   })
 
   vim.api.nvim_create_autocmd({
-    "WinEnter",
+    "BufWinEnter",
     "CursorHold",
     "InsertLeave",
     "BufWritePost",
