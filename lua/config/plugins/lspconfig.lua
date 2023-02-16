@@ -41,7 +41,7 @@ function spec.config()
   vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
 
   vim.api.nvim_create_autocmd("LspAttach", {
-    group = vim.api.nvim_create_augroup("config.plugins.lsp.attachment", {}),
+    group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
     callback = function(a)
       local client = vim.lsp.get_client_by_id(a.data.client_id)
 
