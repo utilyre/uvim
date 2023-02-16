@@ -26,6 +26,9 @@ function spec.config()
   end
 
   vim.diagnostic.config({
+    virtual_text = {
+      prefix = " " .. vim.g.icons.layout.List,
+    },
     float = {
       source = true,
       border = "rounded",
