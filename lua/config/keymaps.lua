@@ -1,12 +1,13 @@
-vim.keymap.set("n", "<s-y>", "y$")
+local function map(mode, left, right) vim.keymap.set(mode, left, right) end
 
-vim.keymap.set("n", "<leader>", "<nop>")
-vim.keymap.set("n", "<leader>w", "<cmd>write<cr>")
-vim.keymap.set("n", "<leader>q", "<cmd>quit<cr>")
-vim.keymap.set("n", "<leader>c", "<cmd>bdelete<cr>")
-vim.keymap.set("n", "<leader>s", "<cmd>split<cr>")
-vim.keymap.set("n", "<leader>v", "<cmd>vsplit<cr>")
-vim.keymap.set("n", "<leader>u", "<cmd>nohlsearch<cr>")
+map("n", "<leader>", "<nop>")
+map("n", "<leader>w", "<cmd>write<cr>")
+map("n", "<leader>q", "<cmd>quit<cr>")
+map("n", "<leader>c", "<cmd>bdelete<cr>")
+map("n", "<leader>s", "<cmd>split<cr>")
+map("n", "<leader>v", "<cmd>vsplit<cr>")
+map("n", "<leader>u", "<cmd>nohlsearch<cr>")
 
-vim.keymap.set("i", "jk", "<esc>")
-vim.keymap.set("i", "kj", "<esc>")
+map("n", "<s-y>", "y$")
+map("i", "jk", "<esc>")
+map("i", "kj", "<esc>")
