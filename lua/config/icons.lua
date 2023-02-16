@@ -10,7 +10,6 @@ vim.g.icons = {
       AlignLeft = "",
       AngleRight = "",
       Archive = "",
-      ArrowRight = "",
       Beer = "",
       Bolt = "",
       CaretDown = "",
