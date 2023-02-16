@@ -9,14 +9,14 @@ function spec.config()
   tokyonight.setup({
     style = "night",
     on_highlights = function(highlights, colors)
-      highlights["TelescopePromptPrefix"] = { foreground = colors.blue }
-      highlights["TelescopeMultiIcon"] = { foreground = colors.green }
-      highlights["TelescopeMultiSelection"] = { bold = true }
-
       highlights["@text.note"] = { bold = true, background = colors.blue2 }
       highlights["@text.todo"] = { bold = true, background = colors.green1 }
       highlights["@text.warning"] = { bold = true, background = colors.yellow }
       highlights["@text.danger"] = { bold = true, background = colors.red1 }
+
+      highlights["TelescopePromptPrefix"] = { foreground = colors.blue }
+      highlights["TelescopeMultiIcon"] = { foreground = colors.green }
+      highlights["TelescopeMultiSelection"] = { bold = true }
     end,
   })
 
