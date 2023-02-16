@@ -14,6 +14,8 @@ function spec.config()
       highlights["@text.warning"] = { bold = true, background = colors.yellow }
       highlights["@text.danger"] = { bold = true, background = colors.red1 }
 
+      highlights["NoiceCmdlinePopup"] = { background = colors.bg_float }
+
       highlights["TelescopePromptPrefix"] = { foreground = colors.blue }
       highlights["TelescopeMultiIcon"] = { foreground = colors.green }
       highlights["TelescopeMultiSelection"] = { bold = true }
