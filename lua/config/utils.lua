@@ -56,14 +56,3 @@ function table.map(list, alter)
 
   return ret
 end
-
----Checks if a file exists.
----@param name string File path to be checked.
----@return boolean
-function vim.fs.exists(name)
-  local file, err = io.open(name, "r")
-  if err ~= nil then return false end
-
-  io.close(file)
-  return true
-end
