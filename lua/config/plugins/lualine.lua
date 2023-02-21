@@ -22,12 +22,7 @@ function spec.config()
     sections = {
       lualine_a = {
         {
-          function()
-            local v = vim.version()
-            if v.prerelease then return vim.g.icons.widget.outline.Moon end
-
-            return "v" .. v.major .. "." .. v.minor
-          end,
+          function() return vim.g.icons.widget.outline.Moon end,
         },
       },
       lualine_b = {
