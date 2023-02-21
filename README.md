@@ -42,10 +42,11 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
    git clone https://github.com/utilyre/nvim.git ~/.config/nvim
    ```
 
-2. Open up `nvim` and wait for [lazy.nvim][lazy.nvim] to do its job. Once it's
-   done re-open `nvim` to make sure everything is good to go.
+2. Spin up Neovim in headless mode to install all of the plugins
 
-[lazy.nvim]: https://github.com/folke/lazy.nvim
+  ```bash
+  nvim --headless +q
+  ```
 
 ## ☕ Tips
 
