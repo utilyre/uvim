@@ -44,9 +44,9 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 2. Spin up Neovim in headless mode to install all of the plugins
 
-  ```bash
-  nvim --headless +q
-  ```
+   ```bash
+   nvim --headless +q
+   ```
 
 ## ☕ Tips
 
