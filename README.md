@@ -27,10 +27,13 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 ## 📦 Installation
 
-0.  Take a backup of your existing Neovim folders _(optional)_
+0.  Take a backup of your (possibly) existing Neovim folders
 
     ```bash
+    # required
     mv ~/.config/nvim ~/.config/nvim-backup
+
+    # optional
     mv ~/.cache/nvim ~/.cache/nvim-backup
     mv ~/.local/share/nvim ~/.local/share/nvim-backup
     mv ~/.local/state/nvim ~/.local/state/nvim-backup
