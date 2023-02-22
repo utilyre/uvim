@@ -28,6 +28,7 @@ function spec.config()
       lualine_b = {
         {
           "branch",
+          icon = vim.g.icons.widget.inline.Fork,
         },
         {
           "diff",
@@ -93,9 +94,7 @@ function spec.config()
         {
           function()
             if not vim.bo.expandtab then return "" end
-            return vim.g.icons.widget.inline.Indent
-              .. " "
-              .. vim.bo.shiftwidth
+            return vim.g.icons.widget.inline.Indent .. " " .. vim.bo.shiftwidth
           end,
         },
       },
