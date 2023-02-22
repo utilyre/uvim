@@ -19,6 +19,8 @@ function spec.config()
       highlights["TelescopePromptPrefix"] = { foreground = colors.blue }
       highlights["TelescopeMultiIcon"] = { foreground = colors.green }
       highlights["TelescopeMultiSelection"] = { bold = true }
+
+      highlights["LuasnipSignChoiceNode"] = { foreground = colors.blue7 }
     end,
   })
 
