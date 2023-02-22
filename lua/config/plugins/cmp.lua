@@ -79,6 +79,20 @@ function spec.config()
           fallback()
         end
       end, { "i", "s" }),
+      ["<c-k>"] = cmp.mapping(function(fallback)
+        if luasnip.choice_active() then
+          luasnip.change_choice(-1)
+        else
+          fallback()
+        end
+      end, { "i", "s" }),
+      ["<c-j>"] = cmp.mapping(function(fallback)
+        if luasnip.choice_active() then
+          luasnip.change_choice(1)
+        else
+          fallback()
+        end
+      end, { "i", "s" }),
       ["<s-tab>"] = cmp.mapping(function(fallback)
         if luasnip.jumpable(-1) then
           luasnip.jump(-1)
