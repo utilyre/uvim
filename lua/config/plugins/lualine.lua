@@ -93,7 +93,7 @@ function spec.config()
         {
           function()
             if not vim.bo.expandtab then return "" end
-            return vim.g.icons.widget.inline.AlignLeft
+            return vim.g.icons.widget.inline.Indent
               .. " "
               .. vim.bo.shiftwidth
           end,

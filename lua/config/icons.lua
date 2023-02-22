@@ -7,7 +7,6 @@ vim.g.icons = {
   },
   widget = {
     inline = {
-      AlignLeft = "",
       AngleRight = "",
       Archive = "",
       Beer = "",
@@ -27,6 +26,7 @@ vim.g.icons = {
       FolderOpen = "",
       Gear = "",
       Hint = "",
+      Indent = "",
       Info = "",
       Link = "",
       Lock = "",
