@@ -17,6 +17,17 @@ function spec.config()
       prompt_prefix = vim.g.icons.widget.inline.ChevronRight .. " ",
       selection_caret = "  ",
       multi_icon = vim.g.icons.widget.inline.Check .. " ",
+      mappings = {
+        n = {
+          ["<space>"] = {
+            actions.select_default,
+            type = "action",
+            opts = {
+              nowait = true,
+            },
+          },
+        },
+      },
     }),
     pickers = {
       find_files = {
@@ -30,7 +41,10 @@ function spec.config()
         initial_mode = "normal",
         mappings = {
           n = {
-            dd = actions.delete_buffer,
+            ["dd"] = {
+              actions.delete_buffer,
+              type = "action",
+            },
           },
         },
       },
