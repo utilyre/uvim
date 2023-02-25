@@ -15,10 +15,8 @@ function spec.config()
     use_default_mappings = false,
     window = {
       mappings = {
-        ["<"] = "prev_source",
-        [">"] = "next_source",
-        ["l"] = "open",
-        ["h"] = "close_node",
+        ["<space>"] = "toggle_node",
+        ["<cr>"] = "open",
         ["q"] = "close_window",
         ["r"] = "refresh",
         ["d"] = "cut_to_clipboard",
@@ -45,11 +43,8 @@ function spec.config()
       },
     },
     filesystem = {
-      filtered_items = { visible = true },
-    },
-    buffers = {
-      mappings = {
-        ["x"] = "buffer_delete",
+      filtered_items = {
+        visible = true,
       },
     },
     default_component_configs = {
@@ -57,6 +52,12 @@ function spec.config()
         with_expanders = true,
         expander_collapsed = vim.g.icons.widget.inline.CaretRight,
         expander_expanded = vim.g.icons.widget.inline.CaretDown,
+      },
+      icon = {
+        folder_closed = vim.g.icons.widget.inline.Folder,
+        folder_open = vim.g.icons.widget.inline.FolderOpen,
+        folder_empty = vim.g.icons.widget.outline.Folder,
+        folder_empty_open = vim.g.icons.widget.outline.FolderOpen,
       },
       diagnostics = {
         symbols = {
