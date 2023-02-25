@@ -33,7 +33,6 @@ function spec.config()
         },
       },
     },
-    sources = { "filesystem", "buffers" },
     filesystem = {
       group_empty_dirs = true,
       filtered_items = {
