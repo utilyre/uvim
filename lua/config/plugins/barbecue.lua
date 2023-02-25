@@ -22,9 +22,7 @@ function spec.config()
     end,
     kinds = vim.g.icons.kind,
     symbols = {
-      ellipsis = vim.g.icons.layout.Truncation,
       separator = vim.g.icons.widget.inline.AngleRight,
-      modified = vim.g.icons.layout.Modified,
     },
   })
 

@@ -1,9 +1,7 @@
 vim.g.icons = {
   layout = {
     List = "•",
-    Modified = "●",
     Tab = "→",
-    Truncation = "…",
   },
   widget = {
     inline = {
