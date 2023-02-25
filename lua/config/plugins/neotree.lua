@@ -14,6 +14,7 @@ function spec.config()
   neotree.setup({
     use_default_mappings = false,
     window = {
+      position = "float",
       mappings = {
         ["<space>"] = "toggle_node",
         ["<cr>"] = "open",
@@ -32,19 +33,18 @@ function spec.config()
         },
       },
     },
-    source_selector = {
-      winbar = true,
-      content_layout = "center",
-      tab_labels = {
-        filesystem = "  Files ",
-        buffers = "  Buffers ",
-        git_status = "  Git ",
-        diagnostics = " 裂Diagnostics ",
-      },
-    },
+    sources = { "filesystem", "buffers" },
     filesystem = {
+      group_empty_dirs = true,
       filtered_items = {
         visible = true,
+      },
+    },
+    buffers = {
+      window = {
+        mappings = {
+          ["x"] = "buffer_delete",
+        },
       },
     },
     default_component_configs = {
@@ -88,7 +88,8 @@ function spec.config()
     vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
-  map("<tab>", command.execute, { position = "float", toggle = true })
+  map("<c-_>", command.execute, { toggle = true })
+  map("<tab>", command.execute, { toggle = true, source = "buffers" })
 end
 
 return spec
