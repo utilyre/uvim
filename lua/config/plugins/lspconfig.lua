@@ -53,20 +53,19 @@ function spec.config()
           "TextChanged",
           "InsertLeave",
         }, {
-          group = vim.api.nvim_create_augroup(
-            "config.plugins.lsp.codelens",
-            { clear = false }
-          ),
+          group = vim.api.nvim_create_augroup("config.plugins.lsp.codelens", {
+            clear = false,
+          }),
           buffer = a.buf,
           callback = function() vim.lsp.codelens.refresh() end,
         })
       end
 
       if client.server_capabilities["documentHighlightProvider"] then
-        local group = vim.api.nvim_create_augroup(
-          "config.plugins.lsp.reference",
-          { clear = false }
-        )
+        local group =
+          vim.api.nvim_create_augroup("config.plugins.lsp.reference", {
+            clear = false,
+          })
 
         vim.api.nvim_create_autocmd("CursorHold", {
           group = group,
