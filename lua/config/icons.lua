@@ -13,7 +13,6 @@ vim.g.icons = {
       Bolt = "",
       CaretDown = "",
       CaretRight = "",
-      Check = "",
       ChevronRight = "",
       Circle = "",
       Clipboard = "",

@@ -9,23 +9,18 @@ local spec = {
 function spec.config()
   local telescope = require("telescope")
   local themes = require("telescope.themes")
-  local actions = require("telescope.actions")
   local builtin = require("telescope.builtin")
 
   telescope.setup({
     defaults = vim.tbl_deep_extend("force", themes.get_dropdown(), {
       prompt_prefix = vim.g.icons.widget.inline.ChevronRight .. " ",
       selection_caret = "  ",
-      multi_icon = vim.g.icons.widget.inline.Check .. " ",
       mappings = {
         n = {
-          ["<space>"] = {
-            actions.select_default,
-            type = "action",
-            opts = {
-              nowait = true,
-            },
-          },
+          ["<tab>"] = "select_default",
+        },
+        i = {
+          ["<tab>"] = "select_default",
         },
       },
     }),
@@ -41,10 +36,7 @@ function spec.config()
         initial_mode = "normal",
         mappings = {
           n = {
-            ["dd"] = {
-              actions.delete_buffer,
-              type = "action",
-            },
+            ["dd"] = "delete_buffer",
           },
         },
       },
