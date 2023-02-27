@@ -43,7 +43,7 @@ lazy.setup("config.plugins", {
   ui = {
     border = "rounded",
     icons = {
-      lazy = vim.g.icons.widget.inline.Beer .. "  ",
+      lazy = vim.g.icons.widget.inline.Bed .. "  ",
       not_loaded = vim.g.icons.widget.outline.Circle,
       loaded = vim.g.icons.widget.inline.Circle,
       task = vim.g.icons.widget.inline.Clipboard,
