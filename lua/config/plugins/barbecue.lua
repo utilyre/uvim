@@ -13,13 +13,6 @@ function spec.config()
   barbecue.setup({
     create_autocmd = false,
     show_modified = true,
-    custom_section = function(bufnr)
-      return {
-        vim.bo[bufnr].readonly and { vim.g.icons.widget.inline.Lock, "Error" }
-          or { "" },
-        { " " },
-      }
-    end,
     kinds = vim.g.icons.kind,
     symbols = {
       separator = vim.g.icons.widget.inline.AngleRight,

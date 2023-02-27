@@ -22,7 +22,6 @@ vim.g.icons = {
       Hint = "",
       Indent = "",
       Info = "",
-      Lock = "",
       PaperClip = "",
       Play = "",
       Usd = "",
