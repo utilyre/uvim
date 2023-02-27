@@ -49,6 +49,17 @@ function spec.config()
         },
       },
     },
+    git_status = {
+      window = {
+        mappings = {
+          ["A"] = "git_add_all",
+          ["a"] = "git_add_file",
+          ["u"] = "git_unstage_file",
+          ["c"] = "git_commit",
+          ["p"] = "git_push",
+        },
+      },
+    },
     default_component_configs = {
       indent = {
         with_expanders = true,
@@ -90,8 +101,9 @@ function spec.config()
     vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
-  map("<c-_>", command.execute, { toggle = true })
-  map("<tab>", command.execute, { toggle = true, source = "buffers" })
+  map("<leader>tf", command.execute, { source = "filesystem" })
+  map("<leader>tb", command.execute, { source = "buffers" })
+  map("<leader>tg", command.execute, { source = "git_status" })
 end
 
 return spec
