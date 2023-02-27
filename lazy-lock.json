@@ -2,7 +2,6 @@
   "LuaSnip": { "branch": "master", "commit": "f7c845749aba6096f041a73a26ba64f3817bab99" },
   "barbecue.nvim": { "branch": "main", "commit": "23348f3979912fb36a1442fb0d07e8d2e739aea2" },
   "bufdelete.nvim": { "branch": "master", "commit": "8933abc09df6c381d47dc271b1ee5d266541448e" },
-  "buffer_manager.nvim": { "branch": "main", "commit": "c6e6b4ed793d816119d564d040cc77d07bf87285" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },
   "cmp_luasnip": { "branch": "master", "commit": "18095520391186d634a0045dacaa346291096566" },
   "dressing.nvim": { "branch": "master", "commit": "5f44f829481640be0f96759c965ae22a3bcaf7ce" },
