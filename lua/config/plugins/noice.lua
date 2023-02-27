@@ -23,15 +23,15 @@ function spec.config()
       format = {
         cmdline = {
           title = " Palette ",
-          icon = ":",
+          icon = vim.g.icons.widget.inline.ChevronRight,
         },
         search_down = {
           title = " Find ",
-          icon = "/",
+          icon = vim.g.icons.widget.inline.Search,
         },
         search_up = {
           title = " Find ",
-          icon = "?",
+          icon = vim.g.icons.widget.inline.Search,
         },
       },
     },
