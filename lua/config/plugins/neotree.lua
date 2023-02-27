@@ -22,8 +22,8 @@ function spec.config()
         ["<space>"] = "open",
         ["q"] = "close_window",
         ["r"] = "refresh",
-        ["<"] = "prev_source",
-        [">"] = "next_source",
+        ["h"] = "prev_source",
+        ["l"] = "next_source",
       },
     },
     source_selector = {
