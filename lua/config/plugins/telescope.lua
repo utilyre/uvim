@@ -13,6 +13,7 @@ function spec.config()
 
   telescope.setup({
     defaults = vim.tbl_deep_extend("force", themes.get_dropdown(), {
+      path_display = { "truncate" },
       prompt_prefix = vim.g.icons.widget.inline.ChevronRight .. " ",
       selection_caret = "  ",
       mappings = {
