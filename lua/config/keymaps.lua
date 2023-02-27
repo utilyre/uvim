@@ -8,5 +8,7 @@ map("n", "<leader>v", "<cmd>vsplit<cr>")
 map("n", "<leader>u", "<cmd>nohlsearch<cr>")
 
 map("n", "<s-y>", "y$")
+map("v", "<s-tab>", "<gv")
+map("v", "<tab>", ">gv")
 map("i", "jk", "<esc>")
 map("i", "kj", "<esc>")
