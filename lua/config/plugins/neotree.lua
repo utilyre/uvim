@@ -23,6 +23,15 @@ function spec.config()
         [">"] = "next_source",
       },
     },
+    source_selector = {
+      winbar = true,
+      content_layout = "center",
+      tab_labels = {
+        filesystem = vim.g.icons.widget.inline.Tree .. " Tree",
+        buffers = vim.g.icons.widget.inline.Tasks .. " Buffers",
+        git_status = vim.g.icons.widget.inline.Pin .. " VCS",
+      },
+    },
     filesystem = {
       filtered_items = {
         visible = true,
@@ -72,6 +81,7 @@ function spec.config()
         folder_open = vim.g.icons.widget.inline.FolderOpen,
         folder_empty = vim.g.icons.widget.outline.Folder,
         folder_empty_open = vim.g.icons.widget.outline.FolderOpen,
+        default = vim.g.icons.widget.inline.File,
       },
       diagnostics = {
         symbols = {
