@@ -16,27 +16,30 @@ function spec.config()
     window = {
       position = "float",
       mappings = {
-        ["<space>"] = "toggle_node",
-        ["<cr>"] = "open",
+        ["<space>"] = "open",
         ["q"] = "close_window",
         ["r"] = "refresh",
-        ["d"] = "cut_to_clipboard",
-        ["y"] = "copy_to_clipboard",
-        ["p"] = "paste_from_clipboard",
-        ["c"] = "rename",
-        ["x"] = "delete",
-        ["a"] = {
-          "add",
-          config = {
-            show_path = "relative",
-          },
-        },
       },
     },
     filesystem = {
       group_empty_dirs = true,
       filtered_items = {
         visible = true,
+      },
+      window = {
+        mappings = {
+          ["d"] = "cut_to_clipboard",
+          ["y"] = "copy_to_clipboard",
+          ["p"] = "paste_from_clipboard",
+          ["c"] = "rename",
+          ["x"] = "delete",
+          ["a"] = {
+            "add",
+            config = {
+              show_path = "relative",
+            },
+          },
+        },
       },
     },
     buffers = {
