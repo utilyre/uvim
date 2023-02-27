@@ -28,7 +28,7 @@ function spec.config()
       content_layout = "center",
       tab_labels = {
         filesystem = vim.g.icons.widget.inline.Tree .. " Tree",
-        buffers = vim.g.icons.widget.inline.Tasks .. " Buffers",
+        buffers = vim.g.icons.widget.inline.Tasks .. " Open",
         git_status = vim.g.icons.widget.inline.Pin .. " VCS",
       },
     },
