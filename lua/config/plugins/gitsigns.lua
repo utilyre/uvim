@@ -19,11 +19,11 @@ function spec.config()
     },
     on_attach = function(bufnr)
       local function map(left, right, ...)
-        local parameters = { ... }
+        local params = { ... }
         vim.keymap.set(
           "n",
           left,
-          function() right(unpack(parameters)) end,
+          function() right(unpack(params)) end,
           { buffer = bufnr }
         )
       end

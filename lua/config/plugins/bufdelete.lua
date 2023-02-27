@@ -6,8 +6,8 @@ function spec.config()
   local bufdelete = require("bufdelete")
 
   local function map(left, right, ...)
-    local parameters = { ... }
-    vim.keymap.set("n", left, function() right(unpack(parameters)) end)
+    local params = { ... }
+    vim.keymap.set("n", left, function() right(unpack(params)) end)
   end
 
   map("<leader>c", bufdelete.bufdelete)

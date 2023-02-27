@@ -87,10 +87,10 @@ function spec.config()
   })
 
   local function map(left, right, ...)
-    local parameters = { ... }
+    local params = { ... }
     vim.keymap.set({ "n", "i", "s" }, left, function()
       if cmp.visible() then return left end
-      if not right(unpack(parameters)) then return left end
+      if not right(unpack(params)) then return left end
       return "<ignore>"
     end, { expr = true })
   end

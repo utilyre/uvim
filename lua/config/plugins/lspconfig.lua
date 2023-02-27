@@ -82,11 +82,11 @@ function spec.config()
       end
 
       local function map(left, right, ...)
-        local parameters = { ... }
+        local params = { ... }
         vim.keymap.set(
           "n",
           left,
-          function() right(unpack(parameters)) end,
+          function() right(unpack(params)) end,
           { buffer = args.buf }
         )
       end
@@ -105,8 +105,8 @@ function spec.config()
   })
 
   local function map(left, right, ...)
-    local parameters = { ... }
-    vim.keymap.set("n", left, function() right(unpack(parameters)) end)
+    local params = { ... }
+    vim.keymap.set("n", left, function() right(unpack(params)) end)
   end
 
   map("[e", vim.diagnostic.goto_prev, { float = false })

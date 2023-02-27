@@ -35,8 +35,8 @@ function spec.config()
   })
 
   local function map(left, right, ...)
-    local parameters = { ... }
-    vim.keymap.set("n", left, function() right(unpack(parameters)) end)
+    local params = { ... }
+    vim.keymap.set("n", left, function() right(unpack(params)) end)
   end
 
   map("<leader>fr", builtin.resume)
