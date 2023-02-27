@@ -23,7 +23,6 @@ function spec.config()
       },
     },
     filesystem = {
-      group_empty_dirs = true,
       filtered_items = {
         visible = true,
       },
