@@ -17,6 +17,7 @@ function spec.config()
       selection_caret = "  ",
       mappings = {
         n = {
+          ["q"] = "close",
           ["<tab>"] = "select_default",
         },
         i = {
@@ -31,6 +32,15 @@ function spec.config()
       live_grep = {
         disable_coordinates = true,
       },
+      buffers = {
+        sort_lastused = true,
+        initial_mode = "normal",
+        mappings = {
+          n = {
+            ["dd"] = "delete_buffer",
+          },
+        },
+      },
     },
   })
 
@@ -43,6 +53,7 @@ function spec.config()
   map("<leader>ft", builtin.filetypes)
   map("<leader>ff", builtin.find_files)
   map("<leader>fw", builtin.live_grep)
+  map("<leader><space>", builtin.buffers)
 end
 
 return spec
