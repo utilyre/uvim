@@ -45,8 +45,8 @@ function spec.config()
 
   vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
-    callback = function(a)
-      local client = vim.lsp.get_client_by_id(a.data.client_id)
+    callback = function(args)
+      local client = vim.lsp.get_client_by_id(args.data.client_id)
 
       if client.server_capabilities["codeLensProvider"] then
         vim.api.nvim_create_autocmd({
@@ -57,7 +57,7 @@ function spec.config()
           group = vim.api.nvim_create_augroup("config.plugins.lsp.codelens", {
             clear = false,
           }),
-          buffer = a.buf,
+          buffer = args.buf,
           callback = function() vim.lsp.codelens.refresh() end,
         })
       end
@@ -70,13 +70,13 @@ function spec.config()
 
         vim.api.nvim_create_autocmd("CursorHold", {
           group = group,
-          buffer = a.buf,
+          buffer = args.buf,
           callback = function() vim.lsp.buf.document_highlight() end,
         })
 
         vim.api.nvim_create_autocmd({ "CursorMoved", "InsertEnter" }, {
           group = group,
-          buffer = a.buf,
+          buffer = args.buf,
           callback = function() vim.lsp.buf.clear_references() end,
         })
       end
@@ -87,7 +87,7 @@ function spec.config()
           "n",
           left,
           function() right(unpack(parameters)) end,
-          { buffer = a.buf }
+          { buffer = args.buf }
         )
       end
 

@@ -1,9 +1,9 @@
 vim.api.nvim_create_autocmd({ "InsertLeave", "InsertEnter" }, {
   group = vim.api.nvim_create_augroup("config.autocmds.timeout", {}),
-  callback = function(a)
-    if a.event == "InsertLeave" then
+  callback = function(args)
+    if args.event == "InsertLeave" then
       vim.opt.timeout = false
-    elseif a.event == "InsertEnter" then
+    elseif args.event == "InsertEnter" then
       vim.opt.timeout = true
     end
   end,

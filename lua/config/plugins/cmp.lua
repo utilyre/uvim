@@ -13,7 +13,7 @@ function spec.config()
 
   cmp.setup({
     snippet = {
-      expand = function(options) luasnip.lsp_expand(options.body) end,
+      expand = function(opts) luasnip.lsp_expand(opts.body) end,
     },
     experimental = {
       ghost_text = true,
