@@ -40,6 +40,7 @@ function spec.config()
         },
         {
           "diagnostics",
+          update_in_insert = true,
           symbols = {
             hint = vim.g.icons.widget.inline.Hint .. " ",
             info = vim.g.icons.widget.inline.Info .. " ",
