@@ -14,7 +14,6 @@ function spec.config()
   neotree.setup({
     use_default_mappings = false,
     window = {
-      position = "float",
       mappings = {
         ["<space>"] = "open",
         ["q"] = "close_window",
