@@ -12,6 +12,7 @@ function spec.config()
   local command = require("neo-tree.command")
 
   neotree.setup({
+    close_if_last_window = true,
     use_default_mappings = false,
     window = {
       mappings = {
