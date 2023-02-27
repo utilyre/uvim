@@ -13,6 +13,9 @@ function spec.config()
 
   neotree.setup({
     close_if_last_window = true,
+    use_libuv_file_watcher = true,
+    enable_modified_markers = false,
+    popup_border_style = "rounded",
     use_default_mappings = false,
     window = {
       mappings = {
