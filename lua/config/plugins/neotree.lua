@@ -19,6 +19,8 @@ function spec.config()
         ["<space>"] = "open",
         ["q"] = "close_window",
         ["r"] = "refresh",
+        ["<"] = "prev_source",
+        [">"] = "next_source",
       },
     },
     filesystem = {
@@ -101,9 +103,7 @@ function spec.config()
     vim.keymap.set("n", left, function() right(unpack(parameters)) end)
   end
 
-  map("<leader>tf", command.execute, { source = "filesystem" })
-  map("<leader>tb", command.execute, { source = "buffers" })
-  map("<leader>tg", command.execute, { source = "git_status" })
+  map("<tab>", command.execute, { toggle = true, reveal = true })
 end
 
 return spec
