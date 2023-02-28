@@ -15,13 +15,15 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 -   🚀 Use a [Nerd Font][nerdfonts] within your terminal.
 
--   🔍 Install [`ripgrep`][ripgrep] through your favorite package manager.
+-   🔍 Install [`fd`][fd] and [`ripgrep`][ripgrep] through your favorite package
+    manager.
 
 -   🐙 Setup [`git`][git] if you haven't already.
 
 [neovim]: https://neovim.io
 [kitty]: https://sw.kovidgoyal.net/kitty
 [nerdfonts]: https://www.nerdfonts.com
+[fd]: https://github.com/sharkdp/fd
 [ripgrep]: https://crates.io/crates/ripgrep
 [git]: https://git-scm.com
 
