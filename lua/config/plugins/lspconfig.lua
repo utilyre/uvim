@@ -23,7 +23,6 @@ function spec.config()
   end
 
   vim.diagnostic.config({
-    update_in_insert = true,
     virtual_text = {
       spacing = 2,
       prefix = " " .. vim.g.icons.layout.List,
