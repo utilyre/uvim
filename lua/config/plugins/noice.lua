@@ -25,11 +25,11 @@ function spec.config()
           title = " Palette ",
           icon = vim.g.icons.widget.inline.ChevronRight,
         },
-        search_down = {
+        search_up = {
           title = " Find ",
           icon = vim.g.icons.widget.inline.Search,
         },
-        search_up = {
+        search_down = {
           title = " Find ",
           icon = vim.g.icons.widget.inline.Search,
         },
