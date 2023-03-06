@@ -10,9 +10,6 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 -   🍺 Get yourself a fresh install of [`neovim`][neovim].
 
--   📠 Have a feature-rich terminal installed ([`kitty`][kitty] is highly
-    recommended).
-
 -   🚀 Use a [Nerd Font][nerdfonts] within your terminal.
 
 -   🔍 Install [`fd`][fd] and [`ripgrep`][ripgrep] through your favorite package
@@ -21,7 +18,6 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 -   🐙 Setup [`git`][git] if you haven't already.
 
 [neovim]: https://neovim.io
-[kitty]: https://sw.kovidgoyal.net/kitty
 [nerdfonts]: https://www.nerdfonts.com
 [fd]: https://github.com/sharkdp/fd
 [ripgrep]: https://crates.io/crates/ripgrep
