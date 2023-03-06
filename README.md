@@ -56,9 +56,9 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 -   See [`:help lspconfig-all`][servers] to get an understanding of how you would
     setup a language server protocol.
 
-    Filename: `user/servers.lua`
-
     ```lua
+    -- user/servers.lua
+
     -- $ rustup component add rust-analyzer
     require("lspconfig").rust_analyzer.setup({
       cmd = { "rustup", "run", "stable", "rust-analyzer" },
@@ -68,9 +68,9 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 -   See [null-ls builtins][builtins] to figure out how you are expected to
     configure a source.
 
-    Filename: `user/sources.lua`
-
     ```lua
+    -- user/sources.lua
+
     -- $ cargo install stylua
     require("null-ls").register(require("null-ls").builtins.formatting.stylua)
     ```
