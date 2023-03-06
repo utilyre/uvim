@@ -16,7 +16,7 @@ local lazy = require("lazy")
 lazy.setup("config.plugins", {
   concurrency = 4,
   install = {
-    colorscheme = { "tokyonight", "habamax" },
+    colorscheme = { "onedark", "habamax" },
   },
   dev = {
     path = os.getenv("NVIM_DEV") or vim.fs.normalize("$HOME/Code"),
