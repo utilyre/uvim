@@ -1,5 +1,6 @@
 local spec = {
   "navarasu/onedark.nvim",
+  dev = true,
   priority = 100,
 }
 
