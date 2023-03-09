@@ -8,6 +8,7 @@ function spec.config()
 
   luasnip.config.setup({
     region_check_events = "CursorMoved",
+    update_events = "TextChangedI",
   })
 
   loader.lazy_load()
