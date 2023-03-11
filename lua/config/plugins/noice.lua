@@ -19,6 +19,17 @@ function spec.config()
       view_history = "popup",
       view_search = false,
     },
+    routes = {
+      {
+        filter = {
+          event = "msg_show",
+          kind = "",
+        },
+        opts = {
+          skip = true,
+        },
+      },
+    },
     cmdline = {
       format = {
         cmdline = {
