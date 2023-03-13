@@ -1,4 +1,5 @@
 ---Uniquifies list.
+---
 ---@generic T
 ---@param list T[] List to be uniquified.
 ---@return T[]
@@ -13,6 +14,7 @@ function table.unique(list)
 end
 
 ---Merges lists in each other.
+---
 ---@generic T
 ---@param ... T[] Lists to be merged.
 ---@return T[]
@@ -28,6 +30,7 @@ function table.merge(...)
 end
 
 ---Determines if an element should be yielded.
+---
 ---@generic T
 ---@param list T[] List to be iterated over.
 ---@param predicate fun(value: T, index: number): T Callback to determine if element `value` should be yielded.
@@ -43,6 +46,7 @@ function table.filter(list, predicate)
 end
 
 ---Replaces each element.
+---
 ---@generic T
 ---@param list T[] List to be iterated over.
 ---@param alter fun(value: T, index: number): T Callback to replace element `value`.
