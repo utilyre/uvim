@@ -12,6 +12,10 @@ function spec.config()
   })
 
   loader.lazy_load()
+
+  local map = vim.mapper({ "i", "s" })
+  map("<c-p>", luasnip.jump, -1)
+  map("<c-n>", luasnip.jump, 1)
 end
 
 return spec

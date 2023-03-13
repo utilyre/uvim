@@ -45,55 +45,28 @@ function spec.config()
     },
     mapping = {
       ["<c-space>"] = cmp.mapping(function()
-        if cmp.visible() then
-          cmp.abort()
-        else
-          cmp.complete()
-        end
+        if not cmp.visible() then cmp.complete() end
+        cmp.abort()
       end, { "i", "s" }),
       ["<c-y>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-          cmp.scroll_docs(-1)
-        else
-          fallback()
-        end
+        if not cmp.visible() then fallback() end
+        cmp.scroll_docs(-1)
       end, { "i", "s" }),
       ["<c-e>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-          cmp.scroll_docs(1)
-        else
-          fallback()
-        end
-      end, { "i", "s" }),
-      ["<c-p>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-          cmp.select_prev_item()
-        else
-          fallback()
-        end
-      end, { "i", "s" }),
-      ["<c-n>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-          cmp.select_next_item()
-        else
-          fallback()
-        end
+        if not cmp.visible() then fallback() end
+        cmp.scroll_docs(1)
       end, { "i", "s" }),
       ["<s-tab>"] = cmp.mapping(function(fallback)
-        if luasnip.jumpable(-1) then
-          luasnip.jump(-1)
-        else
-          fallback()
-        end
+        if not cmp.visible() then fallback() end
+        cmp.select_prev_item()
       end, { "i", "s" }),
       ["<tab>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-          cmp.confirm({ select = true })
-        elseif luasnip.jumpable(1) then
-          luasnip.jump(1)
-        else
-          fallback()
-        end
+        if not cmp.visible() then fallback() end
+        cmp.select_next_item()
+      end, { "i", "s" }),
+      ["<cr>"] = cmp.mapping(function(fallback)
+        if not cmp.visible() then fallback() end
+        cmp.confirm()
       end, { "i", "s" }),
     },
   })
