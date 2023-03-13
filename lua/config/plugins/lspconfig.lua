@@ -80,7 +80,7 @@ function spec.config()
         })
       end
 
-      local map = vim.map("n", { buffer = args.buf })
+      local map = vim.mapper("n", { buffer = args.buf })
       map("K", vim.lsp.buf.hover)
       map("<leader>is", vim.lsp.buf.document_symbol)
       map("<leader>iD", vim.lsp.buf.declaration, { reuse_win = true })
@@ -94,7 +94,7 @@ function spec.config()
     end,
   })
 
-  local map = vim.map("n")
+  local map = vim.mapper("n")
   map("[e", vim.diagnostic.goto_prev, { float = false })
   map("]e", vim.diagnostic.goto_next, { float = false })
   map("<leader>e", vim.diagnostic.open_float)

@@ -5,7 +5,7 @@ local spec = {
 function spec.config()
   local bufdelete = require("bufdelete")
 
-  local map = vim.map("n")
+  local map = vim.mapper("n")
   map("<leader>c", bufdelete.bufdelete)
 end
 

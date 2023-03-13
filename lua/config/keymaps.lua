@@ -1,6 +1,6 @@
-local nmap = vim.map("n")
-local xmap = vim.map("x")
-local imap = vim.map("i")
+local nmap = vim.mapper("n")
+local xmap = vim.mapper("x")
+local imap = vim.mapper("i")
 
 nmap("<leader>", "<nop>")
 nmap("<leader>w", "<cmd>write<cr>")

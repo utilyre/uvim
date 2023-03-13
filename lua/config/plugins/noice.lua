@@ -85,7 +85,7 @@ function spec.config()
     },
   })
 
-  local map = vim.map({ "n", "i", "s" }, { expr = true })
+  local map = vim.mapper({ "n", "i", "s" }, { expr = true })
   map("<c-y>", function()
     if not lsp.scroll(-1) then return "<c-y>" end
     return "<ignore>"

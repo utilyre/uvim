@@ -18,7 +18,7 @@ function spec.config()
       border = "rounded",
     },
     on_attach = function(buf)
-      local map = vim.map("n", { buffer = buf })
+      local map = vim.mapper("n", { buffer = buf })
       map("[h", gitsigns.prev_hunk, { navigation_message = false })
       map("]h", gitsigns.next_hunk, { navigation_message = false })
       map("<leader>hd", gitsigns.diffthis)
