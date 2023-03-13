@@ -17,12 +17,9 @@ function spec.config()
       prompt_prefix = vim.g.icons.widget.inline.ChevronRight .. " ",
       selection_caret = "  ",
       mappings = {
-        n = {
-          ["q"] = "close",
-          ["<tab>"] = "select_default",
-        },
         i = {
-          ["<tab>"] = "select_default",
+          ["<s-tab>"] = "move_selection_previous",
+          ["<tab>"] = "move_selection_next",
         },
       },
     }),
