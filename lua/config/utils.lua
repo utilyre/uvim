@@ -65,9 +65,10 @@ end
 ---
 ---@param mode string|string[]
 ---@param opts? table
----@return fun(lhs: string, rhs: string|(fun(): string|nil), ...: any)
+---@return fun(lhs: string, rhs: string|(fun(): string|nil), ...: any) map
+---@return fun(lhs: string) unmap
 function vim.map(mode, opts)
-  return function(lhs, rhs, ...)
+  local function map(lhs, rhs, ...)
     local params = { ... }
     vim.keymap.set(
       mode,
@@ -77,4 +78,8 @@ function vim.map(mode, opts)
       opts
     )
   end
+
+  local function unmap(lhs) vim.keymap.del(mode, lhs, opts) end
+
+  return map, unmap
 end
