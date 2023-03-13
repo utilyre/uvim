@@ -5,11 +5,7 @@ local spec = {
 function spec.config()
   local bufdelete = require("bufdelete")
 
-  local function map(left, right, ...)
-    local params = { ... }
-    vim.keymap.set("n", left, function() right(unpack(params)) end)
-  end
-
+  local map = vim.map("n")
   map("<leader>c", bufdelete.bufdelete)
 end
 

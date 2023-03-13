@@ -60,3 +60,21 @@ function table.map(list, alter)
 
   return ret
 end
+
+---Generates a helper function to define keymaps.
+---
+---@param mode string|string[]
+---@param opts? table
+---@return fun(lhs: string, rhs: string|(fun(): string|nil), ...: any)
+function vim.map(mode, opts)
+  return function(lhs, rhs, ...)
+    local params = { ... }
+    vim.keymap.set(
+      mode,
+      lhs,
+      type(rhs) == "function" and function() return rhs(unpack(params)) end
+        or rhs,
+      opts
+    )
+  end
+end

@@ -80,16 +80,7 @@ function spec.config()
         })
       end
 
-      local function map(left, right, ...)
-        local params = { ... }
-        vim.keymap.set(
-          "n",
-          left,
-          function() right(unpack(params)) end,
-          { buffer = args.buf }
-        )
-      end
-
+      local map = vim.map("n", { buffer = args.buf })
       map("K", vim.lsp.buf.hover)
       map("<leader>is", vim.lsp.buf.document_symbol)
       map("<leader>iD", vim.lsp.buf.declaration, { reuse_win = true })
@@ -103,11 +94,7 @@ function spec.config()
     end,
   })
 
-  local function map(left, right, ...)
-    local params = { ... }
-    vim.keymap.set("n", left, function() right(unpack(params)) end)
-  end
-
+  local map = vim.map("n")
   map("[e", vim.diagnostic.goto_prev, { float = false })
   map("]e", vim.diagnostic.goto_next, { float = false })
   map("<leader>e", vim.diagnostic.open_float)

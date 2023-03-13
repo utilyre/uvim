@@ -85,16 +85,7 @@ function spec.config()
     },
   })
 
-  local function map(left, right, ...)
-    local params = { ... }
-    vim.keymap.set(
-      { "n", "i", "s" },
-      left,
-      function() return right(unpack(params)) end,
-      { expr = true }
-    )
-  end
-
+  local map = vim.map({ "n", "i", "s" }, { expr = true })
   map("<c-y>", function()
     if not lsp.scroll(-1) then return "<c-y>" end
     return "<ignore>"

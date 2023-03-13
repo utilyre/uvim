@@ -42,11 +42,7 @@ function spec.config()
     },
   })
 
-  local function map(left, right, ...)
-    local params = { ... }
-    vim.keymap.set("n", left, function() right(unpack(params)) end)
-  end
-
+  local map = vim.map("n")
   map("<leader>fr", builtin.resume)
   map("<leader>ft", builtin.filetypes)
   map("<leader>ff", builtin.find_files)
