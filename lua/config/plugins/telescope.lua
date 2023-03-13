@@ -32,10 +32,9 @@ function spec.config()
       },
       buffers = {
         sort_lastused = true,
-        initial_mode = "normal",
         mappings = {
-          n = {
-            ["dd"] = "delete_buffer",
+          i = {
+            ["<c-d>"] = "delete_buffer",
           },
         },
       },
