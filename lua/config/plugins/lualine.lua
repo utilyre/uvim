@@ -62,25 +62,19 @@ function spec.config()
       lualine_y = {
         {
           function()
-            local names = table.unique(
-              table.merge(
-                table.map(
-                  table.filter(
-                    vim.lsp.get_active_clients({
-                      bufnr = vim.api.nvim_get_current_buf(),
-                    }),
-                    function(client) return client.name ~= "null-ls" end
-                  ),
-                  function(client) return client.name end
-                ),
-                table.map(
-                  sources.get_available(vim.bo.filetype),
-                  function(source) return source.name end
-                )
+            local clients = vim.tbl_map(
+              function(client) return client.name end,
+              vim.tbl_filter(
+                function(client) return client.name ~= "null-ls" end,
+                vim.lsp.get_active_clients()
               )
             )
+            local null = vim.tbl_map(
+              function(source) return source.name end,
+              sources.get_available(vim.bo.filetype)
+            )
 
-            return table.concat(names, " ")
+            return table.concat({ unpack(clients), unpack(null) }, " ")
           end,
         },
         {
