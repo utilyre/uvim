@@ -5,7 +5,9 @@ local spec = {
 function spec.config()
   local sentiment = require("sentiment")
 
-  sentiment.setup()
+  sentiment.setup({
+    delay = 40,
+  })
 end
 
 return spec
