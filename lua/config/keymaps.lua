@@ -1,3 +1,26 @@
+---Generate a helper function to define keymaps.
+---
+---@param mode string|string[]
+---@param opts? table
+---@return fun(lhs: string, rhs: string|(fun(): string|nil), ...: any) map
+---@return fun(lhs: string) unmap
+function vim.mapper(mode, opts)
+  local function map(lhs, rhs, ...)
+    local params = { ... }
+    vim.keymap.set(
+      mode,
+      lhs,
+      type(rhs) == "function" and function() return rhs(unpack(params)) end
+        or rhs,
+      opts
+    )
+  end
+
+  local function unmap(lhs) vim.keymap.del(mode, lhs, opts) end
+
+  return map, unmap
+end
+
 local nmap = vim.mapper("n")
 local xmap = vim.mapper("x")
 local imap = vim.mapper("i")

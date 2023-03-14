@@ -1,4 +1,3 @@
-require("config.utils")
 require("config.icons")
 require("config.opts")
 require("config.keymaps")
