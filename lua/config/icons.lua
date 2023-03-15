@@ -8,6 +8,7 @@ vim.g.icons = {
       AngleRight = "",
       Archive = "",
       Bed = "",
+      Bell = "",
       Bolt = "",
       ChevronRight = "",
       Circle = "",
@@ -18,8 +19,6 @@ vim.g.icons = {
       Flask = "",
       Fork = "",
       Gear = "",
-      Hint = "",
-      Indent = "",
       Info = "",
       PaperClip = "",
       Play = "",
@@ -31,7 +30,6 @@ vim.g.icons = {
     outline = {
       Circle = "",
       Keyboard = "",
-      Moon = "",
     },
   },
   kind = {
