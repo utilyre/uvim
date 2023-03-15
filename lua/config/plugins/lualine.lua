@@ -7,6 +7,7 @@ local spec = {
 
 function spec.config()
   local lualine = require("lualine")
+  local sources = require("null-ls.sources")
 
   lualine.setup({
     options = {
@@ -58,7 +59,14 @@ function spec.config()
           },
         },
         function() return vim.bo.filetype:gsub("^%l", string.upper) end,
-        -- TODO: lsp servers here
+        function()
+          local names = vim.tbl_map(
+            function(source) return source.name:gsub("^%l", string.upper) end,
+            sources.get_available(vim.bo.filetype)
+          )
+
+          return table.concat(names, " ")
+        end,
         {
           function() return vim.g.icons.widget.inline.Bell end,
           on_click = function() vim.cmd.messages() end,
