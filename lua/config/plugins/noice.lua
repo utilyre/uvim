@@ -14,10 +14,6 @@ function spec.config()
       command_palette = true,
       lsp_doc_border = true,
     },
-    messages = {
-      view_history = "popup",
-      view_search = false,
-    },
     commands = {
       history = {
         view = "popup",
