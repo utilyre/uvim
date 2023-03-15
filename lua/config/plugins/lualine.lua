@@ -8,6 +8,7 @@ local spec = {
 function spec.config()
   local lualine = require("lualine")
   local sources = require("null-ls.sources")
+  local noice = require("noice")
 
   lualine.setup({
     options = {
@@ -69,7 +70,7 @@ function spec.config()
         end,
         {
           function() return vim.g.icons.widget.inline.Bell end,
-          on_click = function() vim.cmd.messages() end,
+          on_click = function() noice.cmd("history") end,
         },
       },
     },

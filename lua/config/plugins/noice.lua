@@ -18,6 +18,11 @@ function spec.config()
       view_history = "popup",
       view_search = false,
     },
+    commands = {
+      history = {
+        view = "popup",
+      },
+    },
     cmdline = {
       format = {
         cmdline = {
