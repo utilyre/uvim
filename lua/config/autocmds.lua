@@ -1,11 +1,8 @@
-vim.api.nvim_create_autocmd({ "InsertLeave", "InsertEnter" }, {
+vim.api.nvim_create_autocmd("ModeChanged", {
   group = vim.api.nvim_create_augroup("config.autocmds.timeout", {}),
   callback = function(args)
-    if args.event == "InsertLeave" then
-      vim.opt.timeout = false
-    elseif args.event == "InsertEnter" then
-      vim.opt.timeout = true
-    end
+    local mode = vim.split(args.match, ":", { plain = true })[2]
+    vim.opt.timeout = mode == "i"
   end,
 })
 
