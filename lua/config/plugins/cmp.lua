@@ -65,8 +65,8 @@ function spec:config()
         cmp.select_next_item()
       end, { "i", "s" }),
       ["<cr>"] = cmp.mapping(function(fallback)
-        if cmp.get_active_entry() == nil then fallback() end
-        cmp.confirm()
+        if cmp.get_selected_entry() == nil then fallback() end
+        cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace })
       end, { "i", "s" }),
     },
   })
