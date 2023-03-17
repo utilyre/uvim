@@ -65,7 +65,7 @@ function spec:config()
         cmp.select_next_item()
       end, { "i", "s" }),
       ["<cr>"] = cmp.mapping(function(fallback)
-        if not cmp.visible() then fallback() end
+        if cmp.get_active_entry() == nil then fallback() end
         cmp.confirm()
       end, { "i", "s" }),
     },
