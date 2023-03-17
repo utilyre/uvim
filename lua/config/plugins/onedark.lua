@@ -3,7 +3,7 @@ local spec = {
   priority = 100,
 }
 
-function spec.config()
+function spec:config()
   local onedark = require("onedark")
 
   onedark.setup({

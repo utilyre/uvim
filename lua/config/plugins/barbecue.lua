@@ -6,7 +6,7 @@ local spec = {
   },
 }
 
-function spec.config()
+function spec:config()
   local barbecue = require("barbecue")
   local ui = require("barbecue.ui")
 

@@ -2,7 +2,7 @@ local spec = {
   "nvim-treesitter/nvim-treesitter",
 }
 
-function spec.config()
+function spec:config()
   local treesitter = require("nvim-treesitter.configs")
 
   treesitter.setup({

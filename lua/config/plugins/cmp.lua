@@ -7,7 +7,7 @@ local spec = {
   },
 }
 
-function spec.config()
+function spec:config()
   local cmp = require("cmp")
   local luasnip = require("luasnip")
 

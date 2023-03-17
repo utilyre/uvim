@@ -2,7 +2,7 @@ local spec = {
   "stevearc/dressing.nvim",
 }
 
-function spec.config()
+function spec:config()
   local dressing = require("dressing")
   local themes = require("telescope.themes")
 

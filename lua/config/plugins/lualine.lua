@@ -5,7 +5,7 @@ local spec = {
   },
 }
 
-function spec.config()
+function spec:config()
   local lualine = require("lualine")
   local sources = require("null-ls.sources")
 

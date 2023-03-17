@@ -2,7 +2,7 @@ local spec = {
   "utilyre/sentiment.nvim",
 }
 
-function spec.config()
+function spec:config()
   local sentiment = require("sentiment")
 
   sentiment.setup({

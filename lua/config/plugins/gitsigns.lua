@@ -2,7 +2,7 @@ local spec = {
   "lewis6991/gitsigns.nvim",
 }
 
-function spec.config()
+function spec:config()
   local gitsigns = require("gitsigns")
 
   gitsigns.setup({

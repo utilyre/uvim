@@ -2,7 +2,7 @@ local spec = {
   "famiu/bufdelete.nvim",
 }
 
-function spec.config()
+function spec:config()
   local bufdelete = require("bufdelete")
 
   local map = vim.mapper("n")

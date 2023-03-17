@@ -2,7 +2,7 @@ local spec = {
   "L3MON4D3/LuaSnip",
 }
 
-function spec.config()
+function spec:config()
   local luasnip = require("luasnip")
   local loader = require("luasnip.loaders.from_lua")
 

@@ -2,7 +2,7 @@ local spec = {
   "neovim/nvim-lspconfig",
 }
 
-function spec.config()
+function spec:config()
   local lspconfig = require("lspconfig")
   local cmp = require("cmp_nvim_lsp")
 

@@ -5,7 +5,7 @@ local spec = {
   },
 }
 
-function spec.config()
+function spec:config()
   local null = require("null-ls")
 
   local sources_path = vim.fn.stdpath("config") .. "/user/sources.lua"

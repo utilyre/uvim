@@ -2,7 +2,7 @@ local spec = {
   "akinsho/git-conflict.nvim",
 }
 
-function spec.config()
+function spec:config()
   local gitconflict = require("git-conflict")
 
   gitconflict.setup({
