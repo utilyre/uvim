@@ -17,7 +17,6 @@ vim.opt.shortmess = {
   s = true,
   t = true,
   T = true,
-  W = true,
   I = true,
   F = true,
 }
