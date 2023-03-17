@@ -64,6 +64,16 @@ function spec:config()
             function(source) return source.name:gsub("^%l", string.upper) end,
             sources.get_available(vim.bo.filetype)
           )
+          vim.list_extend(
+            names,
+            vim.tbl_map(
+              function(client) return client.name:gsub("_", "-") end,
+              vim.tbl_filter(
+                function(client) return client.name ~= "null-ls" end,
+                vim.lsp.get_active_clients({ bufnr = 0 })
+              )
+            )
+          )
 
           return table.concat(names, " ")
         end,
