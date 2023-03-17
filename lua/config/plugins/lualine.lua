@@ -34,7 +34,7 @@ function spec.config()
           always_visible = true,
           sections = { "error", "warn" },
           symbols = {
-            warn = vim.g.icons.widget.inline.Warn .. " ",
+            warn = vim.g.icons.widget.inline.Warning .. " ",
             error = vim.g.icons.widget.inline.Error .. " ",
           },
         },
