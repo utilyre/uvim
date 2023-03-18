@@ -23,11 +23,5 @@ nmap("<leader>c", "<cmd>bdelete<cr>")
 nmap("<leader>u", "<cmd>nohlsearch<cr>")
 
 nmap("<s-y>", "y$")
-nmap("<s-tab>", "<<")
-nmap("<tab>", ">>")
-
-xmap("<s-tab>", "<gv")
-xmap("<tab>", ">gv")
-
 imap("jk", "<esc>")
 imap("kj", "<esc>")
