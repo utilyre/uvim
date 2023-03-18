@@ -1,6 +1,6 @@
 local spec = {
   "utilyre/onedark.nvim",
-  priority = 100,
+  priority = 10000,
 }
 
 function spec:config()
