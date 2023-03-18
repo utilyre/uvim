@@ -1,5 +1,5 @@
 function vim.mapper(mode, opts)
-  local function map(lhs, rhs, ...)
+  return function(lhs, rhs, ...)
     local params = { ... }
     vim.keymap.set(
       mode,
@@ -9,10 +9,6 @@ function vim.mapper(mode, opts)
       opts
     )
   end
-
-  local function unmap(lhs) vim.keymap.del(mode, lhs, opts) end
-
-  return map, unmap
 end
 
 local nmap = vim.mapper("n")
