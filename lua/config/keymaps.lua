@@ -19,6 +19,7 @@ nmap("<leader>w", "<cmd>write<cr>")
 nmap("<leader>q", "<cmd>quit<cr>")
 nmap("<leader>s", "<cmd>split<cr>")
 nmap("<leader>v", "<cmd>vsplit<cr>")
+nmap("<leader>c", "<cmd>bdelete<cr>")
 nmap("<leader>u", "<cmd>nohlsearch<cr>")
 
 nmap("<s-y>", "y$")
