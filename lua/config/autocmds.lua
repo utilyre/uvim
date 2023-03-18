@@ -1,3 +1,13 @@
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = vim.api.nvim_create_augroup("config.autocmds.mkdir", {}),
+  callback = function(args)
+    local path = vim.fs.dirname(args.file)
+    if vim.loop.fs_access(path, "R") then return end
+
+    vim.fn.mkdir(path, "p")
+  end,
+})
+
 vim.api.nvim_create_autocmd("ModeChanged", {
   group = vim.api.nvim_create_augroup("config.autocmds.timeout", {}),
   callback = function(args)
