@@ -69,7 +69,7 @@ lazy.setup("config.plugins", {
   },
 })
 
-local map = vim.mapper("n")
+local map = vim.keymap.gen("n")
 map("<leader>ph", lazy.home)
 map("<leader>pi", lazy.install)
 map("<leader>pu", lazy.update)

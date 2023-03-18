@@ -41,7 +41,7 @@ function spec:config()
     },
   })
 
-  local map = vim.mapper("n")
+  local map = vim.keymap.gen("n")
   map("<leader>fr", builtin.resume)
   map("<leader>ft", builtin.filetypes)
   map("<leader>ff", builtin.find_files)

@@ -1,4 +1,4 @@
-function vim.mapper(mode, opts)
+function vim.keymap.gen(mode, opts)
   return function(lhs, rhs, ...)
     if type(rhs) == "function" then
       local callback = rhs
@@ -10,9 +10,9 @@ function vim.mapper(mode, opts)
   end
 end
 
-local nmap = vim.mapper("n")
-local xmap = vim.mapper("x")
-local imap = vim.mapper("i")
+local nmap = vim.keymap.gen("n")
+local xmap = vim.keymap.gen("x")
+local imap = vim.keymap.gen("i")
 
 nmap("<leader>", "<nop>")
 nmap("<leader>w", "<cmd>write<cr>")
