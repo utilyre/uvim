@@ -1,13 +1,12 @@
 function vim.mapper(mode, opts)
   return function(lhs, rhs, ...)
-    local params = { ... }
-    vim.keymap.set(
-      mode,
-      lhs,
-      type(rhs) == "function" and function() return rhs(unpack(params)) end
-        or rhs,
-      opts
-    )
+    if type(rhs) == "function" then
+      local callback = rhs
+      local params = { ... }
+      rhs = function() return callback(unpack(params)) end
+    end
+
+    vim.keymap.set(mode, lhs, rhs, opts)
   end
 end
 
