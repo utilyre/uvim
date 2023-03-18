@@ -57,10 +57,11 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     setup a language server protocol.
 
     ```lua
-    -- user/servers.lua
+    -- settings/servers.lua
+    local lspconfig = require("lspconfig")
 
     -- $ rustup component add rust-analyzer
-    require("lspconfig").rust_analyzer.setup({
+    lspconfig.rust_analyzer.setup({
       cmd = { "rustup", "run", "stable", "rust-analyzer" },
     })
     ```
@@ -69,10 +70,11 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     configure a source.
 
     ```lua
-    -- user/sources.lua
+    -- settings/sources.lua
+    local null = require("null-ls")
 
     -- $ cargo install stylua
-    require("null-ls").register(require("null-ls").builtins.formatting.stylua)
+    null.register(null.builtins.formatting.stylua)
     ```
 
 -   Set `NVIM_DEV` environment variable to modify where [lazy.nvim][lazy.nvim]
