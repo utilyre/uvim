@@ -13,8 +13,8 @@ function spec:config()
   loader.lazy_load()
 
   local map = vim.keymap.gen({ "i", "s" })
-  map("<c-p>", luasnip.jump, -1)
-  map("<c-n>", luasnip.jump, 1)
+  map("<c-k>", luasnip.jump, -1)
+  map("<c-j>", luasnip.jump, 1)
 end
 
 return spec
