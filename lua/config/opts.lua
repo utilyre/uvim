@@ -48,6 +48,7 @@ vim.opt.shiftwidth = 2
 vim.opt.textwidth = 80
 
 vim.opt.spell = true
+vim.opt.spelllang:append({ "programming" })
 vim.opt.spelloptions:append({ "camel" })
 
 vim.g.mapleader = " "
