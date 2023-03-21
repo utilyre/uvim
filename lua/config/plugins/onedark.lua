@@ -1,5 +1,5 @@
 local spec = {
-  "utilyre/onedark.nvim",
+  "navarasu/onedark.nvim",
   priority = 10000,
 }
 
