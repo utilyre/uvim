@@ -45,7 +45,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 ## ☕ Tips
 
--   Run `:TSInstall all` to install every treesitter parsers available.
+-   Run `:TSInstall all` to install every [treesitter][treesitter] parsers
+    available.
 
 -   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
     you would setup a language server protocol.
@@ -79,6 +80,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 [fd]: https://crates.io/crates/fd-find
 [ripgrep]: https://crates.io/crates/ripgrep
 [git]: https://git-scm.com
+[treesitter]: https://tree-sitter.github.io/tree-sitter
 [lspconfig-all]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 [lazy.nvim]: https://github.com/folke/lazy.nvim
