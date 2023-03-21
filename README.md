@@ -45,7 +45,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 ## ☕ Tips
 
--   Run `:TSInstall all` to install every [treesitter][treesitter] parsers
+-   Run `:TSInstall all` to install every [treesitter][treesitter] parser
     available.
 
 -   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
