@@ -1,5 +1,6 @@
 local spec = {
   "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdateSync",
 }
 
 function spec:config()
