@@ -17,12 +17,6 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 -   🐙 Setup [`git`][git] if you haven't already.
 
-[neovim]: https://neovim.io
-[nerdfonts]: https://www.nerdfonts.com
-[fd]: https://github.com/sharkdp/fd
-[ripgrep]: https://crates.io/crates/ripgrep
-[git]: https://git-scm.com
-
 ## 📦 Installation
 
 0.  Take a backup of your (possibly) existing Neovim folders
@@ -53,8 +47,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 -   Run `:TSInstall all` to install every treesitter parsers available.
 
--   See [`:help lspconfig-all`][servers] to get an understanding of how you would
-    setup a language server protocol.
+-   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
+    you would setup a language server protocol.
 
     ```lua
     -- settings/servers.lua
@@ -66,8 +60,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     })
     ```
 
--   See [null-ls builtins][builtins] to figure out how you are expected to
-    configure a source.
+-   See [builtins][builtins] to figure out how you are expected to configure a
+    source.
 
     ```lua
     -- settings/sources.lua
@@ -80,6 +74,11 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 -   Set `NVIM_DEV` environment variable to modify where [lazy.nvim][lazy.nvim]
     should look for `dev = true` plugins.
 
-[servers]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+[neovim]: https://neovim.io
+[nerdfonts]: https://www.nerdfonts.com
+[fd]: https://crates.io/crates/fd-find
+[ripgrep]: https://crates.io/crates/ripgrep
+[git]: https://git-scm.com
+[lspconfig-all]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 [lazy.nvim]: https://github.com/folke/lazy.nvim
