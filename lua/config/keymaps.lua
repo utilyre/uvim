@@ -11,7 +11,6 @@ function vim.keymap.gen(mode, opts)
 end
 
 local nmap = vim.keymap.gen("n")
-local xmap = vim.keymap.gen("x")
 local imap = vim.keymap.gen("i")
 
 nmap("<leader>", "<nop>")
