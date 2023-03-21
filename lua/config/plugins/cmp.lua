@@ -1,5 +1,6 @@
 local spec = {
   "hrsh7th/nvim-cmp",
+  event = { "InsertEnter" },
   dependencies = {
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-nvim-lsp",

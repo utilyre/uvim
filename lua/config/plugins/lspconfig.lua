@@ -1,5 +1,6 @@
 local spec = {
   "neovim/nvim-lspconfig",
+  event = { "BufReadPre", "BufNewFile" },
 }
 
 function spec:config()

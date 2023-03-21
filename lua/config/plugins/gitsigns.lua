@@ -1,5 +1,6 @@
 local spec = {
   "lewis6991/gitsigns.nvim",
+  event = { "BufReadPre", "BufNewFile" },
 }
 
 function spec:config()

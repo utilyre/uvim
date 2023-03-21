@@ -1,5 +1,12 @@
 local spec = {
   "nvim-telescope/telescope.nvim",
+  keys = {
+    "<leader>fr",
+    "<leader>ft",
+    "<leader>ff",
+    "<leader>fw",
+    "<leader><space>",
+  },
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",

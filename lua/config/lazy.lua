@@ -15,6 +15,9 @@ local lazy = require("lazy")
 
 lazy.setup("config.plugins", {
   concurrency = 4,
+  defaults = {
+    lazy = true,
+  },
   install = {
     colorscheme = { "onedark", "habamax" },
   },
