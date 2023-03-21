@@ -7,7 +7,8 @@ function spec:config()
   local lspconfig = require("lspconfig")
   local cmp = require("cmp_nvim_lsp")
 
-  local servers_path = vim.fn.stdpath("config") .. "/settings/servers.lua"
+  local servers_path =
+    vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/servers.lua")
   if vim.loop.fs_access(servers_path, "R") then
     lspconfig.util.on_setup = lspconfig.util.add_hook_after(
       lspconfig.util.on_setup,
