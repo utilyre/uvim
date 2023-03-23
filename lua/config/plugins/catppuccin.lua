@@ -10,6 +10,12 @@ function spec:config()
 
   catppuccin.setup({
     flavour = "mocha",
+    integrations = {
+      barbecue = {
+        bold_basename = false,
+        dim_context = true,
+      },
+    },
   })
 
   catppuccin.load()
