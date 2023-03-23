@@ -5,7 +5,10 @@ local spec = {
 
 function spec:config()
   local lspconfig = require("lspconfig")
+  local windows = require("lspconfig.ui.windows")
   local cmp = require("cmp_nvim_lsp")
+
+  windows.default_options.border = "rounded"
 
   local servers_path =
     vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/servers.lua")
