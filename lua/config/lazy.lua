@@ -19,7 +19,7 @@ lazy.setup("config.plugins", {
     lazy = true,
   },
   install = {
-    colorscheme = { "onedark", "habamax" },
+    colorscheme = { "catppuccin", "habamax" },
   },
   dev = {
     path = os.getenv("NVIM_DEV") or vim.fs.normalize("$HOME/Code"),
