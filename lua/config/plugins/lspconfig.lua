@@ -3,6 +3,33 @@ local spec = {
   event = { "BufReadPre", "BufNewFile" },
 }
 
+function spec:init()
+  vim.diagnostic.config({
+    virtual_text = {
+      spacing = 2,
+      prefix = " " .. vim.g.icons.layout.List,
+      suffix = " ",
+    },
+    float = {
+      source = true,
+      border = "rounded",
+      header = "",
+      prefix = " " .. vim.g.icons.layout.List .. " ",
+      suffix = " ",
+    },
+  })
+
+  vim.fn.sign_define("DiagnosticSignHint", { numhl = "DiagnosticSignHint" })
+  vim.fn.sign_define("DiagnosticSignInfo", { numhl = "DiagnosticSignInfo" })
+  vim.fn.sign_define("DiagnosticSignWarn", { numhl = "DiagnosticSignWarn" })
+  vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
+
+  local map = vim.keymap.gen("n")
+  map("[e", vim.diagnostic.goto_prev, { float = false })
+  map("]e", vim.diagnostic.goto_next, { float = false })
+  map("<leader>e", vim.diagnostic.open_float)
+end
+
 function spec:config()
   local lspconfig = require("lspconfig")
   local windows = require("lspconfig.ui.windows")
@@ -31,26 +58,6 @@ function spec:config()
     vim.lsp.with(vim.lsp.handlers.hover, {
       border = "rounded",
     })
-
-  vim.diagnostic.config({
-    virtual_text = {
-      spacing = 2,
-      prefix = " " .. vim.g.icons.layout.List,
-      suffix = " ",
-    },
-    float = {
-      source = true,
-      border = "rounded",
-      header = "",
-      prefix = " " .. vim.g.icons.layout.List .. " ",
-      suffix = " ",
-    },
-  })
-
-  vim.fn.sign_define("DiagnosticSignHint", { numhl = "DiagnosticSignHint" })
-  vim.fn.sign_define("DiagnosticSignInfo", { numhl = "DiagnosticSignInfo" })
-  vim.fn.sign_define("DiagnosticSignWarn", { numhl = "DiagnosticSignWarn" })
-  vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
 
   vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
@@ -103,11 +110,6 @@ function spec:config()
       map("<leader>ic", vim.lsp.buf.rename)
     end,
   })
-
-  local map = vim.keymap.gen("n")
-  map("[e", vim.diagnostic.goto_prev, { float = false })
-  map("]e", vim.diagnostic.goto_next, { float = false })
-  map("<leader>e", vim.diagnostic.open_float)
 end
 
 return spec
