@@ -1,6 +1,6 @@
 local spec = {
   "utilyre/sentiment.nvim",
-  event = { "BufWinEnter" },
+  event = { "VeryLazy" },
 }
 
 function spec:config()
