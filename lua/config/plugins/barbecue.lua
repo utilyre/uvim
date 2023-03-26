@@ -1,6 +1,6 @@
 local spec = {
   "utilyre/barbecue.nvim",
-  event = { "BufWinEnter" },
+  event = { "BufReadPre" },
   dependencies = {
     "SmiteshP/nvim-navic",
     "nvim-tree/nvim-web-devicons",
