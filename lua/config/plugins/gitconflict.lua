@@ -1,6 +1,6 @@
 local spec = {
   "akinsho/git-conflict.nvim",
-  event = { "BufReadPre", "BufNewFile" },
+  event = { "BufReadPre" },
 }
 
 function spec:config()
