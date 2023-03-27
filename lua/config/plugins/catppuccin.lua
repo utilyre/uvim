@@ -12,6 +12,7 @@ function spec:config()
     flavour = "mocha",
     integrations = {
       barbecue = {
+        bold_basename = false,
         dim_context = true,
       },
     },
