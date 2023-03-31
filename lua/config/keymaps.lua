@@ -11,7 +11,7 @@ function vim.keymap.gen(mode, opts)
 end
 
 local nmap = vim.keymap.gen("n")
-local imap = vim.keymap.gen("i")
+local ismap = vim.keymap.gen({ "i", "s" })
 
 nmap("<leader>", "<nop>")
 nmap("<leader>w", "<cmd>write<cr>")
@@ -22,5 +22,5 @@ nmap("<leader>c", "<cmd>bdelete<cr>")
 nmap("<leader>u", "<cmd>nohlsearch<cr>")
 
 nmap("<s-y>", "y$")
-imap("jk", "<esc>")
-imap("kj", "<esc>")
+ismap("jk", "<esc>")
+ismap("kj", "<esc>")
