@@ -19,6 +19,7 @@ local spec = {
 function spec:config()
   local cmp = require("cmp")
   local luasnip = require("luasnip")
+  local completion = require("nvim-autopairs.completion.cmp")
 
   cmp.setup({
     snippet = {
@@ -91,6 +92,8 @@ function spec:config()
       end, { "i", "s" }),
     },
   })
+
+  cmp.event:on("confirm_done", completion.on_confirm_done())
 end
 
 return spec
