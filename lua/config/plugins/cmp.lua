@@ -53,6 +53,14 @@ function spec:config()
       },
       {
         name = "buffer",
+        option = {
+          get_bufnrs = function()
+            return vim.tbl_map(
+              function(win) return vim.api.nvim_win_get_buf(win) end,
+              vim.api.nvim_list_wins()
+            )
+          end,
+        },
       },
     },
     mapping = {
