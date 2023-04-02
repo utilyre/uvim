@@ -7,6 +7,13 @@ local spec = {
     "hrsh7th/cmp-buffer",
     "nvim-lua/plenary.nvim",
   },
+  opts = {
+    sources = {
+      luasnip = "Snippet",
+      nvim_lsp = "Language",
+      buffer = "Document",
+    },
+  },
 }
 
 function spec:config()
@@ -32,14 +39,8 @@ function spec:config()
     formatting = {
       fields = { "abbr", "kind", "menu" },
       format = function(entry, item)
-        local sources = {
-          luasnip = "Snippet",
-          nvim_lsp = "Language",
-          buffer = "Document",
-        }
-
         item.kind = vim.g.icons.kind[item.kind] .. " " .. item.kind
-        item.menu = "(" .. sources[entry.source.name] .. ")"
+        item.menu = "(" .. self.opts.sources[entry.source.name] .. ")"
         return item
       end,
     },
