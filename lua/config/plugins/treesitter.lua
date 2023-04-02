@@ -3,6 +3,9 @@ local spec = {
   build = ":TSUpdateSync",
   cmd = { "TSUpdateSync" },
   event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    "windwp/nvim-ts-autotag",
+  },
 }
 
 function spec:config()
@@ -13,6 +16,9 @@ function spec:config()
       enable = true,
     },
     indent = {
+      enable = true,
+    },
+    autotag = {
       enable = true,
     },
   })
