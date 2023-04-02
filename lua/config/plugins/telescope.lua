@@ -1,5 +1,6 @@
 local spec = {
   "nvim-telescope/telescope.nvim",
+  cmd = { "Telescope" },
   keys = {
     "<leader>fr",
     "<leader>ft",
