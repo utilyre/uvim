@@ -99,8 +99,6 @@ function spec:config()
 
       local map = vim.keymap.gen("n", { buffer = args.buf })
       map("K", vim.lsp.buf.hover)
-      map("<leader>is", vim.lsp.buf.document_symbol)
-      map("<leader>iD", vim.lsp.buf.declaration, { reuse_win = true })
       map("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
       map("<leader>it", vim.lsp.buf.type_definition, { reuse_win = true })
       map("<leader>ii", vim.lsp.buf.implementation)
