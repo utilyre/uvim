@@ -1,9 +1,6 @@
 local spec = {
   "windwp/nvim-autopairs",
   event = { "InsertEnter" },
-  dependencies = {
-    "nvim-treesitter/nvim-treesitter",
-  },
 }
 
 function spec:config()
