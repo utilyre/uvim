@@ -11,7 +11,7 @@ local spec = {
     sources = {
       luasnip = "LS",
       nvim_lsp = "LSP",
-      buffer = "CTX",
+      buffer = "DOC",
     },
   },
 }
