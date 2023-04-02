@@ -19,7 +19,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("TermOpen", {
   group = vim.api.nvim_create_augroup("config.autocmds.terminal", {}),
   callback = function()
-    vim.opt_local.signcolumn = "no"
     vim.opt_local.number = false
     vim.opt_local.relativenumber = false
     vim.opt_local.spell = false
