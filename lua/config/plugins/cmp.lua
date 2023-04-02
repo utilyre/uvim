@@ -29,9 +29,15 @@ function spec:config()
       },
     },
     formatting = {
-      fields = { "kind", "abbr" },
-      format = function(_, item)
-        item.kind = vim.g.icons.kind[item.kind]
+      fields = { "abbr", "kind", "menu" },
+      format = function(entry, item)
+        local sources = {
+          luasnip = "Snippet",
+          nvim_lsp = "LSP",
+        }
+
+        item.kind = vim.g.icons.kind[item.kind] .. " " .. item.kind
+        item.menu = "(" .. sources[entry.source.name] .. ")"
         return item
       end,
     },
