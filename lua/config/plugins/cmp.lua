@@ -9,9 +9,9 @@ local spec = {
   },
   opts = {
     sources = {
-      luasnip = "Snippet",
-      nvim_lsp = "Language",
-      buffer = "Document",
+      luasnip = "LS",
+      nvim_lsp = "LSP",
+      buffer = "CTX",
     },
   },
 }
