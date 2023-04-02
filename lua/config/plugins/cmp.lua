@@ -4,6 +4,7 @@ local spec = {
   dependencies = {
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
     "nvim-lua/plenary.nvim",
   },
 }
@@ -33,7 +34,8 @@ function spec:config()
       format = function(entry, item)
         local sources = {
           luasnip = "Snippet",
-          nvim_lsp = "LSP",
+          nvim_lsp = "Language",
+          buffer = "Document",
         }
 
         item.kind = vim.g.icons.kind[item.kind] .. " " .. item.kind
@@ -48,6 +50,9 @@ function spec:config()
       },
       {
         name = "nvim_lsp",
+      },
+      {
+        name = "buffer",
       },
     },
     mapping = {
