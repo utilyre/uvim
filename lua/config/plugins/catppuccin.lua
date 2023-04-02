@@ -13,7 +13,6 @@ function spec:config()
     custom_highlights = function(colors)
       return {
         ["CmpItemMenu"] = {
-          italic = true,
           fg = colors.overlay0,
         },
       }
