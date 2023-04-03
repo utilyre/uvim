@@ -14,8 +14,6 @@ local nmap = vim.keymap.gen("n")
 local ismap = vim.keymap.gen({ "i", "s" })
 
 nmap("<leader>", "<nop>")
-nmap("<leader>s", "<cmd>split<cr>")
-nmap("<leader>v", "<cmd>vsplit<cr>")
 nmap("<leader>c", "<cmd>bdelete<cr>")
 nmap("<leader>u", "<cmd>nohlsearch<cr>")
 
