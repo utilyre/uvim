@@ -32,6 +32,7 @@ lazy.setup("config.plugins", {
         "man",
         "matchit",
         "matchparen",
+        "netrwPlugin",
         "rplugin",
         "tarPlugin",
         "tohtml",

@@ -52,6 +52,3 @@ vim.opt.spelllang:append({ "programming" })
 vim.opt.spelloptions:append({ "camel" })
 
 vim.g.mapleader = " "
-
-vim.g.netrw_banner = 0
-vim.g.netrw_list_hide = "\\./,\\.\\./"
