@@ -1,6 +1,5 @@
 local spec = {
   "lewis6991/gitsigns.nvim",
-  cmd = { "Gitsigns" },
   event = { "BufReadPre", "BufNewFile" },
 }
 
