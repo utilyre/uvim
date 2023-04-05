@@ -26,6 +26,7 @@ function spec:config()
       selection_caret = "  ",
       mappings = {
         i = {
+          ["<esc>"] = "close",
           ["<s-tab>"] = "move_selection_previous",
           ["<tab>"] = "move_selection_next",
         },

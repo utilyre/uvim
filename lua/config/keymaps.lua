@@ -13,10 +13,7 @@ end
 local nmap = vim.keymap.gen("n")
 local ismap = vim.keymap.gen({ "i", "s" })
 
-nmap("<leader>", "<nop>")
-nmap("<leader>c", "<cmd>bdelete<cr>")
-nmap("<leader>u", "<cmd>nohlsearch<cr>")
-
+nmap("<esc>u", "<cmd>nohlsearch<cr>")
 nmap("<s-y>", "y$")
 ismap("jk", "<esc>")
 ismap("kj", "<esc>")
