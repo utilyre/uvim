@@ -20,6 +20,6 @@
   "nvim-unception": { "branch": "main", "commit": "e8f068dc94112cca368ab7363583b24678fdf510" },
   "nvim-web-devicons": { "branch": "master", "commit": "0568104bf8d0c3ab16395433fcc5c1638efc25d4" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
-  "sentiment.nvim": { "branch": "main", "commit": "242466eda57ecda416a5af0b8355d4f6ff16728e" },
+  "sentiment.nvim": { "branch": "main", "commit": "311cf06ba23a65eedcbfbcdfbfce1a9a7e239451" },
   "telescope.nvim": { "branch": "master", "commit": "942fe5faef47b21241e970551eba407bc10d9547" }
 }
