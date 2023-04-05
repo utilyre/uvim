@@ -8,9 +8,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "InsertLeave", "InsertEnter" }, {
+vim.api.nvim_create_autocmd("ModeChanged", {
   group = vim.api.nvim_create_augroup("config.autocmds.timeout", {}),
-  callback = function(args) vim.opt.timeout = args.event == "InsertEnter" end,
+  callback = function(args)
+    local mode = vim.split(args.match, ":", { plain = true })[2]
+    vim.opt.timeout = mode == "i"
+  end,
 })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
