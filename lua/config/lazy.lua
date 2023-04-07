@@ -1,3 +1,5 @@
+local Binder = require("config.binder")
+
 local lazy_path = vim.fs.normalize(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 if not vim.loop.fs_access(lazy_path, "R") then
   vim.fn.system({
@@ -69,14 +71,14 @@ lazy.setup("config.plugins", {
   },
 })
 
-local map = vim.keymap.gen("n")
-map("<leader>ph", lazy.home)
-map("<leader>pi", lazy.install)
-map("<leader>pu", lazy.update)
-map("<leader>ps", lazy.sync)
-map("<leader>px", lazy.clean)
-map("<leader>pc", lazy.check)
-map("<leader>pl", lazy.log)
-map("<leader>pr", lazy.restore)
-map("<leader>pp", lazy.profile)
-map("<leader>pd", lazy.debug)
+local binder = Binder.new("n")
+binder:clone():desc("Package Home"):bind("<leader>ph", lazy.home)
+binder:clone():desc("Package Install"):bind("<leader>pi", lazy.install)
+binder:clone():desc("Package Update"):bind("<leader>pu", lazy.update)
+binder:clone():desc("Package Sync"):bind("<leader>ps", lazy.sync)
+binder:clone():desc("Package Clean"):bind("<leader>px", lazy.clean)
+binder:clone():desc("Package Check"):bind("<leader>pc", lazy.check)
+binder:clone():desc("Package Log"):bind("<leader>pl", lazy.log)
+binder:clone():desc("Package Restore"):bind("<leader>pr", lazy.restore)
+binder:clone():desc("Package Profile"):bind("<leader>pp", lazy.profile)
+binder:clone():desc("Package Debug"):bind("<leader>pd", lazy.debug)

@@ -1,3 +1,5 @@
+local Binder = require("config.binder")
+
 local spec = {
   "L3MON4D3/LuaSnip",
 }
@@ -12,9 +14,9 @@ function spec:config()
 
   loader.lazy_load()
 
-  local map = vim.keymap.gen({ "i", "s" })
-  map("<c-k>", luasnip.jump, -1)
-  map("<c-j>", luasnip.jump, 1)
+  local binder = Binder.new({ "i", "s" })
+  binder:clone():desc("Previous Region"):bind("<c-k>", luasnip.jump, -1)
+  binder:clone():desc("Next Region"):bind("<c-j>", luasnip.jump, 1)
 end
 
 return spec

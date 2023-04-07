@@ -1,3 +1,5 @@
+local Binder = require("config.binder")
+
 local spec = {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
@@ -24,10 +26,16 @@ function spec:init()
   vim.fn.sign_define("DiagnosticSignWarn", { numhl = "DiagnosticSignWarn" })
   vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
 
-  local map = vim.keymap.gen("n")
-  map("[e", vim.diagnostic.goto_prev, { float = false })
-  map("]e", vim.diagnostic.goto_next, { float = false })
-  map("<leader>e", vim.diagnostic.open_float)
+  local binder = Binder.new("n")
+  binder
+    :clone()
+    :desc("Previous Error")
+    :bind("[e", vim.diagnostic.goto_prev, { float = false })
+  binder
+    :clone()
+    :desc("Next Error")
+    :bind("]e", vim.diagnostic.goto_next, { float = false })
+  binder:clone():desc("Error Show"):bind("<leader>e", vim.diagnostic.open_float)
 end
 
 function spec:config()
@@ -97,15 +105,33 @@ function spec:config()
         })
       end
 
-      local map = vim.keymap.gen("n", { buffer = args.buf })
-      map("K", vim.lsp.buf.hover)
-      map("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
-      map("<leader>it", vim.lsp.buf.type_definition, { reuse_win = true })
-      map("<leader>ii", vim.lsp.buf.implementation)
-      map("<leader>ir", vim.lsp.buf.references)
-      map("<leader>ia", vim.lsp.buf.code_action)
-      map("<leader>if", vim.lsp.buf.format, { async = true })
-      map("<leader>ic", vim.lsp.buf.rename)
+      local binder = Binder.new("n"):buffer(args.buf)
+      binder:clone():desc("LSP Hover"):bind("K", vim.lsp.buf.hover)
+      binder
+        :clone()
+        :desc("LSP Definition")
+        :bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
+      binder
+        :clone()
+        :desc("LSP Type Definition")
+        :bind("<leader>it", vim.lsp.buf.type_definition, { reuse_win = true })
+      binder
+        :clone()
+        :desc("LSP Implementation")
+        :bind("<leader>ii", vim.lsp.buf.implementation)
+      binder
+        :clone()
+        :desc("LSP References")
+        :bind("<leader>ir", vim.lsp.buf.references)
+      binder
+        :clone()
+        :desc("LSP Code Actions")
+        :bind("<leader>ia", vim.lsp.buf.code_action)
+      binder
+        :clone()
+        :desc("LSP Format")
+        :bind("<leader>if", vim.lsp.buf.format, { async = true })
+      binder:clone():desc("LSP Rename"):bind("<leader>ic", vim.lsp.buf.rename)
     end,
   })
 end

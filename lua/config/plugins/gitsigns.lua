@@ -1,3 +1,5 @@
+local Binder = require("config.binder")
+
 local spec = {
   "lewis6991/gitsigns.nvim",
   event = { "BufReadPre", "BufNewFile" },
@@ -19,16 +21,24 @@ function spec:config()
       border = "rounded",
     },
     on_attach = function(buf)
-      local map = vim.keymap.gen("n", { buffer = buf })
-      map("[h", gitsigns.prev_hunk, { navigation_message = false })
-      map("]h", gitsigns.next_hunk, { navigation_message = false })
-      map("<leader>hd", gitsigns.diffthis)
-      map("<leader>hp", gitsigns.preview_hunk)
-      map("<leader>hR", gitsigns.reset_buffer)
-      map("<leader>hr", gitsigns.reset_hunk)
-      map("<leader>hA", gitsigns.stage_buffer)
-      map("<leader>ha", gitsigns.stage_hunk)
-      map("<leader>hu", gitsigns.undo_stage_hunk)
+      local binder = Binder.new("n"):buffer(buf)
+      binder:clone():desc("Previous Hunk"):bind("[h", gitsigns.prev_hunk)
+      binder:clone():desc("Next Hunk"):bind("]h", gitsigns.next_hunk)
+      binder:clone():desc("Buffer Diff"):bind("<leader>hd", gitsigns.diffthis)
+      binder
+        :clone()
+        :desc("Hunk Preview")
+        :bind("<leader>hp", gitsigns.preview_hunk)
+      binder
+        :clone()
+        :desc("Buffer Reset")
+        :bind("<leader>hR", gitsigns.reset_buffer)
+      binder:clone():desc("Hunk Reset"):bind("<leader>hr", gitsigns.reset_hunk)
+      binder
+        :clone()
+        :desc("Buffer Add")
+        :bind("<leader>hA", gitsigns.stage_buffer)
+      binder:clone():desc("Hunk Add"):bind("<leader>ha", gitsigns.stage_hunk)
     end,
   })
 end

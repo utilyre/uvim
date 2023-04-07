@@ -1,3 +1,5 @@
+local Binder = require("config.binder")
+
 local spec = {
   "nvim-telescope/telescope.nvim",
   cmd = { "Telescope" },
@@ -26,7 +28,6 @@ function spec:config()
       selection_caret = "  ",
       mappings = {
         i = {
-          ["<esc>"] = "close",
           ["<s-tab>"] = "move_selection_previous",
           ["<tab>"] = "move_selection_next",
         },
@@ -51,12 +52,12 @@ function spec:config()
     },
   })
 
-  local map = vim.keymap.gen("n")
-  map("<leader>fr", builtin.resume)
-  map("<leader>ft", builtin.filetypes)
-  map("<leader>ff", builtin.find_files)
-  map("<leader>fw", builtin.live_grep)
-  map("<leader><space>", builtin.buffers)
+  local binder = Binder.new("n")
+  binder:clone():desc("Find Resume"):bind("<leader>fr", builtin.resume)
+  binder:clone():desc("Find Type"):bind("<leader>ft", builtin.filetypes)
+  binder:clone():desc("Find File"):bind("<leader>ff", builtin.find_files)
+  binder:clone():desc("Find Word"):bind("<leader>fw", builtin.live_grep)
+  binder:clone():desc("Find Buffer"):bind("<leader><space>", builtin.buffers)
 end
 
 return spec
