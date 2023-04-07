@@ -1,3 +1,5 @@
+local icons = require("config.icons")
+
 vim.opt.clipboard = "unnamedplus"
 vim.opt.writebackup = false
 vim.opt.undofile = true
@@ -28,7 +30,7 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.list = true
 vim.opt.listchars = {
-  tab = vim.g.icons.layout.Tab .. "  ",
+  tab = icons.layout.Tab .. "  ",
 }
 vim.opt.fillchars:append({
   eob = " ",

@@ -1,4 +1,5 @@
 local Binder = require("config.binder")
+local icons = require("config.icons")
 
 local spec = {
   "lewis6991/gitsigns.nvim",
@@ -11,7 +12,7 @@ function spec:config()
   gitsigns.setup({
     current_line_blame = true,
     current_line_blame_formatter = "  <author>, <author_time:%R> "
-      .. vim.g.icons.layout.List
+      .. icons.layout.List
       .. " <summary> ",
     current_line_blame_formatter_nc = "  <author> ",
     current_line_blame_opts = {

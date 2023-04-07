@@ -1,3 +1,5 @@
+local icons = require("config.icons")
+
 local spec = {
   "utilyre/barbecue.nvim",
   event = { "BufReadPre", "BufNewFile" },
@@ -14,9 +16,9 @@ function spec:config()
   barbecue.setup({
     create_autocmd = false,
     show_modified = true,
-    kinds = vim.g.icons.kind,
+    kinds = icons.kind,
     symbols = {
-      separator = vim.g.icons.widget.inline.AngleRight,
+      separator = icons.widget.inline.AngleRight,
     },
   })
 

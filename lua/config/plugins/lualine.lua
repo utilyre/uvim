@@ -1,3 +1,5 @@
+local icons = require("config.icons")
+
 local spec = {
   "nvim-lualine/lualine.nvim",
   event = "VeryLazy",
@@ -26,7 +28,7 @@ function spec:config()
       lualine_a = {
         {
           "branch",
-          icon = vim.g.icons.widget.inline.Fork,
+          icon = icons.widget.inline.Fork,
         },
         {
           "diagnostics",
@@ -34,8 +36,8 @@ function spec:config()
           always_visible = true,
           sections = { "error", "warn" },
           symbols = {
-            warn = vim.g.icons.widget.inline.Warning .. " ",
-            error = vim.g.icons.widget.inline.Error .. " ",
+            warn = icons.widget.inline.Warning .. " ",
+            error = icons.widget.inline.Error .. " ",
           },
         },
       },

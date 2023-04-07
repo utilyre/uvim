@@ -1,3 +1,5 @@
+local icons = require("config.icons")
+
 local spec = {
   "hrsh7th/nvim-cmp",
   event = { "InsertEnter" },
@@ -33,7 +35,7 @@ function spec:config()
     formatting = {
       fields = { "abbr", "kind", "menu" },
       format = function(entry, item)
-        item.kind = vim.g.icons.kind[item.kind] .. " " .. item.kind
+        item.kind = icons.kind[item.kind] .. " " .. item.kind
         item.menu = "(" .. entry.source.name .. ")"
         return item
       end,

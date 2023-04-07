@@ -1,4 +1,5 @@
 local Binder = require("config.binder")
+local icons = require("config.icons")
 
 local lazy_path = vim.fs.normalize(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 if not vim.loop.fs_access(lazy_path, "R") then
@@ -46,26 +47,26 @@ lazy.setup("config.plugins", {
   ui = {
     border = "rounded",
     icons = {
-      lazy = vim.g.icons.widget.inline.Bed .. "  ",
-      not_loaded = vim.g.icons.widget.outline.Circle,
-      loaded = vim.g.icons.widget.inline.Circle,
-      task = vim.g.icons.widget.inline.Clipboard,
-      source = vim.g.icons.widget.inline.Fire,
-      start = vim.g.icons.widget.inline.Play,
-      plugin = vim.g.icons.widget.inline.Archive,
-      event = vim.g.icons.widget.inline.Bolt,
-      keys = vim.g.icons.widget.outline.Keyboard,
-      cmd = vim.g.icons.widget.inline.Usd,
-      ft = vim.g.icons.widget.inline.Code,
-      init = vim.g.icons.widget.inline.Flask,
-      runtime = vim.g.icons.widget.inline.Vim,
-      import = vim.g.icons.widget.inline.PaperClip,
-      config = vim.g.icons.widget.inline.Gear,
+      lazy = icons.widget.inline.Bed .. "  ",
+      not_loaded = icons.widget.outline.Circle,
+      loaded = icons.widget.inline.Circle,
+      task = icons.widget.inline.Clipboard,
+      source = icons.widget.inline.Fire,
+      start = icons.widget.inline.Play,
+      plugin = icons.widget.inline.Archive,
+      event = icons.widget.inline.Bolt,
+      keys = icons.widget.outline.Keyboard,
+      cmd = icons.widget.inline.Usd,
+      ft = icons.widget.inline.Code,
+      init = icons.widget.inline.Flask,
+      runtime = icons.widget.inline.Vim,
+      import = icons.widget.inline.PaperClip,
+      config = icons.widget.inline.Gear,
       list = {
-        vim.g.icons.layout.List,
-        vim.g.icons.layout.List,
-        vim.g.icons.layout.List,
-        vim.g.icons.layout.List,
+        icons.layout.List,
+        icons.layout.List,
+        icons.layout.List,
+        icons.layout.List,
       },
     },
   },
