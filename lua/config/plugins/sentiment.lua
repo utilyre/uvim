@@ -1,6 +1,6 @@
 local spec = {
   "utilyre/sentiment.nvim",
-  event = "VeryLazy",
+  event = { "BufReadPre", "BufNewFile" },
 }
 
 function spec:config()
