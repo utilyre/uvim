@@ -39,7 +39,7 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.pumheight = 16
+vim.opt.pumheight = 20
 vim.opt.completeopt = {}
 
 vim.opt.wrap = false
