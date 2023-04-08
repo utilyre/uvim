@@ -1,14 +1,14 @@
 ---@class Binder
----@field private mode string|string[]
+---@field private modes string[]
 ---@field private opts { buffer: integer, desc: string, expr: boolean, remap: boolean }
 local Binder = {}
 
----@param mode string|string[]
+---@param modes string[]
 ---@return Binder
-function Binder.new(mode)
+function Binder.new(modes)
   local instance = setmetatable({}, { __index = Binder })
 
-  instance.mode = mode
+  instance.modes = modes
   instance.opts = {}
 
   return instance
@@ -53,7 +53,7 @@ function Binder:bind(lhs, rhs, ...)
     rhs = function() return fn(unpack(params)) end
   end
 
-  vim.keymap.set(self.mode, lhs, rhs, self.opts)
+  vim.keymap.set(self.modes, lhs, rhs, self.opts)
 end
 
 return Binder

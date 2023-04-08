@@ -22,7 +22,7 @@ function spec:config()
       border = "rounded",
     },
     on_attach = function(buf)
-      local binder = Binder.new("n"):buffer(buf)
+      local binder = Binder.new({ "n" }):buffer(buf)
       binder:clone():desc("Previous Hunk"):bind("[h", gitsigns.prev_hunk)
       binder:clone():desc("Next Hunk"):bind("]h", gitsigns.next_hunk)
       binder:clone():desc("Buffer Diff"):bind("<leader>hd", gitsigns.diffthis)

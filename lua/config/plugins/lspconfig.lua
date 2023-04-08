@@ -27,7 +27,7 @@ function spec:init()
   vim.fn.sign_define("DiagnosticSignWarn", { numhl = "DiagnosticSignWarn" })
   vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
 
-  local binder = Binder.new("n")
+  local binder = Binder.new({ "n" })
   binder
     :clone()
     :desc("Previous Error")
@@ -106,7 +106,7 @@ function spec:config()
         })
       end
 
-      local binder = Binder.new("n"):buffer(args.buf)
+      local binder = Binder.new({ "n" }):buffer(args.buf)
       binder:clone():desc("LSP Hover"):bind("K", vim.lsp.buf.hover)
       binder
         :clone()

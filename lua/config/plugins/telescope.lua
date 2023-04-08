@@ -53,7 +53,7 @@ function spec:config()
     },
   })
 
-  local binder = Binder.new("n")
+  local binder = Binder.new({ "n" })
   binder:clone():desc("Find Resume"):bind("<leader>fr", builtin.resume)
   binder:clone():desc("Find Type"):bind("<leader>ft", builtin.filetypes)
   binder:clone():desc("Find File"):bind("<leader>ff", builtin.find_files)

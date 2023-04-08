@@ -72,7 +72,7 @@ lazy.setup("config.plugins", {
   },
 })
 
-local binder = Binder.new("n")
+local binder = Binder.new({ "n" })
 binder:clone():desc("Package Home"):bind("<leader>ph", lazy.home)
 binder:clone():desc("Package Install"):bind("<leader>pi", lazy.install)
 binder:clone():desc("Package Update"):bind("<leader>pu", lazy.update)
