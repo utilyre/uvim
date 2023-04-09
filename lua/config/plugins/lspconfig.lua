@@ -107,32 +107,35 @@ function spec:config()
       end
 
       local binder = Binder.new({ "n" }):buffer(args.buf)
-      binder:clone():desc("LSP Hover"):bind("K", vim.lsp.buf.hover)
+      binder:clone():desc("Intellisense Hover"):bind("K", vim.lsp.buf.hover)
       binder
         :clone()
-        :desc("LSP Definition")
+        :desc("Intellisense Definition")
         :bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
       binder
         :clone()
-        :desc("LSP Type Definition")
+        :desc("Intellisense Type Definition")
         :bind("<leader>it", vim.lsp.buf.type_definition, { reuse_win = true })
       binder
         :clone()
-        :desc("LSP Implementation")
+        :desc("Intellisense Implementation")
         :bind("<leader>ii", vim.lsp.buf.implementation)
       binder
         :clone()
-        :desc("LSP References")
+        :desc("Intellisense Reference")
         :bind("<leader>ir", vim.lsp.buf.references)
       binder
         :clone()
-        :desc("LSP Code Actions")
+        :desc("Intellisense Code Action")
         :bind("<leader>ia", vim.lsp.buf.code_action)
       binder
         :clone()
-        :desc("LSP Format")
+        :desc("Intellisense Format")
         :bind("<leader>if", vim.lsp.buf.format, { async = true })
-      binder:clone():desc("LSP Rename"):bind("<leader>ic", vim.lsp.buf.rename)
+      binder
+        :clone()
+        :desc("Intellisense Rename")
+        :bind("<leader>ic", vim.lsp.buf.rename)
     end,
   })
 end

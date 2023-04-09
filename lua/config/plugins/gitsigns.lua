@@ -25,19 +25,19 @@ function spec:config()
       local binder = Binder.new({ "n" }):buffer(buf)
       binder:clone():desc("Previous Hunk"):bind("[h", gitsigns.prev_hunk)
       binder:clone():desc("Next Hunk"):bind("]h", gitsigns.next_hunk)
-      binder:clone():desc("Buffer Diff"):bind("<leader>hd", gitsigns.diffthis)
+      binder:clone():desc("Hunk Diff All"):bind("<leader>hd", gitsigns.diffthis)
       binder
         :clone()
         :desc("Hunk Preview")
         :bind("<leader>hp", gitsigns.preview_hunk)
       binder
         :clone()
-        :desc("Buffer Reset")
+        :desc("Hunk Reset All")
         :bind("<leader>hR", gitsigns.reset_buffer)
       binder:clone():desc("Hunk Reset"):bind("<leader>hr", gitsigns.reset_hunk)
       binder
         :clone()
-        :desc("Buffer Add")
+        :desc("Hunk Add All")
         :bind("<leader>hA", gitsigns.stage_buffer)
       binder:clone():desc("Hunk Add"):bind("<leader>ha", gitsigns.stage_hunk)
     end,
