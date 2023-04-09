@@ -64,6 +64,14 @@ function spec:config()
           "filetype",
           colored = false,
         },
+        {
+          function()
+            return vim.lsp.buf.server_ready() and icons.widget.HeartBeat or ""
+          end,
+          padding = {
+            right = 2,
+          },
+        },
       },
     },
   })

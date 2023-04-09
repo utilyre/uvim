@@ -11,6 +11,7 @@ icons.widget = {
   Bed = "",
   Bolt = "",
   ChevronRight = "",
+  HeartBeat = "",
   CircleFill = "",
   CircleStroke = "",
   Clipboard = "",
