@@ -32,6 +32,10 @@ vim.opt.fillchars:append({
   eob = " ",
 })
 
+vim.opt.linebreak = true
+vim.opt.breakat:remove({ "-" })
+vim.opt.iskeyword:append({ "-" })
+
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -39,7 +43,6 @@ vim.opt.smartcase = true
 vim.opt.pumheight = 20
 vim.opt.completeopt = {}
 
-vim.opt.wrap = false
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
