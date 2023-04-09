@@ -2,6 +2,7 @@ local Binder = require("config.binder")
 
 local spec = {
   "L3MON4D3/LuaSnip",
+  lazy = true,
 }
 
 function spec:config()

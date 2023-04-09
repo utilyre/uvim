@@ -1,7 +1,6 @@
 local spec = {
   "catppuccin/nvim",
   name = "catppuccin.nvim",
-  lazy = false,
   priority = 10000,
 }
 
