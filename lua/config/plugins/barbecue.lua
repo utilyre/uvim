@@ -26,9 +26,7 @@ function spec:config()
     "BufWinEnter",
     "CursorHold",
     "InsertLeave",
-    "BufWritePost",
-    "TextChanged",
-    "TextChangedI",
+    "BufModifiedSet",
   }, {
     group = vim.api.nvim_create_augroup("config.plugins.barbecue.updater", {}),
     callback = function() ui.update() end,
