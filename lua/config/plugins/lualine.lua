@@ -60,7 +60,10 @@ function spec:config()
             unix = "LF",
           },
         },
-        function() return vim.bo.filetype:gsub("^%l", string.upper) end,
+        {
+          "filetype",
+          colored = false,
+        },
       },
     },
   })
