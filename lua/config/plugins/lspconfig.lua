@@ -65,7 +65,7 @@ function spec:config()
       border = "rounded",
     })
 
-  vim.api.nvim_create_autocmd("LspAttach", {
+  vim.api.nvim_create_autocmd({ "LspAttach" }, {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
     callback = function(args)
       local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -90,7 +90,7 @@ function spec:config()
             clear = false,
           })
 
-        vim.api.nvim_create_autocmd("CursorHold", {
+        vim.api.nvim_create_autocmd({ "CursorHold" }, {
           group = group,
           buffer = args.buf,
           callback = function() vim.lsp.buf.document_highlight() end,
