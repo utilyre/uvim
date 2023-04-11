@@ -30,13 +30,13 @@ function spec:init()
   local binder = Binder.new({ "n" })
   binder
     :clone()
-    :desc("Previous Error")
-    :bind("[e", vim.diagnostic.goto_prev, { float = false })
+    :desc("Previous Diagnostic")
+    :bind("[d", vim.diagnostic.goto_prev, { float = false })
   binder
     :clone()
-    :desc("Next Error")
-    :bind("]e", vim.diagnostic.goto_next, { float = false })
-  binder:clone():desc("Error Show"):bind("<leader>e", vim.diagnostic.open_float)
+    :desc("Next Diagnostic")
+    :bind("]d", vim.diagnostic.goto_next, { float = false })
+  binder:clone():desc("Diagnostic"):bind("<leader>d", vim.diagnostic.open_float)
 end
 
 function spec:config()
