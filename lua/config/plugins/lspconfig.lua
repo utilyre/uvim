@@ -45,23 +45,20 @@ function spec:config()
   local cmp = require("cmp_nvim_lsp")
 
   windows.default_options.border = "rounded"
+  lspconfig.util.on_setup = lspconfig.util.add_hook_after(
+    lspconfig.util.on_setup,
+    function(config)
+      config.capabilities = vim.tbl_deep_extend(
+        "force",
+        config.capabilities,
+        cmp.default_capabilities()
+      )
+    end
+  )
 
   local servers_path =
     vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/servers.lua")
-  if vim.loop.fs_access(servers_path, "R") then
-    lspconfig.util.on_setup = lspconfig.util.add_hook_after(
-      lspconfig.util.on_setup,
-      function(config)
-        config.capabilities = vim.tbl_deep_extend(
-          "force",
-          config.capabilities,
-          cmp.default_capabilities()
-        )
-      end
-    )
-
-    dofile(servers_path)
-  end
+  if vim.loop.fs_access(servers_path, "R") then dofile(servers_path) end
 
   vim.lsp.handlers["textDocument/hover"] =
     vim.lsp.with(vim.lsp.handlers.hover, {
