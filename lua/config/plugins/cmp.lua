@@ -4,10 +4,10 @@ local spec = {
   "hrsh7th/nvim-cmp",
   event = { "InsertEnter" },
   dependencies = {
-    "saadparwaiz1/cmp_luasnip",
+    "nvim-lua/plenary.nvim",
+    "L3MON4D3/LuaSnip",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
-    "nvim-lua/plenary.nvim",
   },
 }
 
@@ -41,10 +41,6 @@ function spec:config()
       end,
     },
     sources = {
-      {
-        name = "luasnip",
-        max_item_count = 2,
-      },
       {
         name = "nvim_lsp",
         max_item_count = 50,
@@ -86,6 +82,14 @@ function spec:config()
       ["<cr>"] = cmp.mapping(function(fallback)
         if cmp.get_selected_entry() == nil then fallback() end
         cmp.confirm({ behavior = "replace" })
+      end, { "i", "s" }),
+      ["<c-k>"] = cmp.mapping(function(fallback)
+        if not luasnip.jumpable(-1) then fallback() end
+        luasnip.jump(-1)
+      end, { "i", "s" }),
+      ["<c-j>"] = cmp.mapping(function(fallback)
+        if not luasnip.jumpable(1) then fallback() end
+        luasnip.jump(1)
       end, { "i", "s" }),
     },
   })
