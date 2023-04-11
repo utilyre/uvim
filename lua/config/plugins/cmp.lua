@@ -43,11 +43,11 @@ function spec:config()
     sources = {
       {
         name = "nvim_lsp",
-        max_item_count = 50,
+        max_item_count = 80,
       },
       {
         name = "buffer",
-        max_item_count = 10,
+        max_item_count = 40,
         option = {
           get_bufnrs = function()
             return vim.tbl_map(
