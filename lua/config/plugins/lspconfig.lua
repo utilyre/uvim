@@ -104,7 +104,10 @@ function spec:config()
       end
 
       local binder = Binder.new({ "n" }):buffer(args.buf)
-      binder:clone():desc("Intellisense Hover"):bind("K", vim.lsp.buf.hover)
+      binder
+        :clone()
+        :desc("Intellisense Hover")
+        :bind("<leader>ih", vim.lsp.buf.hover)
       binder
         :clone()
         :desc("Intellisense Definition")
