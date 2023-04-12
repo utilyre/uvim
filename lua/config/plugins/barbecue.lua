@@ -23,7 +23,8 @@ function spec:config()
   })
 
   vim.api.nvim_create_autocmd({
-    "BufWinEnter",
+    "BufReadPre",
+    "BufNewFile",
     "CursorHold",
     "InsertLeave",
     "BufModifiedSet",
