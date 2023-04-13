@@ -12,7 +12,7 @@ if not vim.loop.fs_access(lazy_path, "R") then
     lazy_path,
   })
 end
-vim.opt.runtimepath:prepend(lazy_path)
+vim.opt.runtimepath:prepend({ lazy_path })
 
 local lazy = require("lazy")
 
