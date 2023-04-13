@@ -47,7 +47,7 @@ function spec:config()
       },
       {
         name = "buffer",
-        max_item_count = 40,
+        max_item_count = 20,
         option = {
           get_bufnrs = function()
             return vim.tbl_map(
