@@ -6,11 +6,7 @@ local spec = {
 function spec:config()
   local flatten = require("flatten")
 
-  flatten.setup({
-    window = {
-      open = "alternate",
-    },
-  })
+  flatten.setup()
 end
 
 return spec
