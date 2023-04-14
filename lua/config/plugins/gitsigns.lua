@@ -3,7 +3,7 @@ local icons = require("config.icons")
 
 local spec = {
   "lewis6991/gitsigns.nvim",
-  event = { "BufReadPre", "BufNewFile" },
+  event = { "BufReadPre", "BufWritePre" },
 }
 
 function spec:config()
