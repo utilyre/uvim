@@ -4,6 +4,9 @@ local icons = require("config.icons")
 local spec = {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
+  dependencies = {
+    "b0o/SchemaStore.nvim",
+  },
 }
 
 function spec:init()
