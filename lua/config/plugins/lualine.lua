@@ -66,7 +66,12 @@ function spec:config()
         },
         {
           function()
-            return vim.lsp.buf.server_ready() and icons.widget.HeartBeat or ""
+            if #vim.lsp.util.get_progress_messages() > 0 then
+              return icons.widget.Ellipsis
+            end
+            if vim.lsp.buf.server_ready() then return icons.widget.HeartBeat end
+
+            return ""
           end,
           padding = {
             right = 2,

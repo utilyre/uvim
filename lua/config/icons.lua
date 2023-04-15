@@ -16,6 +16,7 @@ icons.widget = {
   CircleStroke = "",
   Clipboard = "",
   Code = "",
+  Ellipsis = "",
   Error = "",
   Fire = "",
   Flask = "",
