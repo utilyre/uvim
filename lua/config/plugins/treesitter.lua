@@ -1,7 +1,7 @@
 local spec = {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  cmd = { "TSUpdate" },
+  build = ":TSUpdateSync",
+  cmd = { "TSUpdateSync" },
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "windwp/nvim-ts-autotag",
