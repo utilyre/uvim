@@ -33,10 +33,12 @@ function spec:config()
       },
     },
     formatting = {
-      fields = { "abbr", "kind", "menu" },
-      format = function(entry, item)
-        item.kind = icons.kind[item.kind] .. " " .. item.kind
-        item.menu = "(" .. entry.source.name .. ")"
+      fields = { "kind", "abbr", "menu" },
+      format = function(_, item)
+        local kind = item.kind
+        item.kind = icons.kind[kind]
+        item.menu = kind:lower()
+
         return item
       end,
     },
