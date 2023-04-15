@@ -8,6 +8,7 @@ function spec:config()
 
   autopair.setup({
     check_ts = true,
+    enable_afterquote = false,
   })
 end
 
