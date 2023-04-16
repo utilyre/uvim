@@ -56,17 +56,17 @@ function spec:config()
         config.capabilities,
         cmp.default_capabilities()
       )
+
+      config.handlers["textDocument/hover"] =
+        vim.lsp.with(vim.lsp.handlers.hover, {
+          border = "rounded",
+        })
     end
   )
 
   local servers_path =
     vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/servers.lua")
   if vim.loop.fs_access(servers_path, "R") then dofile(servers_path) end
-
-  vim.lsp.handlers["textDocument/hover"] =
-    vim.lsp.with(vim.lsp.handlers.hover, {
-      border = "rounded",
-    })
 
   vim.api.nvim_create_autocmd({ "LspAttach" }, {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
