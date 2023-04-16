@@ -28,7 +28,7 @@ function spec:config()
       lualine_a = {
         {
           "branch",
-          icon = icons.widget.Fork,
+          icon = icons.widget.Branch,
         },
         {
           "diagnostics",
@@ -67,9 +67,9 @@ function spec:config()
         {
           function()
             if not vim.tbl_isempty(vim.lsp.util.get_progress_messages()) then
-              return icons.widget.Ellipsis
+              return icons.widget.Loading
             end
-            if vim.lsp.buf.server_ready() then return icons.widget.HeartBeat end
+            if vim.lsp.buf.server_ready() then return icons.widget.Ready end
 
             return ""
           end,
