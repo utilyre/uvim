@@ -51,8 +51,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 -   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
     you would setup a language server protocol.
 
-    **NOTE**: Additionally, [SchemaStore.nvim][SchemaStore.nvim] is installed
-    for configuring `jsonls` and `yamlls`.
+    **NOTE**: Additionally, [SchemaStore.nvim][SchemaStore.nvim] is provided to
+    properly setup language servers that accept pre-defined schemas.
 
     ```lua
     -- settings/servers.lua
