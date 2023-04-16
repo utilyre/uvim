@@ -66,7 +66,7 @@ function spec:config()
         },
         {
           function()
-            if #vim.lsp.util.get_progress_messages() > 0 then
+            if not vim.tbl_isempty(vim.lsp.util.get_progress_messages()) then
               return icons.widget.Ellipsis
             end
             if vim.lsp.buf.server_ready() then return icons.widget.HeartBeat end
