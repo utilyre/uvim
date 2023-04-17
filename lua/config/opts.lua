@@ -5,7 +5,7 @@ vim.opt.writebackup = false
 vim.opt.undofile = true
 
 vim.opt.timeout = false
-vim.opt.updatetime = 500
+vim.opt.updatetime = 400
 
 vim.opt.termguicolors = true
 vim.opt.confirm = true
