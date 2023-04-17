@@ -18,7 +18,7 @@ function spec:config()
     show_modified = true,
     kinds = icons.kind,
     symbols = {
-      separator = icons.widget.Nesting,
+      separator = icons.widget.nesting,
     },
   })
 

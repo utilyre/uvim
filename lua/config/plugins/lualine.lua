@@ -28,7 +28,7 @@ function spec:config()
       lualine_a = {
         {
           "branch",
-          icon = icons.widget.Branch,
+          icon = icons.widget.branch,
         },
         {
           "diagnostics",
@@ -36,8 +36,8 @@ function spec:config()
           always_visible = true,
           sections = { "error", "warn" },
           symbols = {
-            warn = icons.widget.Warning .. " ",
-            error = icons.widget.Error .. " ",
+            warn = icons.widget.warning .. " ",
+            error = icons.widget.error .. " ",
           },
         },
       },
@@ -67,9 +67,9 @@ function spec:config()
         {
           function()
             if not vim.tbl_isempty(vim.lsp.util.get_progress_messages()) then
-              return icons.widget.Loading
+              return icons.widget.loading
             end
-            if vim.lsp.buf.server_ready() then return icons.widget.Ready end
+            if vim.lsp.buf.server_ready() then return icons.widget.ready end
 
             return ""
           end,

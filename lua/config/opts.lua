@@ -26,14 +26,14 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.list = true
 vim.opt.listchars = {
-  tab = icons.layout.Tab .. "  ",
+  tab = icons.layout.tab .. "  ",
 }
 vim.opt.fillchars:append({
   eob = " ",
 })
 
 vim.opt.linebreak = true
-vim.opt.showbreak = icons.layout.Wrap .. " "
+vim.opt.showbreak = icons.layout.wrap .. " "
 vim.opt.breakat:remove({ "-" })
 vim.opt.iskeyword:append({ "-" })
 

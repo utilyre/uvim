@@ -13,14 +13,14 @@ function spec:init()
   vim.diagnostic.config({
     virtual_text = {
       spacing = 2,
-      prefix = " " .. icons.layout.List,
+      prefix = " " .. icons.layout.list,
       suffix = " ",
     },
     float = {
       source = true,
       border = "rounded",
       header = "",
-      prefix = " " .. icons.layout.List .. " ",
+      prefix = " " .. icons.layout.list .. " ",
       suffix = " ",
     },
   })
