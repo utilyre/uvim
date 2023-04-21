@@ -37,7 +37,9 @@ function spec:config()
       format = function(_, item)
         local kind = item.kind
         item.kind = icons.kind[kind]
-        item.menu = kind:lower()
+        item.menu = kind
+          :gsub("(%l)(%u)", function(lc, uc) return lc .. " " .. uc end)
+          :lower()
 
         return item
       end,
