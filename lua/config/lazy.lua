@@ -43,7 +43,7 @@ lazy.setup("config.plugins", {
   ui = {
     border = "rounded",
     icons = {
-      lazy = icons.widget.lazy .. "  " ,
+      lazy = icons.widget.lazy .. "  ",
       not_loaded = icons.widget.inactive,
       loaded = icons.widget.active,
       task = icons.widget.task,
