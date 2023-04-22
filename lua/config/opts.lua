@@ -58,9 +58,7 @@ vim.g.mapleader = " "
 vim.api.nvim_create_autocmd({ "TermOpen" }, {
   group = vim.api.nvim_create_augroup("config.opts.terminal", {}),
   callback = function()
-    vim.opt_local.scrolloff = 0
-
-    vim.opt.signcolumn = "no"
+    vim.opt_local.signcolumn = "no"
     vim.opt_local.number = false
     vim.opt_local.relativenumber = false
 
