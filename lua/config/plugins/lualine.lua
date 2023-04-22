@@ -46,6 +46,10 @@ function spec:config()
         end,
         {
           "diagnostics",
+          cond = function()
+            return vim.bo.buftype == ""
+              or not vim.tbl_isempty(vim.diagnostic.get(0))
+          end,
           colored = false,
           always_visible = true,
           sections = { "error", "warn" },
