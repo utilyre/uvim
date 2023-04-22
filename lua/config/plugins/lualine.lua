@@ -82,7 +82,7 @@ function spec:config()
   })
 
   vim.api.nvim_create_autocmd({ "User" }, {
-    group = vim.api.nvim_create_augroup("config.plugins.lualine.updater", {}),
+    group = vim.api.nvim_create_augroup("config.plugins.lualine.refresher", {}),
     pattern = "LspProgressUpdate",
     callback = function()
       lualine.refresh({
