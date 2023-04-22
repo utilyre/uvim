@@ -25,7 +25,8 @@ function spec:config()
       },
     },
     sections = {
-      lualine_a = {
+      lualine_a = {},
+      lualine_b = {
         {
           "branch",
           icon = icons.widget.branch,
@@ -49,11 +50,9 @@ function spec:config()
           },
         },
       },
-      lualine_b = {},
       lualine_c = {},
       lualine_x = {},
-      lualine_y = {},
-      lualine_z = {
+      lualine_y = {
         function() return "Ln %l, Col %c" end,
         function()
           if vim.bo.expandtab then return "Spaces: " .. vim.bo.shiftwidth end
@@ -73,6 +72,7 @@ function spec:config()
           colored = false,
         },
       },
+      lualine_z = {},
     },
   })
 
