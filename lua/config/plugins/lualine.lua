@@ -18,14 +18,19 @@ function spec:config()
       section_separators = "",
       theme = {
         normal = {
-          a = "StatusLine",
+          a = "ColorColumn",
           b = "StatusLine",
           c = "StatusLine",
         },
       },
     },
     sections = {
-      lualine_a = {},
+      lualine_a = {
+        function()
+          if vim.v.servername == nil then return "" end
+          return icons.widget.remote
+        end,
+      },
       lualine_b = {
         {
           "branch",

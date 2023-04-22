@@ -22,6 +22,7 @@ icons.widget = {
   nesting = "",
   plugin = "",
   ready = "",
+  remote = "",
   runtime = "",
   source = "",
   start = "",
