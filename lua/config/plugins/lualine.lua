@@ -47,7 +47,7 @@ function spec:config()
         {
           "diagnostics",
           cond = function()
-            return vim.bo.buftype == ""
+            return vim.lsp.buf.server_ready()
               or not vim.tbl_isempty(vim.diagnostic.get(0))
           end,
           colored = false,
