@@ -36,14 +36,6 @@ function spec:config()
           "branch",
           icon = icons.widget.branch,
         },
-        function()
-          if not vim.tbl_isempty(vim.lsp.util.get_progress_messages()) then
-            return icons.widget.progress
-          end
-          if vim.lsp.buf.server_ready() then return icons.widget.ready end
-
-          return ""
-        end,
         {
           "diagnostics",
           cond = function()
@@ -62,6 +54,14 @@ function spec:config()
       lualine_c = {},
       lualine_x = {},
       lualine_y = {
+        function()
+          if not vim.tbl_isempty(vim.lsp.util.get_progress_messages()) then
+            return icons.widget.progress
+          end
+          if vim.lsp.buf.server_ready() then return icons.widget.ready end
+
+          return ""
+        end,
         function() return "Ln %l, Col %c" end,
         function()
           if vim.bo.expandtab then return "Spaces: " .. vim.bo.shiftwidth end
