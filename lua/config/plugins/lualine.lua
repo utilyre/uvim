@@ -38,7 +38,7 @@ function spec:config()
         },
         function()
           if not vim.tbl_isempty(vim.lsp.util.get_progress_messages()) then
-            return icons.widget.loading
+            return icons.widget.progress
           end
           if vim.lsp.buf.server_ready() then return icons.widget.ready end
 
