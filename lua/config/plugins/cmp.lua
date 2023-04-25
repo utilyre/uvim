@@ -82,7 +82,7 @@ function spec:config()
       end, { "i", "s" }),
       ["<cr>"] = cmp.mapping(function(fallback)
         if cmp.get_selected_entry() == nil then fallback() end
-        cmp.confirm({ behavior = "replace" })
+        cmp.confirm()
       end, { "i", "s" }),
       ["<c-p>"] = cmp.mapping(function(fallback)
         if not luasnip.jumpable(-1) then fallback() end
