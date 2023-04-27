@@ -8,18 +8,18 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 ## ⚡ Requirements
 
--   🍺 Get yourself a fresh install of [`neovim`][neovim].
+-   🍺 Get yourself a fresh install of [Neovim][neovim].
 
 -   🚀 Use a [Nerd Font][nerdfonts] within your terminal.
 
--   🔍 Install [`fd`][fd] and [`ripgrep`][ripgrep] through your favorite package
-    manager.
+-   🔍 Install [`fd-find`][fd] and [`ripgrep`][ripgrep] through your favorite
+    package manager.
 
 -   🐙 Setup [`git`][git] if you haven't already.
 
 ## 📦 Installation
 
-0.  Take a backup of your (possibly) existing Neovim folders
+1.  Take a backup of your (possibly) existing Neovim folders
 
     ```bash
     # required
@@ -31,13 +31,13 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     mv ~/.local/state/nvim ~/.local/state/nvim-backup
     ```
 
-1.  Clone this repository onto `~/.config/nvim`
+2.  Clone this repository onto `~/.config/nvim`
 
     ```bash
     git clone https://github.com/utilyre/nvim.git ~/.config/nvim
     ```
 
-2.  Spin up Neovim in headless mode to install all the plugins
+3.  Spin up Neovim in headless mode to install all the plugins
 
     ```bash
     nvim --headless +q
