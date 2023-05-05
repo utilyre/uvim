@@ -25,7 +25,6 @@ function spec:config()
     window = {
       completion = {
         scrolloff = vim.go.scrolloff,
-        border = "rounded",
       },
       documentation = {
         border = "rounded",
