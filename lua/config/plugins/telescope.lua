@@ -41,15 +41,6 @@ function spec:config()
       live_grep = {
         disable_coordinates = true,
       },
-      buffers = {
-        sort_mru = true,
-        ignore_current_buffer = true,
-        mappings = {
-          i = {
-            ["<c-x>"] = "delete_buffer",
-          },
-        },
-      },
     },
   })
 
@@ -58,7 +49,6 @@ function spec:config()
   binder:clone():desc("Find Type"):bind("<leader>ft", builtin.filetypes)
   binder:clone():desc("Find File"):bind("<leader>ff", builtin.find_files)
   binder:clone():desc("Find Word"):bind("<leader>fw", builtin.live_grep)
-  binder:clone():desc("Find Buffer"):bind("<leader><space>", builtin.buffers)
 end
 
 return spec
