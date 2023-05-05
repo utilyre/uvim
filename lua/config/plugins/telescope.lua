@@ -9,7 +9,6 @@ local spec = {
     "<leader>ft",
     "<leader>ff",
     "<leader>fw",
-    "<leader><space>",
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
