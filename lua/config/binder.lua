@@ -56,4 +56,11 @@ function Binder:bind(lhs, rhs, ...)
   vim.keymap.set(self.modes, lhs, rhs, self.opts)
 end
 
+---@param lhs string
+---@return boolean
+function Binder:unbind(lhs)
+  local ok = pcall(vim.keymap.del, self.modes, lhs, self.opts)
+  return ok
+end
+
 return Binder
