@@ -49,13 +49,3 @@ vim.opt.spelllang:append({ "programming" })
 vim.opt.spelloptions:append({ "camel" })
 
 vim.g.mapleader = " "
-
-vim.api.nvim_create_autocmd({ "TermOpen" }, {
-  group = vim.api.nvim_create_augroup("config.opts.terminal", {}),
-  callback = function()
-    vim.opt_local.number = false
-    vim.opt_local.relativenumber = false
-
-    vim.opt_local.spell = false
-  end,
-})
