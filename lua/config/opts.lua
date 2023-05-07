@@ -31,8 +31,6 @@ vim.opt.fillchars:append({
 
 vim.opt.linebreak = true
 vim.opt.showbreak = icons.layout.wrap .. " "
-vim.opt.breakat:remove({ "-" })
-vim.opt.iskeyword:append({ "-" })
 
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
