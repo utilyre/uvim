@@ -141,6 +141,33 @@ function spec:config()
         :bind("<leader>ic", vim.lsp.buf.rename)
     end,
   })
+
+  vim.api.nvim_create_autocmd({ "LspDetach" }, {
+    group = vim.api.nvim_create_augroup("config.plugins.lsp.detacher", {}),
+    callback = function(args)
+      local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+      if client.server_capabilities["codeLensProvider"] then
+        vim.api.nvim_del_augroup_by_name("config.plugins.lsp.codelens")
+        vim.lsp.codelens.clear()
+      end
+
+      if client.server_capabilities["documentHighlightProvider"] then
+        vim.api.nvim_del_augroup_by_name("config.plugins.lsp.reference")
+        vim.lsp.buf.clear_references()
+      end
+
+      local binder = Binder.new({ "n" }):buffer(args.buf)
+      binder:unbind("<leader>ih")
+      binder:unbind("<leader>id")
+      binder:unbind("<leader>it")
+      binder:unbind("<leader>ii")
+      binder:unbind("<leader>ir")
+      binder:unbind("<leader>ia")
+      binder:unbind("<leader>if")
+      binder:unbind("<leader>ic")
+    end,
+  })
 end
 
 return spec
