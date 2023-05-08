@@ -150,7 +150,7 @@ function spec:config()
       if client.server_capabilities["codeLensProvider"] then
         vim.api.nvim_clear_autocmds({
           group = "config.plugins.lsp.codelens",
-          buffer = args.buf
+          buffer = args.buf,
         })
         vim.lsp.codelens.clear()
       end
@@ -158,7 +158,7 @@ function spec:config()
       if client.server_capabilities["documentHighlightProvider"] then
         vim.api.nvim_clear_autocmds({
           group = "config.plugins.lsp.reference",
-          buffer = args.buf
+          buffer = args.buf,
         })
         vim.lsp.buf.clear_references()
       end
