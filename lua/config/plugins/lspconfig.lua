@@ -148,12 +148,18 @@ function spec:config()
       local client = vim.lsp.get_client_by_id(args.data.client_id)
 
       if client.server_capabilities["codeLensProvider"] then
-        vim.api.nvim_del_augroup_by_name("config.plugins.lsp.codelens")
+        vim.api.nvim_clear_autocmds({
+          group = "config.plugins.lsp.codelens",
+          buffer = args.buf
+        })
         vim.lsp.codelens.clear()
       end
 
       if client.server_capabilities["documentHighlightProvider"] then
-        vim.api.nvim_del_augroup_by_name("config.plugins.lsp.reference")
+        vim.api.nvim_clear_autocmds({
+          group = "config.plugins.lsp.reference",
+          buffer = args.buf
+        })
         vim.lsp.buf.clear_references()
       end
 
