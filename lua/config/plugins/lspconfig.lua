@@ -152,6 +152,7 @@ function spec:config()
           group = "config.plugins.lsp.codelens",
           buffer = args.buf,
         })
+
         vim.lsp.codelens.clear()
       end
 
@@ -160,6 +161,7 @@ function spec:config()
           group = "config.plugins.lsp.reference",
           buffer = args.buf,
         })
+
         vim.lsp.buf.clear_references()
       end
 
