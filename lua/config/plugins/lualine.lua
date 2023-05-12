@@ -39,8 +39,10 @@ function spec:config()
         {
           "diagnostics",
           cond = function()
-            return vim.lsp.buf.server_ready()
+            return (
+              not vim.tbl_isempty(vim.lsp.get_active_clients({ bufnr = 0 }))
               or not vim.tbl_isempty(vim.diagnostic.get(0))
+            )
           end,
           colored = false,
           always_visible = true,
@@ -58,7 +60,9 @@ function spec:config()
           if not vim.tbl_isempty(vim.lsp.util.get_progress_messages()) then
             return icons.widget.progress
           end
-          if vim.lsp.buf.server_ready() then return icons.widget.ready end
+          if not vim.tbl_isempty(vim.lsp.get_active_clients({ bufnr = 0 })) then
+            return icons.widget.ready
+          end
 
           return ""
         end,
