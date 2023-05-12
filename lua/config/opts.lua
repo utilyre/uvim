@@ -22,12 +22,8 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.list = true
-vim.opt.listchars = {
-  tab = icons.layout.tab .. "  ",
-}
-vim.opt.fillchars:append({
-  eob = " ",
-})
+vim.opt.listchars = { tab = icons.layout.tab .. "  " }
+vim.opt.fillchars:append({ eob = " " })
 
 vim.opt.linebreak = true
 vim.opt.showbreak = icons.layout.wrap .. " "

@@ -58,9 +58,7 @@ function spec:config()
       )
 
       config.handlers["textDocument/hover"] =
-        vim.lsp.with(vim.lsp.handlers.hover, {
-          border = "rounded",
-        })
+        vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
     end
   )
 

@@ -11,9 +11,7 @@ function spec:config()
     flavour = "mocha",
     custom_highlights = function(colors)
       return {
-        ["CmpItemMenu"] = {
-          fg = colors.overlay0,
-        },
+        ["CmpItemMenu"] = { fg = colors.overlay0 },
       }
     end,
     integrations = {
