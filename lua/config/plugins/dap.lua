@@ -3,7 +3,10 @@ local icons = require("config.icons")
 
 local spec = {
   "mfussenegger/nvim-dap",
-  event = { "BufReadPre", "BufNewFile" },
+  keys = {
+    "<leader>db",
+    "<leader>dc",
+  },
 }
 
 function spec:config()

@@ -3,16 +3,16 @@ local icons = require("config.icons")
 
 local spec = {
   "nvim-telescope/telescope.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+  },
   cmd = { "Telescope" },
   keys = {
     "<leader>fr",
     "<leader>ft",
     "<leader>ff",
     "<leader>fw",
-  },
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons",
   },
 }
 
