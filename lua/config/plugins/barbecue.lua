@@ -2,10 +2,13 @@ local icons = require("config.icons")
 
 local spec = {
   "utilyre/barbecue.nvim",
-  event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "SmiteshP/nvim-navic",
     "nvim-tree/nvim-web-devicons",
+  },
+  event = {
+    "BufReadPre",
+    "BufNewFile",
   },
 }
 

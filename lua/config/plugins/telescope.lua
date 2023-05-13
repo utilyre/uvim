@@ -7,7 +7,9 @@ local spec = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
   },
-  cmd = { "Telescope" },
+  cmd = {
+    "Telescope",
+  },
   keys = {
     "<leader>fr",
     "<leader>ft",

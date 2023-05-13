@@ -2,12 +2,14 @@ local icons = require("config.icons")
 
 local spec = {
   "hrsh7th/nvim-cmp",
-  event = { "InsertEnter" },
   dependencies = {
     "nvim-lua/plenary.nvim",
     "L3MON4D3/LuaSnip",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
+  },
+  event = {
+    "InsertEnter",
   },
 }
 
