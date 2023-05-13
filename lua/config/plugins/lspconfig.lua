@@ -33,13 +33,13 @@ function spec:init()
   local binder = Binder.new({ "n" })
   binder
     :clone()
-    :desc("Previous Diagnostic")
-    :bind("[d", vim.diagnostic.goto_prev, { float = false })
+    :desc("Previous Trouble")
+    :bind("[t", vim.diagnostic.goto_prev, { float = false })
   binder
     :clone()
-    :desc("Next Diagnostic")
-    :bind("]d", vim.diagnostic.goto_next, { float = false })
-  binder:clone():desc("Diagnostic"):bind("<leader>d", vim.diagnostic.open_float)
+    :desc("Next Trouble")
+    :bind("]t", vim.diagnostic.goto_next, { float = false })
+  binder:clone():desc("Trouble"):bind("<leader>t", vim.diagnostic.open_float)
 end
 
 function spec:config()
