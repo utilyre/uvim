@@ -24,7 +24,7 @@ function spec:config()
   binder:bind("<leader>dn", dap.step_over)
   binder:bind("<leader>di", dap.step_into)
   binder:bind("<leader>do", dap.step_out)
-  binder:bind("<leader>dr", dap.repl.open)
+  binder:bind("<leader>dr", dap.repl.open, {}, "")
 end
 
 return spec
