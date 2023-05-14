@@ -69,7 +69,7 @@ function spec:config()
         end,
         function() return "Ln %l, Col %c" end,
         function()
-          if vim.bo.expandtab then return "Spaces: " .. vim.bo.shiftwidth end
+          if vim.bo[0].expandtab then return "Spaces: " .. vim.bo.shiftwidth end
           return "Tabs"
         end,
         function() return vim.go.encoding:upper() end,
