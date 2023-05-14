@@ -20,18 +20,19 @@ function spec:config()
   vim.fn.sign_define("DapStopped", { text = "", linehl = "DapStopped" })
 
   local binder = Binder.new({ "n" })
-  binder:bind("<leader>db", dap.toggle_breakpoint)
-  binder:bind("<leader>dc", dap.continue)
-  binder:bind("<leader>dn", dap.step_over)
-  binder:bind("<leader>di", dap.step_into)
-  binder:bind("<leader>do", dap.step_out)
-  binder:bind("<leader>dr", dap.repl.open, {}, "")
-  binder:bind(
-    "<leader>ds",
-    widgets.centered_float,
-    widgets.scopes,
-    { border = "rounded" }
-  )
+  binder
+    :clone()
+    :desc("Debug Breakpoint")
+    :bind("<leader>db", dap.toggle_breakpoint)
+  binder:clone():desc("Debug Continue"):bind("<leader>dc", dap.continue)
+  binder:clone():desc("Debug Next"):bind("<leader>dn", dap.step_over)
+  binder:clone():desc("Debug Into"):bind("<leader>di", dap.step_into)
+  binder:clone():desc("Debug Out"):bind("<leader>do", dap.step_out)
+  binder:clone():desc("Debug REPL"):bind("<leader>dr", dap.repl.open, {}, "")
+  binder
+    :clone()
+    :desc("Debug Scope")
+    :bind("<leader>ds", widgets.centered_float, widgets.scopes)
 end
 
 return spec
