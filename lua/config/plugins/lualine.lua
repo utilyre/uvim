@@ -41,9 +41,8 @@ function spec:config()
         {
           "diagnostics",
           cond = function()
-            return (
-              not vim.tbl_isempty(vim.lsp.get_active_clients({ bufnr = 0 }))
-              or not vim.tbl_isempty(vim.diagnostic.get(0))
+            return not vim.tbl_isempty(
+              vim.lsp.get_active_clients({ bufnr = 0 })
             )
           end,
           colored = false,
