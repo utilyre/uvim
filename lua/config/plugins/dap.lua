@@ -1,5 +1,4 @@
 local Binder = require("config.binder")
-local icons = require("config.icons")
 
 local spec = {
   "mfussenegger/nvim-dap",
@@ -16,14 +15,8 @@ function spec:config()
     vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/adapters.lua")
   if vim.loop.fs_access(adapters_path, "R") then dofile(adapters_path) end
 
-  vim.fn.sign_define("DapBreakpoint", {
-    text = icons.widget.breakpoint,
-    texthl = "DiagnosticSignError",
-  })
-  vim.fn.sign_define("DapStopped", {
-    text = icons.widget.stack,
-    texthl = "DiagnosticSignInfo",
-  })
+  vim.fn.sign_define("DapBreakpoint", { text = "", linehl = "DapBreakpoint" })
+  vim.fn.sign_define("DapStopped", { text = "", linehl = "DapStopped" })
 
   local binder = Binder.new({ "n" })
   binder:bind("<leader>db", dap.toggle_breakpoint)
