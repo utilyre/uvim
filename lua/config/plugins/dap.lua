@@ -10,6 +10,7 @@ local spec = {
 
 function spec:config()
   local dap = require("dap")
+  local widgets = require("dap.ui.widgets")
 
   local adapters_path =
     vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/adapters.lua")
@@ -25,6 +26,12 @@ function spec:config()
   binder:bind("<leader>di", dap.step_into)
   binder:bind("<leader>do", dap.step_out)
   binder:bind("<leader>dr", dap.repl.open, {}, "")
+  binder:bind(
+    "<leader>ds",
+    widgets.centered_float,
+    widgets.scopes,
+    { border = "rounded" }
+  )
 end
 
 return spec
