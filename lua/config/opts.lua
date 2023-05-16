@@ -27,7 +27,7 @@ vim.opt.fillchars:append({ eob = " " })
 vim.opt.linebreak = true
 vim.opt.showbreak = icons.layout.wrap .. " "
 
-vim.opt.incsearch = true
+vim.opt.incsearch = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
