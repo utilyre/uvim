@@ -64,7 +64,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     })
     ```
 
--   See [BUILTINS.md][BUILTINS.md] to figure out how you are expected to
+-   View [the docs][null-ls.nvim@doc] to figure out how you are expected to
     configure a source.
 
     ```lua
@@ -120,6 +120,6 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 [tree-sitter]: https://tree-sitter.github.io/tree-sitter
 [lspconfig-all]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [SchemaStore.nvim]: https://github.com/b0o/SchemaStore.nvim
-[null-ls.nvim@BUILTINS.md]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
+[null-ls.nvim@doc]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 [nvim-dap@wiki]: https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
 [lazy.nvim]: https://github.com/folke/lazy.nvim
