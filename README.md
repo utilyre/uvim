@@ -95,17 +95,17 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     ```jsonc
     // ${workspaceFolder}/.vscode/launch.json
     {
-      "version": "0.2.0",
-      "configurations": [
-        {
-          "type": "codelldb",
-          "request": "launch",
-          "name": "Launch CodeLLDB",
-          "cwd": "${workspaceFolder}",
-          "program": "${workspaceFolder}/path/to/program",
-          "args": []
-        }
-      ]
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "codelldb",
+                "request": "launch",
+                "name": "Launch CodeLLDB",
+                "cwd": "${workspaceFolder}",
+                "program": "${workspaceFolder}/path/to/program",
+                "args": []
+            }
+        ]
     }
     ```
 
