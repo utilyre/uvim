@@ -12,10 +12,10 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 -   🚀 Use a [Nerd Font][nerdfonts] within your terminal.
 
--   🔍 Install [`fd-find`][fd] and [`ripgrep`][ripgrep] through your favorite
-    package manager.
+-   🔍 Install [`fd-find`][fd-find] and [`ripgrep`][ripgrep] through your
+    favorite package manager.
 
--   🐙 Setup [`git`][git] if you haven't already.
+-   🐙 Setup [`git`][git-scm] if you haven't already.
 
 ## 📦 Installation
 
@@ -45,7 +45,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 ## ☕ Tips
 
--   Run `:TSInstall [language]` to install the [treesitter][treesitter] parser
+-   Run `:TSInstall [language]` to install the [tree-sitter][tree-sitter] parser
     for the given language.
 
 -   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
@@ -64,8 +64,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     })
     ```
 
--   See [builtins][builtins] to figure out how you are expected to configure a
-    source.
+-   See [BUILTINS.md][BUILTINS.md] to figure out how you are expected to
+    configure a source.
 
     ```lua
     -- settings/sources.lua
@@ -75,8 +75,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     null.register(null.builtins.formatting.stylua)
     ```
 
--   Check out [Debug Adapter Installation][adapters] for further information on
-    setting up a debug adapter and configuring it.
+-   Check out [the wiki][nvim-dap@wiki] for further information on setting up a
+    debug adapter and configuring it.
 
     ```lua
     -- settings/adapters.lua
@@ -114,12 +114,12 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 [neovim]: https://neovim.io
 [nerdfonts]: https://www.nerdfonts.com
-[fd]: https://crates.io/crates/fd-find
+[fd-find]: https://crates.io/crates/fd-find
 [ripgrep]: https://crates.io/crates/ripgrep
-[git]: https://git-scm.com
-[treesitter]: https://tree-sitter.github.io/tree-sitter
+[git-scm]: https://git-scm.com
+[tree-sitter]: https://tree-sitter.github.io/tree-sitter
 [lspconfig-all]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [SchemaStore.nvim]: https://github.com/b0o/SchemaStore.nvim
-[builtins]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
-[adapters]: https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
+[null-ls.nvim@BUILTINS.md]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
+[nvim-dap@wiki]: https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
 [lazy.nvim]: https://github.com/folke/lazy.nvim
