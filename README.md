@@ -92,7 +92,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     }
     ```
 
-    ```json5
+    ```jsonc
     // ${workspaceFolder}/.vscode/launch.json
     {
       "version": "0.2.0",
