@@ -25,6 +25,14 @@ function spec:config()
           bg = utils.darken(colors.teal, 0.095, colors.base),
         },
 
+        ["debugPC"] = {
+          fg = colors.yellow,
+          bg = colors.none,
+        },
+        ["debugBreakpoint"] = {
+          fg = colors.red,
+        },
+
         ["CmpItemMenu"] = {
           fg = colors.overlay0,
         },
