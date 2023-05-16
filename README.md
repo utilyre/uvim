@@ -87,7 +87,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
       type = "server",
       port = "${port}",
       executable = {
-        command = vim.fn.normalize("/path/to/codelldb/extension/adapter/codelldb"),
+        command = vim.fs.normalize("/path/to/codelldb/extension/adapter/codelldb"),
         args = { "--port", "${port}" },
       },
     }
