@@ -1,7 +1,6 @@
 local icons = require("config.icons")
 
 vim.opt.clipboard = "unnamedplus"
-vim.opt.writebackup = false
 vim.opt.undofile = true
 
 vim.opt.timeout = false
