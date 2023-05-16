@@ -14,6 +14,7 @@ local spec = {
 
 function spec:init()
   vim.diagnostic.config({
+    severity_sort = true,
     virtual_text = {
       spacing = 2,
       prefix = " " .. icons.layout.list,
@@ -28,10 +29,10 @@ function spec:init()
     },
   })
 
-  vim.fn.sign_define("DiagnosticSignHint", { numhl = "DiagnosticSignHint" })
-  vim.fn.sign_define("DiagnosticSignInfo", { numhl = "DiagnosticSignInfo" })
-  vim.fn.sign_define("DiagnosticSignWarn", { numhl = "DiagnosticSignWarn" })
-  vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
+  vim.fn.sign_define("DiagnosticSignError", { linehl = "DiagnosticLineError" })
+  vim.fn.sign_define("DiagnosticSignWarn", { linehl = "DiagnosticLineWarn" })
+  vim.fn.sign_define("DiagnosticSignInfo", { linehl = "DiagnosticLineInfo" })
+  vim.fn.sign_define("DiagnosticSignHint", { linehl = "DiagnosticLineHint" })
 
   local binder = Binder.new({ "n" })
   binder

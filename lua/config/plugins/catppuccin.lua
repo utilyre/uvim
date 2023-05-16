@@ -1,7 +1,7 @@
 local spec = {
   "catppuccin/nvim",
   name = "catppuccin.nvim",
-  priority = 10000,
+  priority = 1000,
 }
 
 function spec:config()
@@ -12,12 +12,19 @@ function spec:config()
     flavour = "mocha",
     custom_highlights = function(colors)
       return {
-        ["DapBreakpoint"] = {
+        ["DiagnosticLineError"] = {
           bg = utils.darken(colors.red, 0.095, colors.base),
         },
-        ["DapStopped"] = {
+        ["DiagnosticLineWarn"] = {
           bg = utils.darken(colors.yellow, 0.095, colors.base),
         },
+        ["DiagnosticLineInfo"] = {
+          bg = utils.darken(colors.sky, 0.095, colors.base),
+        },
+        ["DiagnosticLineHint"] = {
+          bg = utils.darken(colors.teal, 0.095, colors.base),
+        },
+
         ["CmpItemMenu"] = {
           fg = colors.overlay0,
         },

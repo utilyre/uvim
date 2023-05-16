@@ -49,8 +49,8 @@ function spec:config()
           always_visible = true,
           sections = { "error", "warn" },
           symbols = {
-            warn = icons.widget.warning .. " ",
             error = icons.widget.error .. " ",
+            warn = icons.widget.warning .. " ",
           },
         },
       },
