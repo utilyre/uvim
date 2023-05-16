@@ -102,7 +102,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
           "request": "launch",
           "name": "Launch CodeLLDB",
           "cwd": "${workspaceFolder}",
-          "program": "${workspaceFolder}/path/to/binary"
+          "program": "${workspaceFolder}/path/to/program",
+          "args": []
         }
       ]
     }
