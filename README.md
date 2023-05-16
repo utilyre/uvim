@@ -82,6 +82,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     -- settings/adapters.lua
     local dap = require("dap")
 
+    -- https://github.com/vadimcn/codelldb
     dap.adapters.codelldb = {
       type = "server",
       port = "${port}",
