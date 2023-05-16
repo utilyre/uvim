@@ -141,6 +141,10 @@ function spec:config()
         :clone()
         :desc("Intellisense Rename")
         :bind("<leader>ic", vim.lsp.buf.rename)
+      binder
+        :clone()
+        :desc("Intellisense Execute")
+        :bind("<leader>ie", vim.lsp.codelens.run)
     end,
   })
 
