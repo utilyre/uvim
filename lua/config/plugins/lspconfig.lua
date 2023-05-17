@@ -35,9 +35,9 @@ function spec:init()
   vim.fn.sign_define("DiagnosticSignHint", { linehl = "DiagnosticLineHint" })
 
   local binder = Binder.new({ "n" })
-  binder:bind("[t", vim.diagnostic.goto_prev, { float = false })
-  binder:bind("]t", vim.diagnostic.goto_next, { float = false })
-  binder:bind("<leader>t", vim.diagnostic.open_float)
+  binder:bind("[e", vim.diagnostic.goto_prev, { float = false })
+  binder:bind("]e", vim.diagnostic.goto_next, { float = false })
+  binder:bind("<leader>e", vim.diagnostic.open_float)
 end
 
 function spec:config()
