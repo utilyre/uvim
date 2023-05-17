@@ -57,7 +57,7 @@ function spec:config()
         table.concat(
           vim.fn.readfile(
             vim.fs.normalize(
-              (vim.lsp.buf.list_workspace_folders()[1] or "$PWD")
+              (vim.lsp.buf.list_workspace_folders()[1] or vim.fn.cwd())
                 .. "/.vscode/launch.json"
             )
           ),
