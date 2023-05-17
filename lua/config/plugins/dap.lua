@@ -13,6 +13,8 @@ function spec:config()
   local dap = require("dap")
   local widgets = require("dap.ui.widgets")
 
+  dap.defaults.fallback.terminal_win_cmd = "new"
+
   local adapters_path =
     vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/adapters.lua")
   if vim.loop.fs_access(adapters_path, "R") then dofile(adapters_path) end

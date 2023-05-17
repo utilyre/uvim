@@ -8,6 +8,9 @@ vim.opt.updatetime = 400
 
 vim.opt.termguicolors = true
 vim.opt.confirm = true
+vim.opt.equalalways = false
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 2
 vim.opt.shortmess = {
