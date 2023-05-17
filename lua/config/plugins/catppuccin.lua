@@ -10,31 +10,31 @@ function spec:config()
 
   catppuccin.setup({
     flavour = "mocha",
-    custom_highlights = function(colors)
+    custom_highlights = function(palette)
       return {
-        ["DiagnosticLineError"] = {
-          bg = utils.darken(colors.red, 0.095, colors.base),
-        },
-        ["DiagnosticLineWarn"] = {
-          bg = utils.darken(colors.yellow, 0.095, colors.base),
-        },
-        ["DiagnosticLineInfo"] = {
-          bg = utils.darken(colors.sky, 0.095, colors.base),
-        },
-        ["DiagnosticLineHint"] = {
-          bg = utils.darken(colors.teal, 0.095, colors.base),
-        },
-
         ["debugPC"] = {
-          fg = colors.yellow,
-          bg = colors.none,
+          fg = palette.yellow,
+          bg = palette.none,
         },
         ["debugBreakpoint"] = {
-          fg = colors.red,
+          fg = palette.red,
+        },
+
+        ["DiagnosticLineError"] = {
+          bg = utils.darken(palette.red, 0.095, palette.base),
+        },
+        ["DiagnosticLineWarn"] = {
+          bg = utils.darken(palette.yellow, 0.095, palette.base),
+        },
+        ["DiagnosticLineInfo"] = {
+          bg = utils.darken(palette.sky, 0.095, palette.base),
+        },
+        ["DiagnosticLineHint"] = {
+          bg = utils.darken(palette.teal, 0.095, palette.base),
         },
 
         ["CmpItemMenu"] = {
-          fg = colors.overlay0,
+          fg = palette.overlay0,
         },
       }
     end,
