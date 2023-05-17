@@ -46,10 +46,10 @@ function spec:config()
   })
 
   local binder = Binder.new({ "n" })
-  binder:clone():desc("Find Recent"):bind("<leader>fr", builtin.resume)
-  binder:clone():desc("Find Type"):bind("<leader>ft", builtin.filetypes)
-  binder:clone():desc("Find File"):bind("<leader>ff", builtin.find_files)
-  binder:clone():desc("Find Word"):bind("<leader>fw", builtin.live_grep)
+  binder:bind("<leader>fr", builtin.resume)
+  binder:bind("<leader>ft", builtin.filetypes)
+  binder:bind("<leader>ff", builtin.find_files)
+  binder:bind("<leader>fw", builtin.live_grep)
 end
 
 return spec

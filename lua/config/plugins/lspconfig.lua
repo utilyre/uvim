@@ -35,15 +35,9 @@ function spec:init()
   vim.fn.sign_define("DiagnosticSignHint", { linehl = "DiagnosticLineHint" })
 
   local binder = Binder.new({ "n" })
-  binder
-    :clone()
-    :desc("Previous Trouble")
-    :bind("[t", vim.diagnostic.goto_prev, { float = false })
-  binder
-    :clone()
-    :desc("Next Trouble")
-    :bind("]t", vim.diagnostic.goto_next, { float = false })
-  binder:clone():desc("Trouble"):bind("<leader>t", vim.diagnostic.open_float)
+  binder:bind("[t", vim.diagnostic.goto_prev, { float = false })
+  binder:bind("]t", vim.diagnostic.goto_next, { float = false })
+  binder:bind("<leader>t", vim.diagnostic.open_float)
 end
 
 function spec:config()
@@ -109,42 +103,19 @@ function spec:config()
       end
 
       local binder = Binder.new({ "n" }):buffer(args.buf)
-      binder
-        :clone()
-        :desc("Intellisense Hover")
-        :bind("<leader>ih", vim.lsp.buf.hover)
-      binder
-        :clone()
-        :desc("Intellisense Definition")
-        :bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
-      binder
-        :clone()
-        :desc("Intellisense Type Definition")
-        :bind("<leader>it", vim.lsp.buf.type_definition, { reuse_win = true })
-      binder
-        :clone()
-        :desc("Intellisense Implementation")
-        :bind("<leader>ii", vim.lsp.buf.implementation)
-      binder
-        :clone()
-        :desc("Intellisense Reference")
-        :bind("<leader>ir", vim.lsp.buf.references)
-      binder
-        :clone()
-        :desc("Intellisense Code Action")
-        :bind("<leader>ia", vim.lsp.buf.code_action)
-      binder
-        :clone()
-        :desc("Intellisense Format")
-        :bind("<leader>if", vim.lsp.buf.format, { async = true })
-      binder
-        :clone()
-        :desc("Intellisense Rename")
-        :bind("<leader>ic", vim.lsp.buf.rename)
-      binder
-        :clone()
-        :desc("Intellisense Execute")
-        :bind("<leader>ie", vim.lsp.codelens.run)
+      binder:bind("<leader>ih", vim.lsp.buf.hover)
+      binder:bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
+      binder:bind(
+        "<leader>it",
+        vim.lsp.buf.type_definition,
+        { reuse_win = true }
+      )
+      binder:bind("<leader>ii", vim.lsp.buf.implementation)
+      binder:bind("<leader>ir", vim.lsp.buf.references)
+      binder:bind("<leader>ia", vim.lsp.buf.code_action)
+      binder:bind("<leader>if", vim.lsp.buf.format, { async = true })
+      binder:bind("<leader>ic", vim.lsp.buf.rename)
+      binder:bind("<leader>ie", vim.lsp.codelens.run)
     end,
   })
 
