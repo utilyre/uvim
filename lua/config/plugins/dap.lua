@@ -54,18 +54,14 @@ function spec:config()
   local binder = Binder.new({ "n" })
   binder:bind("<leader>db", dap.toggle_breakpoint)
   binder:bind("<leader>da", function()
+    local launch_path = vim.fs.normalize(
+      (vim.lsp.buf.list_workspace_folders()[1] or vim.fn.getcwd())
+        .. "/.vscode/launch.json"
+    )
+    if not vim.loop.fs_access(launch_path, "R") then return end
+
     vim.ui.select(
-      vim.json.decode(
-        table.concat(
-          vim.fn.readfile(
-            vim.fs.normalize(
-              (vim.lsp.buf.list_workspace_folders()[1] or vim.fn.cwd())
-                .. "/.vscode/launch.json"
-            )
-          ),
-          "\n"
-        )
-      ).configurations,
+      vim.json.decode(table.concat(vim.fn.readfile(launch_path), "\n")).configurations,
       {
         prompt = "Configurations:",
         format_item = function(config) return config.name end,
