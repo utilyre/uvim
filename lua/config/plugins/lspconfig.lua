@@ -82,7 +82,7 @@ function spec:config()
       binder:bind("<leader>ic", vim.lsp.buf.rename)
       binder
         :clone()
-        :with_modes({ "i" })
+        :with_modes({ "i", "s" })
         :bind("<c-space>", vim.lsp.buf.signature_help)
     end,
   })
