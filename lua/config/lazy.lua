@@ -68,7 +68,7 @@ lazy.setup("config.plugins", {
   },
 })
 
-local binder = Binder.new({ "n" })
+local binder = Binder.new():with_modes({ "n" })
 binder:bind("<leader>ph", lazy.home)
 binder:bind("<leader>pi", lazy.install)
 binder:bind("<leader>pu", lazy.update)

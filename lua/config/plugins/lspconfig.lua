@@ -34,7 +34,7 @@ function spec:init()
   vim.fn.sign_define("DiagnosticSignInfo", { linehl = "DiagnosticLineInfo" })
   vim.fn.sign_define("DiagnosticSignHint", { linehl = "DiagnosticLineHint" })
 
-  local binder = Binder.new({ "n" })
+  local binder = Binder.new():with_modes({ "n" })
   binder:bind("[e", vim.diagnostic.goto_prev, { float = false })
   binder:bind("]e", vim.diagnostic.goto_next, { float = false })
   binder:bind("<leader>e", vim.diagnostic.open_float)
@@ -67,7 +67,7 @@ function spec:config()
   vim.api.nvim_create_autocmd({ "LspAttach" }, {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
     callback = function(args)
-      local binder = Binder.new({ "n" }):buffer(args.buf)
+      local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:bind("<leader>ih", vim.lsp.buf.hover)
       binder:bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
       binder:bind(
@@ -86,7 +86,7 @@ function spec:config()
   vim.api.nvim_create_autocmd({ "LspDetach" }, {
     group = vim.api.nvim_create_augroup("config.plugins.lsp.detacher", {}),
     callback = function(args)
-      local binder = Binder.new({ "n" }):buffer(args.buf)
+      local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:unbind("<leader>ih")
       binder:unbind("<leader>id")
       binder:unbind("<leader>it")

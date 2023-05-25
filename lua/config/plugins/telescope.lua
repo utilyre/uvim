@@ -45,7 +45,7 @@ function spec:config()
     },
   })
 
-  local binder = Binder.new({ "n" })
+  local binder = Binder.new():with_modes({ "n" })
   binder:bind("<leader>fr", builtin.resume)
   binder:bind("<leader>ft", builtin.filetypes)
   binder:bind("<leader>ff", builtin.find_files)

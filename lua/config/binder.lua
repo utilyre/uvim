@@ -1,45 +1,47 @@
 ---@class Binder
 ---@field private modes string[]
----@field private opts { buffer: integer, desc: string, expr: boolean, remap: boolean }
+---@field private buffer integer
+---@field private remap boolean
+---@field private expr boolean
+---@field private desc string
 local Binder = {}
 
----@param modes string[]
 ---@return Binder
-function Binder.new(modes)
-  local instance = setmetatable({}, { __index = Binder })
-
-  instance.modes = modes
-  instance.opts = {}
-
-  return instance
-end
+function Binder.new() return setmetatable({}, { __index = Binder }) end
 
 ---@return Binder
 function Binder:clone() return vim.deepcopy(self) end
 
----@param value integer
+---@param modes string[]
 ---@return Binder
-function Binder:buffer(value)
-  self.opts.buffer = value
+function Binder:with_modes(modes)
+  self.modes = modes
   return self
 end
 
----@param value string
+---@param buffer integer
 ---@return Binder
-function Binder:desc(value)
-  self.opts.desc = value
-  return self
-end
-
----@return Binder
-function Binder:expr()
-  self.opts.expr = true
+function Binder:with_buffer(buffer)
+  self.buffer = buffer
   return self
 end
 
 ---@return Binder
-function Binder:remap()
-  self.opts.remap = true
+function Binder:with_remap()
+  self.remap = true
+  return self
+end
+
+---@return Binder
+function Binder:with_expr()
+  self.expr = true
+  return self
+end
+
+---@param desc string
+---@return Binder
+function Binder:with_desc(desc)
+  self.desc = desc
   return self
 end
 
@@ -53,13 +55,18 @@ function Binder:bind(lhs, rhs, ...)
     rhs = function() return fn(unpack(params)) end
   end
 
-  vim.keymap.set(self.modes, lhs, rhs, self.opts)
+  vim.keymap.set(self.modes, lhs, rhs, {
+    buffer = self.buffer,
+    remap = self.remap,
+    expr = self.expr,
+    desc = self.desc,
+  })
 end
 
 ---@param lhs string
 ---@return boolean
 function Binder:unbind(lhs)
-  local ok = pcall(vim.keymap.del, self.modes, lhs, self.opts)
+  local ok = pcall(vim.keymap.del, self.modes, lhs, { buffer = self.buffer })
   return ok
 end
 

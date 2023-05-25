@@ -30,7 +30,7 @@ function spec:config()
   })
 
   dap.listeners.after["event_initialized"].dap = function()
-    local binder = Binder.new({ "n" })
+    local binder = Binder.new():with_modes({ "n" })
 
     binder:bind("<leader>dc", dap.continue)
     binder:bind("<leader>dn", dap.step_over)
@@ -41,7 +41,7 @@ function spec:config()
   end
 
   dap.listeners.before["event_terminated"].dap = function()
-    local binder = Binder.new({ "n" })
+    local binder = Binder.new():with_modes({ "n" })
 
     binder:unbind("<leader>dc")
     binder:unbind("<leader>dn")
@@ -51,7 +51,7 @@ function spec:config()
     binder:unbind("<leader>ds")
   end
 
-  local binder = Binder.new({ "n" })
+  local binder = Binder.new():with_modes({ "n" })
   binder:bind("<leader>db", dap.toggle_breakpoint)
   binder:bind("<leader>da", function()
     local launch_path = vim.fs.normalize(
