@@ -72,11 +72,9 @@ function spec:config()
       local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:bind("<leader>ih", vim.lsp.buf.hover)
       binder:bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
-      binder:bind(
-        "<leader>it",
-        vim.lsp.buf.type_definition,
-        { reuse_win = true }
-      )
+      binder:bind("<leader>it", vim.lsp.buf.type_definition, {
+        reuse_win = true,
+      })
       binder:bind("<leader>ii", vim.lsp.buf.implementation)
       binder:bind("<leader>ir", vim.lsp.buf.references)
       binder:bind("<leader>ia", vim.lsp.buf.code_action)
