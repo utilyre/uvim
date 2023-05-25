@@ -80,7 +80,6 @@ function spec:config()
       binder:bind("<leader>ia", vim.lsp.buf.code_action)
       binder:bind("<leader>if", vim.lsp.buf.format, { async = true })
       binder:bind("<leader>ic", vim.lsp.buf.rename)
-      binder:bind("<leader>ie", vim.lsp.codelens.run)
     end,
   })
 
