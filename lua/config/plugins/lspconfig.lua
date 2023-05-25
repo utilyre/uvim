@@ -57,6 +57,8 @@ function spec:config()
 
       config.handlers["textDocument/hover"] =
         vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+      config.handlers["textDocument/signatureHelp"] =
+        vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
     end
   )
 
@@ -80,6 +82,10 @@ function spec:config()
       binder:bind("<leader>ia", vim.lsp.buf.code_action)
       binder:bind("<leader>if", vim.lsp.buf.format, { async = true })
       binder:bind("<leader>ic", vim.lsp.buf.rename)
+      binder
+        :clone()
+        :with_modes({ "i" })
+        :bind("<c-space>", vim.lsp.buf.signature_help)
     end,
   })
 

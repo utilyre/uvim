@@ -62,8 +62,8 @@ function spec:config()
       },
     },
     mapping = {
-      ["<c-space>"] = cmp.mapping(function()
-        if not cmp.visible() then cmp.complete() end
+      ["<c-space>"] = cmp.mapping(function(fallback)
+        if not cmp.visible() then fallback() end
         cmp.abort()
       end, { "i", "s" }),
       ["<c-y>"] = cmp.mapping(function(fallback)
