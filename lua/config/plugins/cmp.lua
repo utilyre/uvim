@@ -44,22 +44,8 @@ function spec:config()
       end,
     },
     sources = {
-      {
-        name = "nvim_lsp",
-        max_item_count = 80,
-      },
-      {
-        name = "buffer",
-        max_item_count = 20,
-        option = {
-          get_bufnrs = function()
-            return vim.tbl_map(
-              function(win) return vim.api.nvim_win_get_buf(win) end,
-              vim.api.nvim_list_wins()
-            )
-          end,
-        },
-      },
+      { name = "nvim_lsp" },
+      { name = "buffer" },
     },
     mapping = {
       ["<c-space>"] = cmp.mapping(function(fallback)
