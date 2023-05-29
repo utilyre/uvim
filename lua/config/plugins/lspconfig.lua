@@ -1,4 +1,4 @@
-local Binder = require("config.binder")
+local Binder = require("config.Binder")
 local icons = require("config.icons")
 
 local spec = {
