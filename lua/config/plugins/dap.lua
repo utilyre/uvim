@@ -55,6 +55,7 @@ function spec:config()
 
   local binder = Binder.new():with_modes({ "n" })
   binder:bind("<leader>db", dap.toggle_breakpoint)
+  binder:bind("<leader>dt", dap.terminate)
   binder:bind("<leader>da", function()
     local launch_path = vim.fs.normalize(
       (vim.lsp.buf.list_workspace_folders()[1] or vim.fn.getcwd())
