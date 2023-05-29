@@ -19,6 +19,7 @@ icons.widget = {
   lazy = "",
   nesting = "",
   plugin = "",
+  rejectedpoint = "",
   runtime = "",
   source = "",
   stackframe = "",

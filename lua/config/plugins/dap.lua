@@ -30,6 +30,10 @@ function spec:config()
     text = icons.widget.breakpoint,
     texthl = "debugBreakpoint",
   })
+  vim.fn.sign_define("DapBreakpointRejected", {
+    text = icons.widget.rejectedpoint,
+    texthl = "debugBreakpoint",
+  })
 
   dap.listeners.after["event_initialized"].dap = function()
     local binder = Binder.new():with_modes({ "n" })
