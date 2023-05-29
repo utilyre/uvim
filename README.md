@@ -51,9 +51,6 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 -   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
     you would setup a language server protocol.
 
-    **NOTE**: Additionally, [SchemaStore.nvim][SchemaStore.nvim] is provided to
-    properly setup language servers that accept pre-defined schemas.
-
     ```lua
     -- settings/servers.lua
     local lspconfig = require("lspconfig")
@@ -120,7 +117,6 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 [git-scm]: https://git-scm.com
 [tree-sitter]: https://tree-sitter.github.io/tree-sitter
 [lspconfig-all]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-[SchemaStore.nvim]: https://github.com/b0o/SchemaStore.nvim
 [null-ls.nvim@doc]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 [nvim-dap@wiki]: https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
 [lazy.nvim]: https://github.com/folke/lazy.nvim
