@@ -8,11 +8,9 @@ icons.layout = {
 
 icons.widget = {
   active = "",
-  branch = "",
   breakpoint = "",
   command = "",
   config = "",
-  error = "",
   event = "",
   filetype = "",
   import = "",
@@ -21,16 +19,12 @@ icons.widget = {
   lazy = "",
   nesting = "",
   plugin = "",
-  progress = "",
-  ready = "",
-  remote = "",
   runtime = "",
   source = "",
   stackframe = "",
   start = "",
   task = "",
   telescope = "",
-  warning = "",
 }
 
 icons.kind = {
