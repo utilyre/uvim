@@ -11,6 +11,7 @@ local spec = {
 
 function spec:config()
   local dap = require("dap")
+  local vscode = require("dap.ext.vscode")
   local widgets = require("dap.ui.widgets")
 
   dap.defaults.fallback.terminal_win_cmd = "new"
@@ -61,7 +62,7 @@ function spec:config()
     if not vim.loop.fs_access(launch_path, "R") then return end
 
     vim.ui.select(
-      vim.json.decode(table.concat(vim.fn.readfile(launch_path), "\n")).configurations,
+      vscode._load_json(table.concat(vim.fn.readfile(launch_path), "\n")),
       {
         prompt = "Configurations:",
         format_item = function(config) return config.name end,
