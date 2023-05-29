@@ -2,6 +2,7 @@ local icons = require("config.icons")
 
 local spec = {
   "utilyre/barbecue.nvim",
+  name = "barbecue",
   dependencies = {
     "SmiteshP/nvim-navic",
     "nvim-tree/nvim-web-devicons",

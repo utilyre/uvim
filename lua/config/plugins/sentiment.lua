@@ -1,5 +1,6 @@
 local spec = {
   "utilyre/sentiment.nvim",
+  name = "sentiment",
   event = {
     "VeryLazy",
   },

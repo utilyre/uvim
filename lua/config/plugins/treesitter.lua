@@ -1,5 +1,6 @@
 local spec = {
   "nvim-treesitter/nvim-treesitter",
+  name = "treesitter",
   build = ":TSUpdateSync",
   cmd = {
     "TSUpdateSync",

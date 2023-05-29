@@ -3,6 +3,7 @@ local icons = require("config.icons")
 
 local spec = {
   "mfussenegger/nvim-dap",
+  name = "dap",
   keys = {
     "<leader>db",
     "<leader>da",

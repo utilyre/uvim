@@ -1,5 +1,6 @@
 local spec = {
   "jose-elias-alvarez/null-ls.nvim",
+  name = "null",
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
