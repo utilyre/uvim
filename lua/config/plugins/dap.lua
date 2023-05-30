@@ -5,8 +5,8 @@ local spec = {
   "mfussenegger/nvim-dap",
   name = "dap",
   keys = {
-    "<leader>db",
-    "<leader>da",
+    "<leader>bb",
+    "<leader>ba",
   },
 }
 
@@ -38,29 +38,29 @@ function spec:config()
   dap.listeners.after["event_initialized"].dap = function()
     local binder = Binder.new():with_modes({ "n" })
 
-    binder:bind("<leader>dc", dap.continue)
-    binder:bind("<leader>dn", dap.step_over)
-    binder:bind("<leader>di", dap.step_into)
-    binder:bind("<leader>do", dap.step_out)
-    binder:bind("<leader>dr", dap.repl.open, {}, "")
-    binder:bind("<leader>ds", widgets.centered_float, widgets.scopes)
+    binder:bind("<leader>bc", dap.continue)
+    binder:bind("<leader>bn", dap.step_over)
+    binder:bind("<leader>bi", dap.step_into)
+    binder:bind("<leader>bo", dap.step_out)
+    binder:bind("<leader>br", dap.repl.open, {}, "")
+    binder:bind("<leader>bs", widgets.centered_float, widgets.scopes)
   end
 
   dap.listeners.before["event_terminated"].dap = function()
     local binder = Binder.new():with_modes({ "n" })
 
-    binder:unbind("<leader>dc")
-    binder:unbind("<leader>dn")
-    binder:unbind("<leader>di")
-    binder:unbind("<leader>do")
-    binder:unbind("<leader>dr")
-    binder:unbind("<leader>ds")
+    binder:unbind("<leader>bc")
+    binder:unbind("<leader>bn")
+    binder:unbind("<leader>bi")
+    binder:unbind("<leader>bo")
+    binder:unbind("<leader>br")
+    binder:unbind("<leader>bs")
   end
 
   local binder = Binder.new():with_modes({ "n" })
-  binder:bind("<leader>db", dap.toggle_breakpoint)
-  binder:bind("<leader>dt", dap.terminate)
-  binder:bind("<leader>da", function()
+  binder:bind("<leader>bb", dap.toggle_breakpoint)
+  binder:bind("<leader>bt", dap.terminate)
+  binder:bind("<leader>ba", function()
     local launch_path = vim.fs.normalize(
       (vim.lsp.buf.list_workspace_folders()[1] or vim.fn.getcwd())
         .. "/.vscode/launch.json"
