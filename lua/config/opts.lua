@@ -19,20 +19,19 @@ vim.opt.shortmess = {
   F = true,
 }
 
-vim.opt.laststatus = 3
-vim.opt.statusline = "%=%t%="
-vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "+1"
-
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.cursorline = true
-vim.opt.linebreak = true
-vim.opt.showbreak = icons.layout.wrap .. " "
-
 vim.opt.list = true
 vim.opt.listchars = { tab = icons.layout.tab .. "  " }
 vim.opt.fillchars:append({ eob = " " })
+
+vim.opt.laststatus = 3
+vim.opt.statusline = "%=%t%="
+vim.opt.colorcolumn = "+1"
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.cursorline = true
+vim.opt.linebreak = true
+vim.opt.showbreak = icons.layout.wrap .. " "
 
 vim.opt.incsearch = false
 vim.opt.ignorecase = true
