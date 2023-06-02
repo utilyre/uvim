@@ -12,14 +12,6 @@ function spec:config()
     flavour = "mocha",
     custom_highlights = function(palette)
       return {
-        ["debugPC"] = {
-          fg = palette.yellow,
-          bg = palette.none,
-        },
-        ["debugBreakpoint"] = {
-          fg = palette.red,
-        },
-
         ["DiagnosticLineError"] = {
           bg = utils.darken(palette.red, 0.095, palette.base),
         },
