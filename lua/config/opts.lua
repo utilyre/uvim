@@ -23,6 +23,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = icons.layout.tab .. "  " }
 vim.opt.fillchars:append({ eob = " " })
 
+vim.opt.laststatus = 0
 vim.opt.colorcolumn = "+1"
 vim.opt.number = true
 vim.opt.relativenumber = true
