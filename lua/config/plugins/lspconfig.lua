@@ -65,7 +65,10 @@ function spec:config()
   if vim.loop.fs_access(servers_path, "R") then dofile(servers_path) end
 
   vim.api.nvim_create_autocmd({ "LspAttach" }, {
-    group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
+    group = vim.api.nvim_create_augroup(
+      "config.plugins.lspconfig.attacher",
+      {}
+    ),
     callback = function(args)
       local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:bind("<leader>ih", vim.lsp.buf.hover)
@@ -86,7 +89,10 @@ function spec:config()
   })
 
   vim.api.nvim_create_autocmd({ "LspDetach" }, {
-    group = vim.api.nvim_create_augroup("config.plugins.lsp.detacher", {}),
+    group = vim.api.nvim_create_augroup(
+      "config.plugins.lspconfig.detacher",
+      {}
+    ),
     callback = function(args)
       local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:unbind("<leader>ih")
