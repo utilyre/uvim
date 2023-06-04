@@ -27,10 +27,22 @@ function spec:init()
     },
   })
 
-  vim.fn.sign_define("DiagnosticSignError", { linehl = "DiagnosticLineError" })
-  vim.fn.sign_define("DiagnosticSignWarn", { linehl = "DiagnosticLineWarn" })
-  vim.fn.sign_define("DiagnosticSignInfo", { linehl = "DiagnosticLineInfo" })
-  vim.fn.sign_define("DiagnosticSignHint", { linehl = "DiagnosticLineHint" })
+  vim.fn.sign_define("DiagnosticSignError", {
+    numhl = "DiagnosticSignError",
+    linehl = "DiagnosticLineError",
+  })
+  vim.fn.sign_define("DiagnosticSignWarn", {
+    numhl = "DiagnosticSignWarn",
+    linehl = "DiagnosticLineWarn",
+  })
+  vim.fn.sign_define("DiagnosticSignInfo", {
+    numhl = "DiagnosticSignInfo",
+    linehl = "DiagnosticLineInfo",
+  })
+  vim.fn.sign_define("DiagnosticSignHint", {
+    numhl = "DiagnosticSignHint",
+    linehl = "DiagnosticLineHint",
+  })
 
   local binder = Binder.new():with_modes({ "n" })
   binder:bind("[d", vim.diagnostic.goto_prev, { float = false })
