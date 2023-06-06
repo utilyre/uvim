@@ -6,8 +6,10 @@
 ---@field private desc string
 local Binder = {}
 
+Binder.__index = Binder
+
 ---@return Binder
-function Binder.new() return setmetatable({}, { __index = Binder }) end
+function Binder.new() return setmetatable({}, Binder) end
 
 ---@return Binder
 function Binder:clone() return vim.deepcopy(self) end
