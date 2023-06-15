@@ -1,17 +1,17 @@
 {
-  "LuaSnip": { "branch": "master", "commit": "a13af80734eb28f744de6c875330c9d3c24b5f3b" },
+  "LuaSnip": { "branch": "master", "commit": "bfbd03952f428db6e28bb199c713b1b25576cec9" },
   "barbecue": { "branch": "main", "commit": "cd7e7da622d68136e13721865b4d919efd6325ed" },
-  "catppuccin": { "branch": "main", "commit": "2df7036c5c303c9184869936e40ca18935e4afcb" },
-  "cmp": { "branch": "main", "commit": "09ff53ff579cfa3368f8051b0dbe88406891aabe" },
+  "catppuccin": { "branch": "main", "commit": "ad6305594737e16155c41c176c611e865c26bb6d" },
+  "cmp": { "branch": "main", "commit": "b8c2a62b3bd3827aa059b43be3dd4b5c45037d65" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },
-  "lazy.nvim": { "branch": "main", "commit": "678179543e0d27650c328d8659f2c2cab4d854ef" },
-  "lspconfig": { "branch": "master", "commit": "0f598b9ab9f2a6d7e137074be99c8d89af44b990" },
+  "lazy.nvim": { "branch": "main", "commit": "10d4371745f88837c78c8daab00c5be6e48abea4" },
+  "lspconfig": { "branch": "master", "commit": "295c646488d5baa63c6c4da68fe61171b9257375" },
   "null": { "branch": "main", "commit": "a138b14099e9623832027ea12b4631ddd2a49256" },
   "nvim-navic": { "branch": "master", "commit": "15704c607569d6c5cfeab486d3ef9459645a70ce" },
   "nvim-web-devicons": { "branch": "master", "commit": "2a125024a137677930efcfdf720f205504c97268" },
-  "plenary.nvim": { "branch": "master", "commit": "499e0743cf5e8075cd32af68baa3946a1c76adf1" },
+  "plenary.nvim": { "branch": "master", "commit": "36aaceb6e93addd20b1b18f94d86aecc552f30c4" },
   "sentiment": { "branch": "main", "commit": "ecde8d877881bb78fdb90060c0991e76770dbdbc" },
-  "telescope": { "branch": "master", "commit": "69e8715786d1ee86249eff326f9d6804ee388502" },
-  "treesitter": { "branch": "master", "commit": "51dfcfdfdea564c7a6bf155cf5b7c9831193ddae" }
+  "telescope": { "branch": "master", "commit": "00cf15074a2997487813672a75f946d2ead95eb0" },
+  "treesitter": { "branch": "master", "commit": "10b0da9f931c734b531eb095ea01cce53984205c" }
 }
