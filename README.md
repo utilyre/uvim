@@ -72,41 +72,6 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     null.register(null.builtins.formatting.stylua)
     ```
 
--   Check out [the wiki][nvim-dap@wiki] for further information on setting up a
-    debug adapter and configuring it.
-
-    ```lua
-    -- settings/adapters.lua
-    local dap = require("dap")
-
-    -- https://github.com/vadimcn/codelldb
-    dap.adapters.codelldb = {
-      type = "server",
-      port = "${port}",
-      executable = {
-        command = vim.fs.normalize("/path/to/codelldb/extension/adapter/codelldb"),
-        args = { "--port", "${port}" },
-      },
-    }
-    ```
-
-    ```jsonc
-    // ${workspaceFolder}/.vscode/launch.json
-    {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "type": "codelldb",
-                "request": "launch",
-                "name": "Debug",
-                "cwd": "${workspaceFolder}",
-                "program": "${workspaceFolder}/path/to/program",
-                "args": []
-            }
-        ]
-    }
-    ```
-
 -   Set `NVIM_DEV` environment variable to modify where [lazy.nvim][lazy.nvim]
     should look for `dev = true` plugins.
 
@@ -118,5 +83,4 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 [tree-sitter]: https://tree-sitter.github.io/tree-sitter
 [lspconfig-all]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [null-ls.nvim@doc]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
-[nvim-dap@wiki]: https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
 [lazy.nvim]: https://github.com/folke/lazy.nvim
