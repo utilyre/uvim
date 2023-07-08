@@ -19,8 +19,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 ## 📦 Installation
 
-1.  Append the following to your shell startup script (e.g. `~/.bashrc`) and run
-    it in your current session as well
+1.  Run the following and append it to your shell startup script
 
     ```bash
     export NVIM_APPNAME=uvim
