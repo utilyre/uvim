@@ -31,7 +31,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     git clone https://github.com/utilyre/uvim.git ~/.config/$NVIM_APPNAME
     ```
 
-3.  Spin up Neovim in headless mode to install the configured plugins
+3.  Spin up Neovim in headless mode
 
     ```bash
     nvim --headless +q
