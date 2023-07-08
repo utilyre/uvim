@@ -19,11 +19,10 @@ function spec:config()
   local luasnip = require("luasnip")
 
   cmp.setup({
-    snippet = {
-      expand = function(opts) luasnip.lsp_expand(opts.body) end,
-    },
-    experimental = {
-      ghost_text = true,
+    view = {
+      entries = {
+        selection_order = "near_cursor",
+      },
     },
     window = {
       completion = {
@@ -43,6 +42,12 @@ function spec:config()
 
         return item
       end,
+    },
+    experimental = {
+      ghost_text = true,
+    },
+    snippet = {
+      expand = function(opts) luasnip.lsp_expand(opts.body) end,
     },
     sources = {
       { name = "nvim_lsp" },
