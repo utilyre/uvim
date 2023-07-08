@@ -1,6 +1,6 @@
 <div align="center">
 
-# nvim
+# uvim
 
 This is my **"minimal"** _Neovim config_ that I put pride on.
 
@@ -19,25 +19,20 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 ## 📦 Installation
 
-1.  Take a backup of your (possibly) existing Neovim folders
+1.  Append the following to your shell startup script (e.g. `~/.bashrc`) and run
+    it in your current session as well
 
     ```bash
-    # required
-    mv ~/.config/nvim ~/.config/nvim-backup
-
-    # optional
-    mv ~/.cache/nvim ~/.cache/nvim-backup
-    mv ~/.local/share/nvim ~/.local/share/nvim-backup
-    mv ~/.local/state/nvim ~/.local/state/nvim-backup
+    export NVIM_APPNAME=uvim
     ```
 
-2.  Clone this repository onto `~/.config/nvim`
+2.  Clone this repository
 
     ```bash
-    git clone https://github.com/utilyre/nvim.git ~/.config/nvim
+    git clone https://github.com/utilyre/uvim.git ~/.config/$NVIM_APPNAME
     ```
 
-3.  Spin up Neovim in headless mode to install all the plugins
+3.  Spin up Neovim in headless mode to install the configured plugins
 
     ```bash
     nvim --headless +q
