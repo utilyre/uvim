@@ -39,6 +39,9 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 
 ## ☕ Tips
 
+-   Set `NVIM_DEV` environment variable to modify where [lazy.nvim][lazy.nvim]
+    should look for `dev = true` plugins.
+
 -   Run `:TSInstall [language]` to install the [tree-sitter][tree-sitter] parser
     for the given language.
 
@@ -66,15 +69,12 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     null.register(null.builtins.formatting.stylua)
     ```
 
--   Set `NVIM_DEV` environment variable to modify where [lazy.nvim][lazy.nvim]
-    should look for `dev = true` plugins.
-
 [neovim]: https://neovim.io
 [nerdfonts]: https://www.nerdfonts.com
 [fd-find]: https://crates.io/crates/fd-find
 [ripgrep]: https://crates.io/crates/ripgrep
 [git-scm]: https://git-scm.com
+[lazy.nvim]: https://github.com/folke/lazy.nvim
 [tree-sitter]: https://tree-sitter.github.io/tree-sitter
 [lspconfig-all]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 [null-ls.nvim@doc]: https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
-[lazy.nvim]: https://github.com/folke/lazy.nvim
