@@ -1,6 +1,5 @@
 {
   "LuaSnip": { "branch": "master", "commit": "db0aba4a39b28ff5564def07c25bb4bd06a78fdc" },
-  "barbecue": { "branch": "main", "commit": "cd7e7da622d68136e13721865b4d919efd6325ed" },
   "catppuccin": { "branch": "main", "commit": "c75562cbc954136f279ced91661251543b6f2a20" },
   "cmp": { "branch": "main", "commit": "2743dd989e9b932e1b4813a4927d7b84272a14e2" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
@@ -8,7 +7,6 @@
   "lazy.nvim": { "branch": "main", "commit": "f8611632d0f9c6818e8eb54f9bcd1dad122b5a7f" },
   "lspconfig": { "branch": "master", "commit": "2187f222c37cb5fd7cf96f242e5c8a4a340f2596" },
   "null": { "branch": "main", "commit": "07897774c3b2f14d71b2ca51f3014d1055da9657" },
-  "nvim-navic": { "branch": "master", "commit": "d046a2f6bbad220f8baa4bf9161730cfef3dd026" },
   "nvim-web-devicons": { "branch": "master", "commit": "9ab9b0b894b2388a9dbcdee5f00ce72e25d85bf9" },
   "plenary.nvim": { "branch": "master", "commit": "102c02903c74b93c705406bf362049383abc87c8" },
   "sentiment": { "branch": "main", "commit": "ecde8d877881bb78fdb90060c0991e76770dbdbc" },
