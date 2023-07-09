@@ -10,6 +10,7 @@ vim.opt.updatetime = 400
 vim.opt.equalalways = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.smoothscroll = true
 vim.opt.scrolloff = 2
 
 vim.opt.list = true
