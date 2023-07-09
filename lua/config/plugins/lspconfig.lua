@@ -82,6 +82,12 @@ function spec:config()
       {}
     ),
     callback = function(args)
+      local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+      if client.supports_method("textDocument/inlayHint") then
+        vim.lsp.inlay_hint(args.buf, true)
+      end
+
       local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:bind("<leader>ih", vim.lsp.buf.hover)
       binder:bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
@@ -106,6 +112,12 @@ function spec:config()
       {}
     ),
     callback = function(args)
+      local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+      if client.supports_method("textDocument/inlayHint") then
+        vim.lsp.inlay_hint(args.buf, false)
+      end
+
       local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:unbind("<leader>ih")
       binder:unbind("<leader>id")
