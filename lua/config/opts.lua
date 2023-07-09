@@ -43,4 +43,4 @@ vim.opt.spell = true
 vim.opt.spelloptions:append({ "camel" })
 vim.opt.spelllang:append({ "programming" })
 
-vim.g.mapleader = " "
+vim.g.mapleader = vim.keycode("<space>")
