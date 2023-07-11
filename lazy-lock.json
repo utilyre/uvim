@@ -9,7 +9,6 @@
   "null": { "branch": "main", "commit": "db09b6c691def0038c456551e4e2772186449f35" },
   "nvim-web-devicons": { "branch": "master", "commit": "9ab9b0b894b2388a9dbcdee5f00ce72e25d85bf9" },
   "plenary.nvim": { "branch": "master", "commit": "bda256fab0eb66a15e8190937e417e6a14ee5d72" },
-  "sentiment": { "branch": "main", "commit": "ecde8d877881bb78fdb90060c0991e76770dbdbc" },
   "telescope": { "branch": "master", "commit": "276362a8020c6e94c7a76d49aa00d4923b0c02f3" },
   "treesitter": { "branch": "master", "commit": "d9104a1d10023ed9e7eacf68639ad887425246eb" }
 }
