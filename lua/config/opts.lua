@@ -16,7 +16,10 @@ vim.opt.scrolloff = 2
 vim.opt.list = true
 vim.opt.listchars = { tab = icons.layout.tab .. "  " }
 vim.opt.fillchars:append({ eob = " " })
-vim.opt.shortmess = { a = true }
+vim.opt.shortmess = {
+  a = true,
+  F = true,
+}
 
 vim.opt.number = true
 vim.opt.relativenumber = true
