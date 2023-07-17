@@ -43,6 +43,7 @@ function spec:config()
         return item
       end,
     },
+    preselect = "none",
     experimental = {
       ghost_text = true,
     },
