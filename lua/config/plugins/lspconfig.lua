@@ -88,6 +88,16 @@ function spec:config()
         vim.lsp.inlay_hint(args.buf, true)
       end
 
+      vim.api.nvim_create_autocmd({ "LspProgress" }, {
+        group = vim.api.nvim_create_augroup(
+          "config.plugins.lspconfig.progress",
+          {}
+        ),
+        callback = function(args)
+          vim.api.nvim_echo({ { vim.lsp.status() } }, false, {})
+        end,
+      })
+
       local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:bind("<leader>ih", vim.lsp.buf.hover)
       binder:bind("<leader>id", vim.lsp.buf.definition, { reuse_win = true })
