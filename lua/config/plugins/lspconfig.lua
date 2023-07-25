@@ -88,15 +88,18 @@ function spec:config()
         vim.lsp.inlay_hint(args.buf, true)
       end
 
-      vim.api.nvim_create_autocmd({ "LspProgress" }, {
-        group = vim.api.nvim_create_augroup(
-          "config.plugins.lspconfig.progress",
-          {}
-        ),
-        callback = function(args)
-          vim.api.nvim_echo({ { vim.lsp.status() } }, false, {})
-        end,
-      })
+      if client.supports_method("$/progress") then
+        vim.api.nvim_create_autocmd({ "LspProgress" }, {
+          group = vim.api.nvim_create_augroup(
+            "config.plugins.lspconfig.progress",
+            { clear = false }
+          ),
+          buffer = args.buf,
+          callback = function(args)
+            vim.api.nvim_echo({ { vim.lsp.status() } }, true, {})
+          end,
+        })
+      end
 
       local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
       binder:bind("<leader>ih", vim.lsp.buf.hover)
@@ -126,6 +129,13 @@ function spec:config()
 
       if client.supports_method("textDocument/inlayHint") then
         vim.lsp.inlay_hint(args.buf, false)
+      end
+
+      if client.supports_method("$/progress") then
+        vim.api.nvim_clear_autocmds({
+          group = "config.plugins.lspconfig.progress",
+          buffer = args.buf,
+        })
       end
 
       local binder = Binder.new():with_modes({ "n" }):with_buffer(args.buf)
