@@ -1,6 +1,9 @@
 local spec = {
   "numToStr/Comment.nvim",
-  keys = { "gc", "gb" },
+  keys = {
+    { "gc", mode = { "n", "x" } },
+    { "gb", mode = { "n", "x" } },
+  },
 }
 
 function spec:config()
