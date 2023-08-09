@@ -30,12 +30,6 @@ function spec:config()
         },
       }
     end,
-    integrations = {
-      barbecue = {
-        bold_basename = false,
-        dim_context = true,
-      },
-    },
   })
 
   catppuccin.load()
