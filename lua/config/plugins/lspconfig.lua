@@ -3,10 +3,7 @@ local icons = require("config.icons")
 
 local spec = {
   "neovim/nvim-lspconfig",
-  event = {
-    "BufReadPre",
-    "BufNewFile",
-  },
+  event = { "BufReadPre", "BufNewFile" },
 }
 
 function spec:init()

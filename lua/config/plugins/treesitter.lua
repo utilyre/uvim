@@ -1,13 +1,8 @@
 local spec = {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdateSync",
-  cmd = {
-    "TSUpdateSync",
-  },
-  event = {
-    "BufReadPre",
-    "BufNewFile",
-  },
+  cmd = { "TSUpdateSync" },
+  event = { "BufReadPre", "BufNewFile" },
 }
 
 function spec:config()

@@ -1,10 +1,7 @@
 local spec = {
   "jose-elias-alvarez/null-ls.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
-  event = {
-    "BufReadPre",
-    "BufNewFile",
-  },
+  event = { "BufReadPre", "BufNewFile" },
 }
 
 function spec:config()
