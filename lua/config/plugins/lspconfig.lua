@@ -51,7 +51,7 @@ function spec:config()
           ),
           buffer = args.buf,
           callback = function(args)
-            vim.api.nvim_echo({ { vim.lsp.status() } }, true, {})
+            vim.api.nvim_echo({ { vim.lsp.status() } }, false, {})
           end,
         })
       end
