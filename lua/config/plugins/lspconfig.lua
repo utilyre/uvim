@@ -29,7 +29,11 @@ function spec:config()
 
   local servers_path = vim.fs.joinpath(vim.fn.stdpath("config"), "servers")
   for name, type in vim.fs.dir(servers_path) do
-    if type == "file" then dofile(vim.fs.joinpath(servers_path, name)) end
+    if type == "file" and vim.endswith(name, ".lua") then
+      lspconfig[name:sub(1, -5)].setup(
+        dofile(vim.fs.joinpath(servers_path, name))
+      )
+    end
   end
 
   vim.api.nvim_create_autocmd({ "LspAttach" }, {
