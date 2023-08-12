@@ -27,10 +27,6 @@ function spec:config()
     end
   )
 
-  local servers_path =
-    vim.fs.normalize(vim.fn.stdpath("config") .. "/settings/servers.lua")
-  if vim.loop.fs_access(servers_path, "R") then dofile(servers_path) end
-
   vim.api.nvim_create_autocmd({ "LspAttach" }, {
     group = vim.api.nvim_create_augroup(
       "config.plugins.lspconfig.attacher",
