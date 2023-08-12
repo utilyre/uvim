@@ -1,7 +1,7 @@
 local Binder = require("config.Binder")
 local icon = require("config.icon")
 
-local lazy_path = vim.fs.normalize(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
+local lazy_path = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy", "lazy.nvim")
 if not vim.loop.fs_access(lazy_path, "R") then
   vim.system({
     "git",
