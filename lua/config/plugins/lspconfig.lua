@@ -27,6 +27,11 @@ function spec:config()
     end
   )
 
+  local servers_path = vim.fs.joinpath(vim.fn.stdpath("config"), "servers")
+  for name, type in vim.fs.dir(servers_path) do
+    if type == "file" then dofile(vim.fs.joinpath(servers_path, name)) end
+  end
+
   vim.api.nvim_create_autocmd({ "LspAttach" }, {
     group = vim.api.nvim_create_augroup(
       "config.plugins.lspconfig.attacher",
