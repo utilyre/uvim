@@ -1,12 +1,12 @@
-local icons = {}
+local icon = {}
 
-icons.layout = {
+icon.layout = {
   list = "•",
   tab = "→",
   wrap = "↪",
 }
 
-icons.widget = {
+icon.widget = {
   active = "",
   command = "",
   config = "",
@@ -24,7 +24,7 @@ icons.widget = {
   telescope = "",
 }
 
-icons.kind = {
+icon.kind = {
   Class = "",
   Color = "",
   Constant = "",
@@ -52,4 +52,4 @@ icons.kind = {
   Variable = "",
 }
 
-return icons
+return icon

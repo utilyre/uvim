@@ -1,5 +1,5 @@
 local Binder = require("config.Binder")
-local icons = require("config.icons")
+local icon = require("config.icon")
 
 local spec = {
   "nvim-telescope/telescope.nvim",
@@ -21,7 +21,7 @@ function spec:config()
   telescope.setup({
     defaults = vim.tbl_deep_extend("force", themes.get_dropdown(), {
       path_display = { "truncate" },
-      prompt_prefix = icons.widget.telescope .. " ",
+      prompt_prefix = icon.widget.telescope .. " ",
       selection_caret = "  ",
       mappings = {
         i = {

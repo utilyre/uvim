@@ -1,4 +1,4 @@
-local icons = require("config.icons")
+local icon = require("config.icon")
 
 vim.opt.termguicolors = true
 vim.opt.undofile = true
@@ -14,7 +14,7 @@ vim.opt.smoothscroll = true
 vim.opt.scrolloff = 2
 
 vim.opt.list = true
-vim.opt.listchars = { tab = icons.layout.tab .. "  " }
+vim.opt.listchars = { tab = icon.layout.tab .. "  " }
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.shortmess = {
   a = true,
@@ -27,7 +27,7 @@ vim.opt.colorcolumn = "+1"
 
 vim.opt.linebreak = true
 vim.opt.breakindent = true
-vim.opt.showbreak = icons.layout.wrap .. " "
+vim.opt.showbreak = icon.layout.wrap .. " "
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = { "number", "screenline" }
 

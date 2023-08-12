@@ -1,5 +1,5 @@
 local Binder = require("config.Binder")
-local icons = require("config.icons")
+local icon = require("config.icon")
 
 local lazy_path = vim.fs.normalize(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 if not vim.loop.fs_access(lazy_path, "R") then
@@ -43,26 +43,26 @@ lazy.setup("config.plugins", {
   ui = {
     border = "rounded",
     icons = {
-      lazy = icons.widget.lazy .. "  ",
-      not_loaded = icons.widget.inactive,
-      loaded = icons.widget.active,
-      task = icons.widget.task,
-      source = icons.widget.source,
-      start = icons.widget.start,
-      plugin = icons.widget.plugin,
-      event = icons.widget.event,
-      keys = icons.widget.keymap,
-      cmd = icons.widget.command,
-      ft = icons.widget.filetype,
-      init = icons.widget.config,
-      runtime = icons.widget.runtime,
-      import = icons.widget.import,
-      config = icons.widget.config,
+      lazy = icon.widget.lazy .. "  ",
+      not_loaded = icon.widget.inactive,
+      loaded = icon.widget.active,
+      task = icon.widget.task,
+      source = icon.widget.source,
+      start = icon.widget.start,
+      plugin = icon.widget.plugin,
+      event = icon.widget.event,
+      keys = icon.widget.keymap,
+      cmd = icon.widget.command,
+      ft = icon.widget.filetype,
+      init = icon.widget.config,
+      runtime = icon.widget.runtime,
+      import = icon.widget.import,
+      config = icon.widget.config,
       list = {
-        icons.layout.list,
-        icons.layout.list,
-        icons.layout.list,
-        icons.layout.list,
+        icon.layout.list,
+        icon.layout.list,
+        icon.layout.list,
+        icon.layout.list,
       },
     },
   },

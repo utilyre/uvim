@@ -1,5 +1,5 @@
 local Binder = require("config.Binder")
-local icons = require("config.icons")
+local icon = require("config.icon")
 
 local spec = {
   "neovim/nvim-lspconfig",
@@ -11,14 +11,14 @@ function spec:init()
     severity_sort = true,
     virtual_text = {
       spacing = 2,
-      prefix = " " .. icons.layout.list,
+      prefix = " " .. icon.layout.list,
       suffix = " ",
     },
     float = {
       source = true,
       border = "rounded",
       header = "",
-      prefix = " " .. icons.layout.list .. " ",
+      prefix = " " .. icon.layout.list .. " ",
       suffix = " ",
     },
   })

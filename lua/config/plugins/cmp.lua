@@ -1,4 +1,4 @@
-local icons = require("config.icons")
+local icon = require("config.icon")
 
 local spec = {
   "hrsh7th/nvim-cmp",
@@ -34,7 +34,7 @@ function spec:config()
       fields = { "kind", "abbr", "menu" },
       format = function(_, item)
         local kind = item.kind
-        item.kind = icons.kind[kind]
+        item.kind = icon.kind[kind]
         item.menu = kind:gsub("(%l)(%u)", "%1 %2"):lower()
 
         return item
