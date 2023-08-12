@@ -1,50 +1,9 @@
 local Binder = require("config.Binder")
-local icon = require("config.icon")
 
 local spec = {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
 }
-
-function spec:init()
-  vim.diagnostic.config({
-    severity_sort = true,
-    virtual_text = {
-      spacing = 2,
-      prefix = " " .. icon.layout.list,
-      suffix = " ",
-    },
-    float = {
-      source = true,
-      border = "rounded",
-      header = "",
-      prefix = " " .. icon.layout.list .. " ",
-      suffix = " ",
-    },
-  })
-
-  vim.fn.sign_define("DiagnosticSignError", {
-    numhl = "DiagnosticSignError",
-    linehl = "DiagnosticLineError",
-  })
-  vim.fn.sign_define("DiagnosticSignWarn", {
-    numhl = "DiagnosticSignWarn",
-    linehl = "DiagnosticLineWarn",
-  })
-  vim.fn.sign_define("DiagnosticSignInfo", {
-    numhl = "DiagnosticSignInfo",
-    linehl = "DiagnosticLineInfo",
-  })
-  vim.fn.sign_define("DiagnosticSignHint", {
-    numhl = "DiagnosticSignHint",
-    linehl = "DiagnosticLineHint",
-  })
-
-  local binder = Binder.new():with_modes({ "n" })
-  binder:bind("[d", vim.diagnostic.goto_prev, { float = false })
-  binder:bind("]d", vim.diagnostic.goto_next, { float = false })
-  binder:bind("<leader>d", vim.diagnostic.open_float)
-end
 
 function spec:config()
   local lspconfig = require("lspconfig")
