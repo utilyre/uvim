@@ -31,7 +31,6 @@ lazy.setup("config.plugins", {
         "health",
         "man",
         "matchit",
-        "matchparen",
         "rplugin",
         "tarPlugin",
         "tohtml",
