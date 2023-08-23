@@ -3,7 +3,6 @@ local icon = {}
 icon.layout = {
   list = "•",
   tab = "→",
-  wrap = "↪",
 }
 
 icon.widget = {

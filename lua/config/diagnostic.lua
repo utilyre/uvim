@@ -3,11 +3,7 @@ local icon = require("config.icon")
 
 vim.diagnostic.config({
   severity_sort = true,
-  virtual_text = {
-    spacing = 2,
-    prefix = " " .. icon.layout.list,
-    suffix = " ",
-  },
+  virtual_text = false,
   float = {
     source = true,
     border = "rounded",
