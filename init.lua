@@ -1,3 +1,3 @@
-require("config.opt")
-require("config.diagnostic")
-require("config.lazy")
+require("uvim.opt")
+require("uvim.diagnostic")
+require("uvim.lazy")

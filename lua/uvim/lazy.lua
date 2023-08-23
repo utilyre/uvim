@@ -1,5 +1,5 @@
-local Binder = require("config.Binder")
-local icon = require("config.icon")
+local Binder = require("uvim.Binder")
+local icon = require("uvim.icon")
 
 local lazy_path = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy", "lazy.nvim")
 if not vim.loop.fs_access(lazy_path, "R") then
@@ -16,7 +16,7 @@ vim.opt.runtimepath:prepend({ lazy_path })
 
 local lazy = require("lazy")
 
-lazy.setup("config.plugins", {
+lazy.setup("uvim.plugins", {
   concurrency = 4,
   install = {
     colorscheme = { "catppuccin", "habamax" },

@@ -1,5 +1,5 @@
-local Binder = require("config.Binder")
-local icon = require("config.icon")
+local Binder = require("uvim.Binder")
+local icon = require("uvim.icon")
 
 local spec = {
   "nvim-telescope/telescope.nvim",

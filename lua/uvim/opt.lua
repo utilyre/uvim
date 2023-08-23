@@ -1,4 +1,4 @@
-local icon = require("config.icon")
+local icon = require("uvim.icon")
 
 vim.opt.termguicolors = true
 vim.opt.undofile = true

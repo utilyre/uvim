@@ -1,4 +1,4 @@
-local Binder = require("config.Binder")
+local Binder = require("uvim.Binder")
 
 local spec = {
   "neovim/nvim-lspconfig",
