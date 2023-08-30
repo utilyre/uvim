@@ -20,6 +20,7 @@ function spec:config()
 
   telescope.setup({
     defaults = vim.tbl_deep_extend("force", themes.get_dropdown(), {
+      file_ignore_patterns = { "^.git/" },
       path_display = { "truncate" },
       prompt_prefix = icon.widget.telescope .. " ",
       selection_caret = "  ",
