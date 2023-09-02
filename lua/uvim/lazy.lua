@@ -3,7 +3,7 @@ local icon = require("uvim.icon")
 
 local lazy_path = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy", "lazy.nvim")
 if not vim.loop.fs_access(lazy_path, "R") then
-  vim.system({
+  vim.fn.system({
     "git",
     "clone",
     "--single-branch",
