@@ -46,7 +46,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     for the given language.
 
 -   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
-    you would setup a language server protocol.
+    you would setup a language server.
 
     > lsp/rust_analyzer.lua
 
