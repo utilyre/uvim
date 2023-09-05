@@ -8,11 +8,15 @@ function spec:config()
 
   tokyonight.setup({
     style = "night",
-    on_highlights = function(highlights, colors)
-      highlights["DiagnosticLineError"] = highlights["DiagnosticVirtualTextError"]
-      highlights["DiagnosticLineWarn"] = highlights["DiagnosticVirtualTextWarn"]
-      highlights["DiagnosticLineInfo"] = highlights["DiagnosticVirtualTextInfo"]
-      highlights["DiagnosticLineHint"] = highlights["DiagnosticVirtualTextHint"]
+    on_highlights = function(highlights)
+      highlights["DiagnosticLineError"] =
+        { bg = highlights["DiagnosticVirtualTextError"].bg }
+      highlights["DiagnosticLineWarn"] =
+        { bg = highlights["DiagnosticVirtualTextWarn"].bg }
+      highlights["DiagnosticLineInfo"] =
+        { bg = highlights["DiagnosticVirtualTextInfo"].bg }
+      highlights["DiagnosticLineHint"] =
+        { bg = highlights["DiagnosticVirtualTextHint"].bg }
     end,
   })
 
