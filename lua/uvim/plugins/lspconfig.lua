@@ -19,11 +19,6 @@ function spec:config()
         config.capabilities,
         cmp.default_capabilities()
       )
-
-      config.handlers["textDocument/hover"] =
-        vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-      config.handlers["textDocument/signatureHelp"] =
-        vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
     end
   )
 
