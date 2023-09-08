@@ -13,22 +13,10 @@ vim.diagnostic.config({
   },
 })
 
-vim.fn.sign_define("DiagnosticSignError", {
-  numhl = "DiagnosticSignError",
-  linehl = "DiagnosticLineError",
-})
-vim.fn.sign_define("DiagnosticSignWarn", {
-  numhl = "DiagnosticSignWarn",
-  linehl = "DiagnosticLineWarn",
-})
-vim.fn.sign_define("DiagnosticSignInfo", {
-  numhl = "DiagnosticSignInfo",
-  linehl = "DiagnosticLineInfo",
-})
-vim.fn.sign_define("DiagnosticSignHint", {
-  numhl = "DiagnosticSignHint",
-  linehl = "DiagnosticLineHint",
-})
+vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { numhl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { numhl = "DiagnosticSignInfo" })
+vim.fn.sign_define("DiagnosticSignHint", { numhl = "DiagnosticSignHint" })
 
 local binder = Binder.new():with_modes({ "n" })
 binder:bind("[d", vim.diagnostic.goto_prev, { float = false })
