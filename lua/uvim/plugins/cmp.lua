@@ -23,11 +23,8 @@ function spec:config()
     },
     window = {
       completion = {
+        col_offset = -2,
         scrolloff = vim.go.scrolloff,
-        border = "rounded",
-      },
-      documentation = {
-        border = "rounded",
       },
     },
     formatting = {
