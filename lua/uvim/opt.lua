@@ -10,7 +10,6 @@ vim.opt.updatetime = 400
 vim.opt.equalalways = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.scrolloff = 2
 
 vim.opt.list = true
 vim.opt.listchars = { tab = icon.layout.tab .. "  " }
@@ -25,7 +24,7 @@ vim.opt.relativenumber = true
 vim.opt.colorcolumn = "+1"
 
 vim.opt.linebreak = true
-vim.opt.cursorline = true
+vim.opt.scrolloff = 2
 
 vim.opt.confirm = true
 vim.opt.ignorecase = true
