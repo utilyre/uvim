@@ -19,18 +19,25 @@ function spec:config()
   local builtin = require("telescope.builtin")
 
   telescope.setup({
-    defaults = vim.tbl_deep_extend("force", themes.get_dropdown(), {
+    defaults = {
+      sorting_strategy = "ascending",
       file_ignore_patterns = { "^.git/" },
       path_display = { "truncate" },
       prompt_prefix = icon.widget.telescope .. " ",
       selection_caret = "  ",
+      borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+      layout_config = {
+        width = 100,
+        height = 25,
+        prompt_position = "top",
+      },
       mappings = {
         i = {
           ["<s-tab>"] = "move_selection_previous",
           ["<tab>"] = "move_selection_next",
         },
       },
-    }),
+    },
     pickers = {
       find_files = {
         hidden = true,

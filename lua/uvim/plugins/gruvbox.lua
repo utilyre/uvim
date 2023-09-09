@@ -6,7 +6,12 @@ local spec = {
 function spec:config()
   local gruvbox = require("gruvbox")
 
-  gruvbox.setup()
+  gruvbox.setup({
+    overrides = {
+      ["TelescopeNormal"] = { link = "NormalFloat" },
+    },
+  })
+
   gruvbox.load()
 end
 
