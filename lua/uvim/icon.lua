@@ -9,13 +9,10 @@ icon.widget = {
   active = "",
   command = "",
   config = "",
-  error = "",
   event = "",
   filetype = "",
-  hint = "",
   import = "",
   inactive = "",
-  info = "",
   keymap = "",
   lazy = "",
   plugin = "",
@@ -24,7 +21,6 @@ icon.widget = {
   start = "",
   task = "",
   telescope = "",
-  warn = "",
 }
 
 icon.kind = {
