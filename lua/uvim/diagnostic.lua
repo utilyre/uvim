@@ -6,17 +6,29 @@ vim.diagnostic.config({
   virtual_text = false,
   float = {
     source = true,
-    border = "rounded",
+    scope = "cursor",
     header = "",
     prefix = " " .. icon.layout.list .. " ",
     suffix = " ",
   },
 })
 
-vim.fn.sign_define("DiagnosticSignError", { numhl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn", { numhl = "DiagnosticSignWarn" })
-vim.fn.sign_define("DiagnosticSignInfo", { numhl = "DiagnosticSignInfo" })
-vim.fn.sign_define("DiagnosticSignHint", { numhl = "DiagnosticSignHint" })
+vim.fn.sign_define("DiagnosticSignError", {
+  text = icon.widget.error,
+  texthl = "DiagnosticSignError",
+})
+vim.fn.sign_define("DiagnosticSignWarn", {
+  text = icon.widget.warn,
+  texthl = "DiagnosticSignWarn",
+})
+vim.fn.sign_define("DiagnosticSignInfo", {
+  text = icon.widget.info,
+  texthl = "DiagnosticSignInfo",
+})
+vim.fn.sign_define("DiagnosticSignHint", {
+  text = icon.widget.hint,
+  texthl = "DiagnosticSignHint",
+})
 
 local binder = Binder.new():with_modes({ "n" })
 binder:bind("[d", vim.diagnostic.goto_prev, { float = false })

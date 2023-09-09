@@ -21,6 +21,7 @@ vim.opt.shortmess = {
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "+1"
 
 vim.opt.linebreak = true
