@@ -10,7 +10,6 @@ function spec:config()
   local windows = require("lspconfig.ui.windows")
   local cmp = require("cmp_nvim_lsp")
 
-  windows.default_options.border = "rounded"
   lspconfig.util.on_setup = lspconfig.util.add_hook_after(
     lspconfig.util.on_setup,
     function(config)

@@ -41,7 +41,6 @@ lazy.setup("uvim.plugins", {
     },
   },
   ui = {
-    border = "rounded",
     icons = {
       lazy = icon.widget.lazy .. "  ",
       not_loaded = icon.widget.inactive,
