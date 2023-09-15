@@ -51,7 +51,7 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
     > lsp/rust_analyzer.lua
 
     ```lua
-    -- $ rustup component add rust-analyzer
+    --$ rustup component add rust-analyzer
     return {
       cmd = { "rustup", "run", "stable", "rust-analyzer" },
     }
