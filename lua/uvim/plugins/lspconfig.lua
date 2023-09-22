@@ -23,8 +23,8 @@ function spec:config()
     local lsp_path = vim.fs.joinpath(vim.fn.stdpath("config"), "lsp")
     for name, type in vim.fs.dir(lsp_path) do
         if type == "file" and vim.endswith(name, ".lua") then
-            name = name:sub(1, -5)
-            lspconfig[name].setup(dofile(vim.fs.joinpath(lsp_path, name)))
+            local config = dofile(vim.fs.joinpath(lsp_path, name))
+            lspconfig[name:sub(1, -5)].setup(config)
         end
     end
 end
