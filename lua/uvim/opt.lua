@@ -13,7 +13,6 @@ vim.opt.splitright = true
 
 vim.opt.list = true
 vim.opt.listchars = { tab = icon.layout.tab .. "  " }
-vim.opt.fillchars:append({ eob = " " })
 vim.opt.shortmess = {
     a = true,
     F = true,
