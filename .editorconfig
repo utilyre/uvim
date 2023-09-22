@@ -6,13 +6,21 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{lua,json,toml}]
+[*.lua]
+indent_style = space
+indent_size = 4
+
+[*.json]
+indent_style = space
+indent_size = 2
+
+[lazy-lock.json]
+insert_final_newline = false
+
+[*.toml]
 indent_style = space
 indent_size = 2
 
 [*.md]
 indent_style = space
 indent_size = 4
-
-[lazy-lock.json]
-insert_final_newline = false
