@@ -38,6 +38,6 @@ vim.opt.shiftwidth = 4
 
 vim.opt.spell = true
 vim.opt.spelloptions:append({ "camel" })
-vim.opt.spelllang:append({ "programming" })
+vim.opt.spelllang:append({ "linux" })
 
 vim.g.mapleader = vim.keycode("<space>")
