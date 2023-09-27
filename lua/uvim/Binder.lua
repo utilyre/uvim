@@ -64,10 +64,8 @@ function Binder:bind(lhs, rhs, ...)
 end
 
 ---@param lhs string
----@return boolean
 function Binder:unbind(lhs)
-    local ok, _ = pcall(vim.keymap.del, self.modes, lhs, { buffer = self.buffer })
-    return ok
+    vim.keymap.del(self.modes, lhs, { buffer = self.buffer })
 end
 
 return Binder
