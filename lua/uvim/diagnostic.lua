@@ -18,7 +18,7 @@ vim.fn.sign_define("DiagnosticSignWarn")
 vim.fn.sign_define("DiagnosticSignInfo")
 vim.fn.sign_define("DiagnosticSignHint")
 
-local binder = Binder.new():with_modes({ "n" })
+local binder = Binder.new():with_modes("n")
 binder:bind("[g", vim.diagnostic.goto_prev, { float = false })
 binder:bind("]g", vim.diagnostic.goto_next, { float = false })
 binder:bind("<leader>g", vim.diagnostic.open_float)

@@ -12,10 +12,10 @@ function Binder.new() return setmetatable({}, { __index = Binder }) end
 ---@return Binder
 function Binder:clone() return vim.deepcopy(self) end
 
----@param modes string[]
+---@param ... string
 ---@return Binder
-function Binder:with_modes(modes)
-    self.modes = modes
+function Binder:with_modes(...)
+    self.modes = { ... }
     return self
 end
 

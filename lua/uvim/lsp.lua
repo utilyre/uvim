@@ -22,30 +22,15 @@ vim.api.nvim_create_autocmd({ "LspAttach" }, {
             })
         end
 
-        local binder = Binder.new():with_buffer(args.buf)
+        local binder = Binder.new():with_modes("n"):with_buffer(args.buf)
+        binder:bind("<leader>ii", vim.lsp.buf.implementation)
+        binder:bind("<leader>ir", vim.lsp.buf.references)
+        binder:bind("<leader>ia", vim.lsp.buf.code_action)
+        binder:bind("<leader>if", vim.lsp.buf.format, { async = true })
+        binder:bind("<leader>ic", vim.lsp.buf.rename)
         binder
             :clone()
-            :with_modes({ "n" })
-            :bind("<leader>ii", vim.lsp.buf.implementation)
-        binder
-            :clone()
-            :with_modes({ "n" })
-            :bind("<leader>ir", vim.lsp.buf.references)
-        binder
-            :clone()
-            :with_modes({ "n" })
-            :bind("<leader>ia", vim.lsp.buf.code_action)
-        binder
-            :clone()
-            :with_modes({ "n" })
-            :bind("<leader>if", vim.lsp.buf.format, { async = true })
-        binder
-            :clone()
-            :with_modes({ "n" })
-            :bind("<leader>ic", vim.lsp.buf.rename)
-        binder
-            :clone()
-            :with_modes({ "s", "i" })
+            :with_modes("s", "i")
             :bind("<c-space>", vim.lsp.buf.signature_help)
     end,
 })
@@ -66,12 +51,12 @@ vim.api.nvim_create_autocmd({ "LspDetach" }, {
             })
         end
 
-        local binder = Binder.new():with_buffer(args.buf)
-        binder:clone():with_modes({ "n" }):unbind("<leader>ii")
-        binder:clone():with_modes({ "n" }):unbind("<leader>ir")
-        binder:clone():with_modes({ "n" }):unbind("<leader>ia")
-        binder:clone():with_modes({ "n" }):unbind("<leader>if")
-        binder:clone():with_modes({ "n" }):unbind("<leader>ic")
-        binder:clone():with_modes({ "s", "i" }):unbind("<c-space>")
+        local binder = Binder.new():with_modes("n"):with_buffer(args.buf)
+        binder:unbind("<leader>ii")
+        binder:unbind("<leader>ir")
+        binder:unbind("<leader>ia")
+        binder:unbind("<leader>if")
+        binder:unbind("<leader>ic")
+        binder:clone():with_modes("s", "i"):unbind("<c-space>")
     end,
 })
