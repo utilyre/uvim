@@ -1,4 +1,4 @@
-local Binder = require("uvim.Binder")
+local Binder = require("uvim.binder")
 local icon = require("uvim.icon")
 
 local lazy_path = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy", "lazy.nvim")

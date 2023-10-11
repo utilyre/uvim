@@ -1,4 +1,4 @@
-local Binder = require("uvim.Binder")
+local Binder = require("uvim.binder")
 local icon = require("uvim.icon")
 
 local spec = {

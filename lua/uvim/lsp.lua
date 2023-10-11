@@ -1,4 +1,4 @@
-local Binder = require("uvim.Binder")
+local Binder = require("uvim.binder")
 
 vim.api.nvim_create_autocmd({ "LspAttach" }, {
     group = vim.api.nvim_create_augroup("uvim.lsp.attacher", {}),
