@@ -27,8 +27,6 @@ function spec:config()
             selection_caret = "  ",
             borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
             layout_config = {
-                width = 100,
-                height = 25,
                 prompt_position = "top",
             },
             mappings = {
