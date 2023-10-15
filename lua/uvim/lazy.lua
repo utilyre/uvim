@@ -67,13 +67,4 @@ lazy.setup("uvim.plugins", {
     },
 })
 
-vim.keymap.set("n", "<leader>ph", lazy.home)
-vim.keymap.set("n", "<leader>pi", lazy.install)
-vim.keymap.set("n", "<leader>pu", lazy.update)
-vim.keymap.set("n", "<leader>ps", lazy.sync)
-vim.keymap.set("n", "<leader>px", lazy.clean)
-vim.keymap.set("n", "<leader>pc", lazy.check)
-vim.keymap.set("n", "<leader>pl", lazy.log)
-vim.keymap.set("n", "<leader>pr", lazy.restore)
-vim.keymap.set("n", "<leader>pp", lazy.profile)
-vim.keymap.set("n", "<leader>pd", lazy.debug)
+vim.keymap.set("n", "<leader>p", lazy.show)
