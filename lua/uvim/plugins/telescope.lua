@@ -2,8 +2,8 @@ local icon = require("uvim.icon")
 
 local spec = {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    cmd = { "Telescope" },
+    dependencies = "nvim-lua/plenary.nvim",
+    cmd = "Telescope",
     keys = { "<space>fr", "<space>ff", "<space>fw" },
 }
 
