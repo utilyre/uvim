@@ -45,17 +45,8 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 -   Run `:TSInstall [language]` to install the [tree-sitter][tree-sitter] parser
     for the given language.
 
--   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
-    you would setup a language server.
-
-    > lsp/rust_analyzer.lua
-
-    ```lua
-    --$ rustup component add rust-analyzer
-    return {
-      cmd = { "rustup", "run", "stable", "rust-analyzer" },
-    }
-    ```
+-   Install additional plugins or override the existing ones by extending the
+    `uvim.extras` module.
 
 [neovim]: https://neovim.io
 [nerdfonts]: https://www.nerdfonts.com
@@ -63,5 +54,4 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 [ripgrep]: https://crates.io/crates/ripgrep
 [git-scm]: https://git-scm.com
 [lazy.nvim]: https://github.com/folke/lazy.nvim
-[tree-sitter]: https://tree-sitter.github.io/tree-sitter
-[lspconfig-all]: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+[tree-sitter]: https://tree-sitter.github.io
