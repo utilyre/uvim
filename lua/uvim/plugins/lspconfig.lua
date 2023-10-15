@@ -1,5 +1,3 @@
-local Binder = require("uvim.binder")
-
 local spec = {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },

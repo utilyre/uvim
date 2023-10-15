@@ -1,21 +1,14 @@
-local Binder = require("uvim.binder")
 local icon = require("uvim.icon")
 
 local spec = {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = { "Telescope" },
-    keys = {
-        "<leader>fr",
-        "<leader>ft",
-        "<leader>ff",
-        "<leader>fw",
-    },
+    keys = { "<leader>fr", "<leader>ff", "<leader>fw" },
 }
 
 function spec:config()
     local telescope = require("telescope")
-    local themes = require("telescope.themes")
     local builtin = require("telescope.builtin")
 
     telescope.setup({
@@ -46,11 +39,9 @@ function spec:config()
         },
     })
 
-    local binder = Binder.new():with_modes("n")
-    binder:bind("<leader>fr", builtin.resume)
-    binder:bind("<leader>ft", builtin.filetypes)
-    binder:bind("<leader>ff", builtin.find_files)
-    binder:bind("<leader>fw", builtin.live_grep)
+    vim.keymap.set("n", "<leader>fr", builtin.resume)
+    vim.keymap.set("n", "<leader>ff", builtin.find_files)
+    vim.keymap.set("n", "<leader>fw", builtin.live_grep)
 end
 
 return spec

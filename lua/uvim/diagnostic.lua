@@ -1,4 +1,3 @@
-local Binder = require("uvim.binder")
 local icon = require("uvim.icon")
 
 vim.diagnostic.config({
@@ -18,7 +17,14 @@ vim.fn.sign_define("DiagnosticSignWarn")
 vim.fn.sign_define("DiagnosticSignInfo")
 vim.fn.sign_define("DiagnosticSignHint")
 
-local binder = Binder.new():with_modes("n")
-binder:bind("[g", vim.diagnostic.goto_prev, { float = false })
-binder:bind("]g", vim.diagnostic.goto_next, { float = false })
-binder:bind("<leader>g", vim.diagnostic.open_float)
+vim.keymap.set(
+    "n",
+    "[g",
+    function() vim.diagnostic.goto_prev({ float = false }) end
+)
+vim.keymap.set(
+    "n",
+    "]g",
+    function() vim.diagnostic.goto_next({ float = false }) end
+)
+vim.keymap.set("n", "<leader>g", vim.diagnostic.open_float)

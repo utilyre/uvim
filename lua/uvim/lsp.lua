@@ -1,6 +1,4 @@
-local Binder = require("uvim.binder")
-
-vim.api.nvim_create_autocmd({ "LspAttach" }, {
+vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("uvim.lsp.attacher", {}),
     callback = function(args)
         local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -10,7 +8,7 @@ vim.api.nvim_create_autocmd({ "LspAttach" }, {
         end
 
         if client.supports_method("$/progress") then
-            vim.api.nvim_create_autocmd({ "LspProgress" }, {
+            vim.api.nvim_create_autocmd("LspProgress", {
                 group = vim.api.nvim_create_augroup(
                     "uvim.lsp.progress",
                     { clear = false }
@@ -22,20 +20,21 @@ vim.api.nvim_create_autocmd({ "LspAttach" }, {
             })
         end
 
-        local binder = Binder.new():with_modes("n"):with_buffer(args.buf)
-        binder:bind("<leader>ii", vim.lsp.buf.implementation)
-        binder:bind("<leader>ir", vim.lsp.buf.references)
-        binder:bind("<leader>ia", vim.lsp.buf.code_action)
-        binder:bind("<leader>if", vim.lsp.buf.format, { async = true })
-        binder:bind("<leader>ic", vim.lsp.buf.rename)
-        binder
-            :clone()
-            :with_modes("s", "i")
-            :bind("<c-space>", vim.lsp.buf.signature_help)
+        local opts = { buffer = args.buf }
+        vim.keymap.set("n", "<leader>ii", vim.lsp.buf.implementation, opts)
+        vim.keymap.set("n", "<leader>ir", vim.lsp.buf.references, opts)
+        vim.keymap.set("n", "<leader>ia", vim.lsp.buf.code_action, opts)
+        vim.keymap.set(
+            "n",
+            "<leader>if",
+            function() vim.lsp.buf.format({ async = true }) end,
+            opts
+        )
+        vim.keymap.set("n", "<leader>ic", vim.lsp.buf.rename, opts)
     end,
 })
 
-vim.api.nvim_create_autocmd({ "LspDetach" }, {
+vim.api.nvim_create_autocmd("LspDetach", {
     group = vim.api.nvim_create_augroup("uvim.lsp.detacher", {}),
     callback = function(args)
         local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -46,17 +45,16 @@ vim.api.nvim_create_autocmd({ "LspDetach" }, {
 
         if client.supports_method("$/progress") then
             vim.api.nvim_clear_autocmds({
-                group = "config.plugins.lspconfig.progress",
+                group = "uvim.lsp.progress",
                 buffer = args.buf,
             })
         end
 
-        local binder = Binder.new():with_modes("n"):with_buffer(args.buf)
-        binder:unbind("<leader>ii")
-        binder:unbind("<leader>ir")
-        binder:unbind("<leader>ia")
-        binder:unbind("<leader>if")
-        binder:unbind("<leader>ic")
-        binder:clone():with_modes("s", "i"):unbind("<c-space>")
+        local opts = { buffer = args.buf }
+        vim.keymap.del("n", "<leader>ii", opts)
+        vim.keymap.del("n", "<leader>ir", opts)
+        vim.keymap.del("n", "<leader>ia", opts)
+        vim.keymap.del("n", "<leader>if", opts)
+        vim.keymap.del("n", "<leader>ic", opts)
     end,
 })
