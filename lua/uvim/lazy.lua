@@ -15,7 +15,10 @@ vim.opt.runtimepath:prepend({ lazy_path })
 
 local lazy = require("lazy")
 
-lazy.setup("uvim.plugins", {
+lazy.setup({
+    { import = "uvim.plugins" },
+    { import = "uvim.extras" },
+}, {
     concurrency = 4,
     install = {
         colorscheme = { "gruvbox", "habamax" },
@@ -44,18 +47,18 @@ lazy.setup("uvim.plugins", {
         icons = {
             not_loaded = icon.widget.inactive,
             loaded = icon.widget.active,
-            task = icon.widget.task,
-            source = icon.widget.source,
             start = icon.widget.start,
+            source = icon.widget.source,
+            import = icon.widget.import,
+            runtime = icon.widget.runtime,
             plugin = icon.widget.plugin,
+            task = icon.widget.task,
+            init = icon.widget.config,
+            config = icon.widget.config,
             event = icon.widget.event,
             keys = icon.widget.keymap,
             cmd = icon.widget.command,
             ft = icon.widget.filetype,
-            init = icon.widget.config,
-            runtime = icon.widget.runtime,
-            import = icon.widget.import,
-            config = icon.widget.config,
             list = {
                 icon.layout.list,
                 icon.layout.list,

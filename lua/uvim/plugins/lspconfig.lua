@@ -1,9 +1,9 @@
 local spec = {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    lazy = true,
 }
 
-function spec:config()
+function spec:config(opts)
     local lspconfig = require("lspconfig")
     local cmp = require("cmp_nvim_lsp")
 
@@ -18,12 +18,8 @@ function spec:config()
         end
     )
 
-    local lsp_path = vim.fs.joinpath(vim.fn.stdpath("config"), "lsp")
-    for name, type in vim.fs.dir(lsp_path) do
-        if type == "file" and vim.endswith(name, ".lua") then
-            local config = dofile(vim.fs.joinpath(lsp_path, name))
-            lspconfig[name:sub(1, -5)].setup(config)
-        end
+    for name, config in pairs(opts) do
+        lspconfig[name].setup(config)
     end
 end
 
