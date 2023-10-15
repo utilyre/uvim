@@ -14,7 +14,6 @@ icon.widget = {
     import = "",
     inactive = "",
     keymap = "",
-    lazy = "",
     plugin = "",
     runtime = "",
     source = "",

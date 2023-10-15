@@ -42,7 +42,6 @@ lazy.setup("uvim.plugins", {
     },
     ui = {
         icons = {
-            lazy = icon.widget.lazy .. "  ",
             not_loaded = icon.widget.inactive,
             loaded = icon.widget.active,
             task = icon.widget.task,
