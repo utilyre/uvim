@@ -55,6 +55,7 @@ lazy.setup({
             task = icon.widget.task,
             init = icon.widget.config,
             config = icon.widget.config,
+            require = icon.widget.require,
             event = icon.widget.event,
             keys = icon.widget.keymap,
             cmd = icon.widget.command,
