@@ -7,7 +7,7 @@ vim.diagnostic.config({
         source = true,
         scope = "cursor",
         header = "",
-        prefix = " " .. icon.layout.list .. " ",
+        prefix = icon.layout.list .. " ",
         suffix = " ",
     },
 })
