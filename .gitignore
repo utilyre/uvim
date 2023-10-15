@@ -1,2 +1,3 @@
 /ftplugin
-/lua/uvim/extras
+/lua/uvim/extras/*
+!/lua/uvim/extras/init.lua
