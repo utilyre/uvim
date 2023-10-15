@@ -27,4 +27,4 @@ vim.keymap.set(
     "]g",
     function() vim.diagnostic.goto_next({ float = false }) end
 )
-vim.keymap.set("n", "<leader>g", vim.diagnostic.open_float)
+vim.keymap.set("n", "<space>g", vim.diagnostic.open_float)

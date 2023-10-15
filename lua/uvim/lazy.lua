@@ -66,4 +66,4 @@ lazy.setup("uvim.plugins", {
     },
 })
 
-vim.keymap.set("n", "<leader>p", lazy.show)
+vim.keymap.set("n", "<space>p", lazy.show)

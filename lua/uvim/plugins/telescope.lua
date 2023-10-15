@@ -4,7 +4,7 @@ local spec = {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = { "Telescope" },
-    keys = { "<leader>fr", "<leader>ff", "<leader>fw" },
+    keys = { "<space>fr", "<space>ff", "<space>fw" },
 }
 
 function spec:config()
@@ -39,9 +39,9 @@ function spec:config()
         },
     })
 
-    vim.keymap.set("n", "<leader>fr", builtin.resume)
-    vim.keymap.set("n", "<leader>ff", builtin.find_files)
-    vim.keymap.set("n", "<leader>fw", builtin.live_grep)
+    vim.keymap.set("n", "<space>fr", builtin.resume)
+    vim.keymap.set("n", "<space>ff", builtin.find_files)
+    vim.keymap.set("n", "<space>fw", builtin.live_grep)
 end
 
 return spec
