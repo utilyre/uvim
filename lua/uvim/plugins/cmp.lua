@@ -51,12 +51,11 @@ function spec:opts(opts)
         },
         mapping = {
             ["<c-space>"] = cmp.mapping(function(fallback)
-                if not cmp.visible() then
-                    fallback()
-                    return
+                if cmp.visible() then
+                    cmp.abort()
+                else
+                    cmp.complete()
                 end
-
-                cmp.abort()
             end, { "i", "s" }),
             ["<c-y>"] = cmp.mapping(function(fallback)
                 if not cmp.visible() then
