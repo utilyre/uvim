@@ -1,21 +1,18 @@
 local spec = {
     "nvim-treesitter/nvim-treesitter",
+    main = "nvim-treesitter.configs",
     build = ":TSUpdateSync",
     cmd = "TSUpdateSync",
     event = { "BufReadPre", "BufNewFile" },
 }
 
-function spec:config()
-    local treesitter = require("nvim-treesitter.configs")
-
-    treesitter.setup({
-        highlight = {
-            enable = true,
-        },
-        indent = {
-            enable = true,
-        },
-    })
-end
+spec.opts = {
+    highlight = {
+        enable = true,
+    },
+    indent = {
+        enable = true,
+    },
+}
 
 return spec

@@ -3,15 +3,10 @@ local spec = {
     priority = 100,
 }
 
-function spec:config()
+function spec:config(opts)
     local gruvbox = require("gruvbox")
 
-    gruvbox.setup({
-        overrides = {
-            ["TelescopeNormal"] = { link = "NormalFloat" },
-        },
-    })
-
+    gruvbox.setup(opts)
     gruvbox.load()
 end
 

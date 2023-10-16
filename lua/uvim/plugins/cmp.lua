@@ -2,6 +2,7 @@ local icon = require("uvim.icon")
 
 local spec = {
     "hrsh7th/nvim-cmp",
+    main = "cmp",
     dependencies = {
         "nvim-lua/plenary.nvim",
         "L3MON4D3/LuaSnip",
@@ -11,11 +12,11 @@ local spec = {
     event = { "InsertEnter" },
 }
 
-function spec:config()
+function spec:opts(opts)
     local cmp = require("cmp")
     local luasnip = require("luasnip")
 
-    cmp.setup({
+    return vim.tbl_deep_extend("force", opts, {
         view = {
             entries = {
                 selection_order = "near_cursor",
@@ -42,7 +43,7 @@ function spec:config()
             ghost_text = true,
         },
         snippet = {
-            expand = function(opts) luasnip.lsp_expand(opts.body) end,
+            expand = function(args) luasnip.lsp_expand(args.body) end,
         },
         sources = {
             { name = "nvim_lsp" },
