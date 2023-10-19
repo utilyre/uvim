@@ -45,8 +45,27 @@ This is my **"minimal"** _Neovim config_ that I put pride on.
 -   Run `:TSInstall [language]` to install the [tree-sitter][tree-sitter] parser
     for the given language.
 
--   Install additional plugins or override the existing ones by extending the
-    `uvim.extras` module.
+-   See [`:help lspconfig-all`][lspconfig-all] to get an understanding of how
+    you would setup a language server.
+
+    > plugin/lspconfig.lua
+
+    ```lua
+    vim.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
+        once = true,
+        callback = function()
+            local lspconfig = require("lspconfig")
+
+            --$ rustup component add rust-analyzer
+            lspconfig.rust_analyzer.setup({
+                cmd = { "rustup", "run", "stable", "rust-analyzer" },
+            })
+
+            --$ go install golang.org/x/tools/gopls@latest
+            lspconfig.gopls.setup({})
+        end,
+    })
+    ```
 
 [neovim]: https://neovim.io
 [nerdfonts]: https://www.nerdfonts.com

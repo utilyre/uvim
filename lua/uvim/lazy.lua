@@ -15,10 +15,7 @@ vim.opt.runtimepath:prepend({ lazy_path })
 
 local lazy = require("lazy")
 
-lazy.setup({
-    { import = "uvim.plugins" },
-    { import = "uvim.extras" },
-}, {
+lazy.setup("uvim.plugins", {
     concurrency = 4,
     install = {
         colorscheme = { "gruvbox", "habamax" },

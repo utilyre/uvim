@@ -3,7 +3,7 @@ local spec = {
     lazy = true,
 }
 
-function spec:config(opts)
+function spec:config()
     local lspconfig = require("lspconfig")
     local cmp = require("cmp_nvim_lsp")
 
@@ -17,10 +17,6 @@ function spec:config(opts)
             )
         end
     )
-
-    for name, config in pairs(opts) do
-        lspconfig[name].setup(config)
-    end
 end
 
 return spec
