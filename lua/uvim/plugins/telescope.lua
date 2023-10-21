@@ -13,7 +13,6 @@ spec.opts = {
         file_ignore_patterns = { "^.git/", "/.git/" },
         path_display = { "truncate" },
         prompt_prefix = icon.widget.telescope .. " ",
-        selection_caret = "  ",
         borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
         layout_config = {
             prompt_position = "top",
