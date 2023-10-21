@@ -9,7 +9,7 @@ local spec = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
     },
-    event = { "InsertEnter" },
+    event = "InsertEnter",
 }
 
 function spec:opts(opts)
