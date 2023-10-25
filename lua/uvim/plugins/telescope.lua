@@ -17,12 +17,6 @@ spec.opts = {
         layout_config = {
             prompt_position = "top",
         },
-        mappings = {
-            i = {
-                ["<s-tab>"] = "move_selection_previous",
-                ["<tab>"] = "move_selection_next",
-            },
-        },
     },
     pickers = {
         find_files = {
