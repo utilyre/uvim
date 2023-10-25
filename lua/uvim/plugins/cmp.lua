@@ -50,30 +50,7 @@ function spec:opts(opts)
             { name = "buffer" },
         },
         mapping = {
-            ["<c-space>"] = cmp.mapping(function(fallback)
-                if cmp.visible() then
-                    cmp.abort()
-                else
-                    cmp.complete()
-                end
-            end, { "i", "s" }),
-            ["<c-y>"] = cmp.mapping(function(fallback)
-                if not cmp.visible() then
-                    fallback()
-                    return
-                end
-
-                cmp.scroll_docs(-1)
-            end, { "i", "s" }),
-            ["<c-e>"] = cmp.mapping(function(fallback)
-                if not cmp.visible() then
-                    fallback()
-                    return
-                end
-
-                cmp.scroll_docs(1)
-            end, { "i", "s" }),
-            ["<s-tab>"] = cmp.mapping(function(fallback)
+            ["<c-p>"] = cmp.mapping(function(fallback)
                 if not cmp.visible() then
                     fallback()
                     return
@@ -81,15 +58,15 @@ function spec:opts(opts)
 
                 cmp.select_prev_item()
             end, { "i", "s" }),
-            ["<tab>"] = cmp.mapping(function(fallback)
+            ["<c-n>"] = cmp.mapping(function()
                 if not cmp.visible() then
-                    fallback()
+                    cmp.complete()
                     return
                 end
 
                 cmp.select_next_item()
             end, { "i", "s" }),
-            ["<cr>"] = cmp.mapping(function(fallback)
+            ["<c-y>"] = cmp.mapping(function(fallback)
                 if cmp.get_selected_entry() == nil then
                     fallback()
                     return
@@ -97,21 +74,21 @@ function spec:opts(opts)
 
                 cmp.confirm()
             end, { "i", "s" }),
-            ["<c-p>"] = cmp.mapping(function(fallback)
-                if not luasnip.jumpable(-1) then
+            ["<c-u>"] = cmp.mapping(function(fallback)
+                if not cmp.visible() then
                     fallback()
                     return
                 end
 
-                luasnip.jump(-1)
+                cmp.scroll_docs(-5)
             end, { "i", "s" }),
-            ["<c-n>"] = cmp.mapping(function(fallback)
-                if not luasnip.jumpable(1) then
+            ["<c-d>"] = cmp.mapping(function(fallback)
+                if not cmp.visible() then
                     fallback()
                     return
                 end
 
-                luasnip.jump(1)
+                cmp.scroll_docs(5)
             end, { "i", "s" }),
         },
     })
