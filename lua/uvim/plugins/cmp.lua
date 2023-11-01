@@ -15,6 +15,16 @@ function spec:opts(opts)
     local luasnip = require("luasnip")
 
     return vim.tbl_deep_extend("force", opts, {
+        snippet = {
+            expand = function(args) luasnip.lsp_expand(args.body) end,
+        },
+        sources = {
+            { name = "nvim_lsp" },
+            { name = "buffer" },
+        },
+        experimental = {
+            ghost_text = true,
+        },
         view = {
             entries = {
                 selection_order = "near_cursor",
@@ -35,17 +45,6 @@ function spec:opts(opts)
 
                 return item
             end,
-        },
-        preselect = "none",
-        experimental = {
-            ghost_text = true,
-        },
-        snippet = {
-            expand = function(args) luasnip.lsp_expand(args.body) end,
-        },
-        sources = {
-            { name = "nvim_lsp" },
-            { name = "buffer" },
         },
     })
 end
