@@ -22,9 +22,6 @@ function spec:opts(opts)
             { name = "nvim_lsp" },
             { name = "buffer" },
         },
-        experimental = {
-            ghost_text = true,
-        },
         view = {
             entries = {
                 selection_order = "near_cursor",
