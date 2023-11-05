@@ -19,18 +19,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
                 end,
             })
         end
-
-        local opts = { buffer = args.buf }
-        vim.keymap.set("n", "<space>ii", vim.lsp.buf.implementation, opts)
-        vim.keymap.set("n", "<space>ir", vim.lsp.buf.references, opts)
-        vim.keymap.set("n", "<space>ia", vim.lsp.buf.code_action, opts)
-        vim.keymap.set(
-            "n",
-            "<space>if",
-            function() vim.lsp.buf.format({ async = true }) end,
-            opts
-        )
-        vim.keymap.set("n", "<space>ic", vim.lsp.buf.rename, opts)
     end,
 })
 
@@ -49,12 +37,14 @@ vim.api.nvim_create_autocmd("LspDetach", {
                 buffer = args.buf,
             })
         end
-
-        local opts = { buffer = args.buf }
-        vim.keymap.del("n", "<space>ii", opts)
-        vim.keymap.del("n", "<space>ir", opts)
-        vim.keymap.del("n", "<space>ia", opts)
-        vim.keymap.del("n", "<space>if", opts)
-        vim.keymap.del("n", "<space>ic", opts)
     end,
 })
+
+vim.keymap.set("n", "<space>ir", vim.lsp.buf.references)
+vim.keymap.set("n", "<space>ia", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<space>ic", vim.lsp.buf.rename)
+vim.keymap.set(
+    "n",
+    "<space>if",
+    function() vim.lsp.buf.format({ async = true }) end
+)
