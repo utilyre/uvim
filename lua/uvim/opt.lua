@@ -1,11 +1,13 @@
 local icon = require("uvim.icon")
 
-vim.opt.termguicolors = true
 vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.timeout = false
 vim.opt.updatetime = 400
+
+vim.opt.termguicolors = true
+vim.opt.guicursor = ""
 
 vim.opt.equalalways = false
 vim.opt.splitbelow = true
