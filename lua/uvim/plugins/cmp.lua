@@ -48,22 +48,12 @@ end
 
 function spec:config(opts)
     local cmp = require("cmp")
-    local luasnip = require("luasnip")
 
     cmp.setup(opts)
-    luasnip.config.setup({ region_check_events = "CursorMoved" })
 
     vim.keymap.set({ "i", "s" }, "<c-p>", cmp.select_prev_item)
     vim.keymap.set({ "i", "s" }, "<c-n>", cmp.select_next_item)
     vim.keymap.set({ "i", "s" }, "<c-y>", cmp.confirm)
-    vim.keymap.set({ "i", "s" }, "<s-tab>", function()
-        if not luasnip.jumpable(-1) then return "<s-tab>" end
-        luasnip.jump(-1)
-    end, { expr = true })
-    vim.keymap.set({ "i", "s" }, "<tab>", function()
-        if not luasnip.jumpable(1) then return "<tab>" end
-        luasnip.jump(1)
-    end, { expr = true })
 end
 
 return spec
