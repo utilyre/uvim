@@ -4,7 +4,7 @@ local spec = {
 }
 
 spec.opts = {
-    region_check_events = "CursorMoved"
+    region_check_events = "CursorMoved",
 }
 
 function spec:config(opts)
