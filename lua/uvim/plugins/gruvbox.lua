@@ -3,6 +3,10 @@ local spec = {
     priority = 100,
 }
 
+spec.opts = {
+    contrast = "hard",
+}
+
 function spec:config(opts)
     local gruvbox = require("gruvbox")
 
