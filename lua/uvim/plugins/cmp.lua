@@ -22,11 +22,6 @@ function spec:opts(opts)
             { name = "nvim_lsp" },
             { name = "buffer" },
         },
-        view = {
-            entries = {
-                selection_order = "near_cursor",
-            },
-        },
         window = {
             completion = {
                 col_offset = -2,
