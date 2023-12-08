@@ -3,10 +3,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         local client = vim.lsp.get_client_by_id(args.data.client_id)
 
-        if client.supports_method("textDocument/inlayHint") then
-            vim.lsp.inlay_hint.enable(args.buf, true)
-        end
-
         if client.supports_method("$/progress") then
             vim.api.nvim_create_autocmd("LspProgress", {
                 group = vim.api.nvim_create_augroup(
@@ -26,10 +22,6 @@ vim.api.nvim_create_autocmd("LspDetach", {
     group = vim.api.nvim_create_augroup("uvim.lsp.detacher", {}),
     callback = function(args)
         local client = vim.lsp.get_client_by_id(args.data.client_id)
-
-        if client.supports_method("textDocument/inlayHint") then
-            vim.lsp.inlay_hint.enable(args.buf, false)
-        end
 
         if client.supports_method("$/progress") then
             vim.api.nvim_clear_autocmds({
