@@ -11,11 +11,6 @@ vim.diagnostic.config({
     },
 })
 
-vim.fn.sign_define("DiagnosticSignError")
-vim.fn.sign_define("DiagnosticSignWarn")
-vim.fn.sign_define("DiagnosticSignInfo")
-vim.fn.sign_define("DiagnosticSignHint")
-
 vim.keymap.set(
     "n",
     "[g",
