@@ -6,8 +6,6 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.timeout = false
 vim.opt.updatetime = 400
 
-vim.opt.termguicolors = true
-
 vim.opt.equalalways = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
