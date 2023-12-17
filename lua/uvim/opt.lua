@@ -7,7 +7,6 @@ vim.opt.timeout = false
 vim.opt.updatetime = 400
 
 vim.opt.termguicolors = true
-vim.opt.guicursor = ""
 
 vim.opt.equalalways = false
 vim.opt.splitbelow = true
