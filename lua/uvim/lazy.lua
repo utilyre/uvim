@@ -18,7 +18,7 @@ local lazy = require("lazy")
 lazy.setup("uvim.plugins", {
     concurrency = 4,
     install = {
-        colorscheme = { "gruvbox", "habamax" },
+        colorscheme = { "gruvbox", "retrobox" },
     },
     dev = {
         path = vim.env.NVIM_DEV,
