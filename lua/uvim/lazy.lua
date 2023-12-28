@@ -31,6 +31,7 @@ lazy.setup("uvim.plugins", {
                 "man",
                 "matchit",
                 "matchparen",
+                "netrwPlugin",
                 "rplugin",
                 "spellfile",
                 "tarPlugin",
