@@ -22,6 +22,11 @@ function spec:opts(opts)
             { name = "nvim_lsp" },
             { name = "buffer" },
         },
+        view = {
+            docs = {
+                auto_open = false,
+            },
+        },
         window = {
             completion = {
                 col_offset = -2,
